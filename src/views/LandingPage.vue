@@ -24,6 +24,47 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
             FooterComp,
             PageWelcome,
             PhotoIndex
+        },
+
+        mounted(){
+
+            this.delete_classes();
+
+        },
+
+
+        methods:{
+            delete_classes(){
+                
+                let menu_btn = document.querySelector(`.hamburger`);
+
+                let mobile_menu = document.querySelector(`.mobile_nav`);
+
+                let get_div = document.querySelector(`body`);
+
+                let hide_bar = document.querySelector('.wrapper_span');
+
+                let search = document.querySelector('.search');
+
+                let input = document.querySelector('.input');
+
+                let clear = document.querySelector('.clear');
+
+                search.classList.remove('active');
+
+                input.classList.remove('input_active');
+
+                clear.classList.remove('clear_active');
+                
+                menu_btn.classList.remove(`is-active`);
+                
+                mobile_menu.classList.remove(`is-active`);
+
+                get_div.classList.remove(`no-scroll`);
+
+                hide_bar.classList.remove('hide_bar');
+            },
+
         }
     }
 </script>

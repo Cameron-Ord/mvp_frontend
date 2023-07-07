@@ -29,13 +29,6 @@
 
 
             delete_classes(){
-                let menu_btn = document.querySelector(`.hamburger`);
-
-                let mobile_menu = document.querySelector(`.mobile_nav`);
-
-                let get_div = document.querySelector(`body`);
-
-                let hide_bar = document.querySelector('.wrapper_span');
 
                 let search = document.querySelector('.search');
 
@@ -49,13 +42,6 @@
 
                 clear.classList.remove('clear_active');
                 
-                menu_btn.classList.remove(`is-active`);
-                
-                mobile_menu.classList.remove(`is-active`);
-
-                get_div.classList.remove(`no-scroll`);
-
-                hide_bar.classList.remove('hide_bar');
             },
 
 

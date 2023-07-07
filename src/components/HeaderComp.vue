@@ -30,9 +30,6 @@
 
         mounted(){
 
-
-          this.delete_classes();
-
         },
 
         
