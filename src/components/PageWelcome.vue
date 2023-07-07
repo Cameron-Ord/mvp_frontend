@@ -12,7 +12,7 @@
                     <div class="search">
                         <div class="icon" @click="icon_click"></div>
                         <div class="input">
-                            <input type="text" placeholder="search images" class="search_input" ref="search_input_value">
+                            <input type="text" placeholder="search images" class="search_input" ref="search_input_value" maxlength="12">
                         </div>
                         <span class="clear" @click="clear_bar"></span>
                     </div>
@@ -205,11 +205,11 @@
                     position: relative;
                     width: 150px;
                     height: 40px;
-                    left: 40px;
+                    left: 50px;
                     display: flex;
                     justify-items: center;
                     align-items: center;
-                    transition: 0.3s ease-in-out;
+                    transition: 0.2s ease-in-out;
 
                     >.search_input{
 
