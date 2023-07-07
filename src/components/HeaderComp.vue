@@ -9,9 +9,9 @@
                 </nav>
                 <nav class="mobile_nav">
                     <div>
-                        <router-link to="/" class="nav_menu">Browse Photos</router-link>
-                        <router-link to="/" class="nav_menu">About</router-link>
-                        <router-link to="/" class="nav_menu">Contact</router-link>
+                        <router-link to="/PhotoStream" class="router"><h3 class="nav_menu" @click="delete_classes">Browse</h3></router-link>
+                        <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="delete_classes">About</h3></router-link>
+                        <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="delete_classes">Contact</h3></router-link>
                     </div>
                     <div>
                         <p class="nav_menu">example</p>
@@ -28,9 +28,34 @@
 <script>
     export default {
 
+        mounted(){
+
+
+          this.delete_classes();
+
+        },
 
         
         methods:{
+
+
+            delete_classes(){
+                let menu_btn = document.querySelector(`.hamburger`);
+
+                let mobile_menu = document.querySelector(`.mobile_nav`);
+
+                let get_div = document.querySelector(`body`);
+
+                let hide_bar = document.querySelector('.wrapper_span');
+                
+                menu_btn.classList.remove(`is-active`);
+                
+                mobile_menu.classList.remove(`is-active`);
+
+                get_div.classList.remove(`no-scroll`);
+
+                hide_bar.classList.remove('hide_bar');
+            },
 
             make_active() {
 
@@ -38,18 +63,17 @@
 
             let mobile_menu = document.querySelector(`.mobile_nav`);
 
+            let get_div = document.querySelector(`body`);
+
+            let hide_bar = document.querySelector('.wrapper_span');
+
             menu_btn.classList.toggle(`is-active`);
 
             mobile_menu.classList.toggle(`is-active`);
 
-            let get_div = document.querySelector(`body`);
-
             get_div.classList.toggle(`no-scroll`);
 
-            let hide_bar = document.querySelector('.wrapper_span')
-
             hide_bar.classList.toggle('hide_bar');
-        
         }
         }
 
@@ -159,13 +183,20 @@ display: grid;
 z-index: 98;
 padding-top: 60px;
 transition: 0.4s ease-in-out;
-background-color: #FFFFFF;
 grid-template-rows: 25vh 25vh;
+
+>div{
+
+    >.router{
+        text-decoration: none;
+        color: #FFFFFF;
+    }
+}
 
 }
 .nav_menu{
 
-    background-color: #5F4BB6;
+    background-color: rgba($color: #5F4BB6, $alpha: 0.5);
     
     display: block;
 
