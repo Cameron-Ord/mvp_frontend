@@ -1,21 +1,9 @@
 <template>
-    <div>
+    <div class="div_parent">
         <header class="page_header">
             <nav class="header_span">
-                <div class="menu_div">
-                    <button @click="make_active" class="hamburger">
-                        <div class="bar"></div>
-                    </button>
-                </div>
-                <div class="logo_div">
-
-                    <p>PLACEHOLDER</p>
-
-                </div>
-                <div class="search_bar">
-
-                    <p>PLACEHOLDER</p>
-
+                <div>
+                  <button @click="make_active" class="hamburger"><div class="bar"></div></button>
                 </div>
             </nav>
             <nav class="mobile_nav">
@@ -56,28 +44,39 @@
 </script>
 
 <style lang="scss" scoped>
+.div_parent{
 
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
 .page_header{
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    place-items: center;
+    justify-items: center;
     align-items: center;
     min-height: 10vh;
+    width: 100%;
+
 
     >.header_span{
-
-        display: grid;
-        align-items: center;
         justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        display:grid;
+        width: 100%;
 
-        >.menu_div{
+        >.div_{
+
             display: grid;
             align-items: center;
             justify-items: center;
-
         }
+
+
+        
+
+
     }
 }
 
@@ -99,10 +98,11 @@ content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color:black;
+background-color: white;
+
 margin-top: 6px;
 margin-bottom: 6px;
-transition: 0.4s; 
+transition: 0.4s;
 
 }
 
@@ -132,12 +132,13 @@ width: 100%;
 min-height: 100vh;
 display: block;
 z-index: 98;
-padding-top: 120px;
+padding-top: 60px;
 transition: 0.4s;
+background-color: #FFFFFF;
 
->.nav_menu{
-
-      
+}
+.nav_menu{
+    
     display: block;
 
     text-align: center;
@@ -151,11 +152,7 @@ transition: 0.4s;
     padding: 12px 16px;
 
     text-decoration: none;
-}
-
-
-
-}
+  }
 .mobile_nav.is-active {
 
 right: 0;

@@ -1,7 +1,10 @@
 <template>
-    <div>
+    <div class="main_container">
         <header-comp></header-comp>
+        <main class="page_main">
 
+
+        </main>
         <footer-comp></footer-comp>
     </div>
 </template>
@@ -20,4 +23,18 @@ import FooterComp from '@/components/FooterComp.vue';
 
 <style lang="scss" scoped>
 
+.main_container{
+
+    background-image: url('~@/assets/DSC_3634.JPG');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page_main{
+
+    display: grid;
+    min-height: 80vh;
+}
 </style>
