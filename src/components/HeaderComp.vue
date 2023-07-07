@@ -37,21 +37,21 @@
 
 
             delete_classes(){
-                let menu_btn = document.querySelector(`.hamburger`);
+            let menu_btn = document.querySelector(`.hamburger`);
 
-                let mobile_menu = document.querySelector(`.mobile_nav`);
+            let mobile_menu = document.querySelector(`.mobile_nav`);
 
-                let get_div = document.querySelector(`body`);
+            let get_div = document.querySelector(`body`);
 
-                let hide_bar = document.querySelector('.wrapper_span');
-                
-                menu_btn.classList.remove(`is-active`);
-                
-                mobile_menu.classList.remove(`is-active`);
+            let hide_bar = document.querySelector('.wrapper_span');
+            
+            menu_btn.classList.remove(`is-active`);
+            
+            mobile_menu.classList.remove(`is-active`);
 
-                get_div.classList.remove(`no-scroll`);
+            get_div.classList.remove(`no-scroll`);
 
-                hide_bar.classList.remove('hide_bar');
+            hide_bar.classList.remove('hide_bar');
             },
 
             make_active() {
@@ -78,6 +78,12 @@
 </script>
 
 <style lang="scss" scoped>
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
+
 .div_parent{
 
     display: grid;
@@ -102,6 +108,11 @@
     
 
             >.header_span{
+                animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
             justify-items: center;
             align-items: center;
             display:grid;
