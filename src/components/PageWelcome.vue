@@ -225,13 +225,14 @@
            
                         position: absolute;
                         top: 0;
-                        width: 100%;
+                        width: 85%;
                         height: 100%;
                         border: none;
                         outline: none;
                         font-size: 14px;
                         color: #FFFFFF;
                         background-color: rgba($color: #5F4BB6, $alpha: 0);
+             
                     }
                 }
 
