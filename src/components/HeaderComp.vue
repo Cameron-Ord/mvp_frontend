@@ -13,6 +13,11 @@
                         <router-link to="/" class="nav_menu">About</router-link>
                         <router-link to="/" class="nav_menu">Contact</router-link>
                     </div>
+                    <div>
+                        <p class="nav_menu">example</p>
+                        <p class="nav_menu">example</p>
+                        <p class="nav_menu">example</p>
+                    </div>
                 </nav>
             </div>
         </header>
@@ -40,6 +45,10 @@
             let get_div = document.querySelector(`body`);
 
             get_div.classList.toggle(`no-scroll`);
+
+            let hide_bar = document.querySelector('.wrapper_span')
+
+            hide_bar.classList.toggle('hide_bar');
         
         }
         }
@@ -146,11 +155,12 @@ top: 10vh;
 right: 100%;
 width: 100%;
 min-height: 100vh;
-display: block;
+display: grid;
 z-index: 98;
 padding-top: 60px;
-transition: 0.4s;
+transition: 0.4s ease-in-out;
 background-color: #FFFFFF;
+grid-template-rows: 25vh 25vh;
 
 }
 .nav_menu{
