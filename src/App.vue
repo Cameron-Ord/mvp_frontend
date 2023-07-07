@@ -10,4 +10,10 @@
   margin: 0px;
   padding: 0px;
 }
+
+.no-scroll{
+
+height: 100%;
+overflow-y: hidden;
+}
 </style>
