@@ -7,7 +7,7 @@
                 </div>
                 <nav class="heading_navigation">
                     <div class="browse_link">
-                        <router-link to="/PhotoGallery" class="router"><h3 class="h3_text">Browse</h3></router-link>
+                        <router-link to="/PhotoStream" class="router"><h3 class="h3_text" @click="delete_classes">Browse</h3></router-link>
                     </div>
                     <div class="search">
                         <div class="icon" @click="icon_click"></div>
@@ -27,6 +27,39 @@
 
         methods:{
 
+
+            delete_classes(){
+                let menu_btn = document.querySelector(`.hamburger`);
+
+                let mobile_menu = document.querySelector(`.mobile_nav`);
+
+                let get_div = document.querySelector(`body`);
+
+                let hide_bar = document.querySelector('.wrapper_span');
+
+                let search = document.querySelector('.search');
+
+                let input = document.querySelector('.input');
+
+                let clear = document.querySelector('.clear');
+
+                search.classList.remove('active');
+
+                input.classList.remove('input_active');
+
+                clear.classList.remove('clear_active');
+                
+                menu_btn.classList.remove(`is-active`);
+                
+                mobile_menu.classList.remove(`is-active`);
+
+                get_div.classList.remove(`no-scroll`);
+
+                hide_bar.classList.remove('hide_bar');
+            },
+
+
+            
             clear_bar(){
 
                 document.querySelector('.search_input').value = this.$refs['search_input_value'] = '';
@@ -50,6 +83,7 @@
             }
 
         }
+
         
     }
 </script>
