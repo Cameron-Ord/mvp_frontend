@@ -12,7 +12,7 @@
                     <div class="search">
                         <div class="icon" @click="icon_click"></div>
                         <div class="input">
-                            <input type="text" placeholder="search images" class="search_input" ref="search_input_value" maxlength="12">
+                            <input type="text" placeholder="search images" class="search_input" ref="search_input_value" maxlength="30">
                         </div>
                         <span class="clear" @click="clear_bar"></span>
                     </div>
@@ -70,7 +70,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-rows: 4vh 12vh;
+        grid-template-rows: 8vh 12vh;
         transition: 0.3s ease-in-out;
         opacity: 1;
       
@@ -90,6 +90,13 @@
             -ms-animation: fadeIn 5s;
             >.h1_text{
 
+            
+
+                padding: 10px;
+
+                border-radius: 10px;
+
+                color: rgba($color: #FFFFFF, $alpha: 1);
             }
         }
 
@@ -146,7 +153,7 @@
                 -o-animation: fadeIn 5s;
                 -ms-animation: fadeIn 5s;
                 position: relative;
-                background-color: #FFFFFF;
+                background-color: rgba($color: #5F4BB6, $alpha: 0.75);
                 height: 40px;
                 width: 40px;
                 border-radius: 40px;
@@ -160,7 +167,7 @@
                     content:'';
                     width: 1px;
                     height: 10px;
-                    background-color: black;
+                    background-color: #FFFFFF;
                     transform: rotate(45deg);
                 }
                 >.clear::after{
@@ -169,7 +176,7 @@
                     content:'';
                     width: 1px;
                     height: 10px;
-                    background-color: black;
+                    background-color: #FFFFFF;
                     transform: rotate(315deg);
                 }
 
@@ -184,7 +191,7 @@
                     width: 10px;
                     height: 10px;
                     right: 15px;
-                    background-color: #FFFFFF;
+                
                     cursor: pointer;
                     display: flex;
                     justify-content: center;
@@ -205,11 +212,13 @@
                     position: relative;
                     width: 150px;
                     height: 40px;
-                    left: 50px;
+                    left: 45px;
                     display: flex;
                     justify-items: center;
                     align-items: center;
+               
                     transition: 0.2s ease-in-out;
+                   
 
                     >.search_input{
 
@@ -221,7 +230,8 @@
                         border: none;
                         outline: none;
                         font-size: 14px;
-                        
+                        color: #FFFFFF;
+                        background-color: rgba($color: #5F4BB6, $alpha: 0);
                     }
                 }
 
@@ -231,7 +241,7 @@
                     left: 0;
                     width: 40px;
                     height: 40px;
-                    background-color:#FFFFFF;
+                    
                     display: flex;
                     border-radius: 40px;
                     justify-content: center;
@@ -246,7 +256,7 @@
                     position: absolute;
                     width: 8px;
                     height: 8px;
-                    border: 3px solid #5F4BB6;
+                    border: 3px solid #FFFFFF;
                     border-radius: 50%;
                     transform: translate(-2px,-2px);
                 }
@@ -257,7 +267,7 @@
                     position: absolute;
                     width: 3px;
                     height: 8px;
-                    background-color: #5F4BB6;
+                    background-color: #FFFFFF;
                     transform: translate(6px,6px) rotate(315deg);
                 }
             }

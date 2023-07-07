@@ -52,7 +52,7 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
         justify-items: center;
         align-items: center;
         width: 100%;
-        grid-template-rows: 60vh 30vh;
+        grid-template-rows: 1fr 1fr;
     }
 }
 </style>
