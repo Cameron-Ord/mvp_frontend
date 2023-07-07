@@ -1,16 +1,20 @@
 <template>
     <div class="div_parent">
         <header class="page_header">
-            <nav class="header_span">
-                <div>
-                  <button @click="make_active" class="hamburger"><div class="bar"></div></button>
-                </div>
-            </nav>
-            <nav class="mobile_nav">
-                <div>
-                    <p class="nav_menu">PLACEHOLDER</p>
-                </div>
-            </nav>
+            <div class="wrapper">
+                <nav class="header_span">
+                    <div class="btn_div">
+                    <button @click="make_active" class="hamburger"><div class="bar"></div></button>
+                    </div>
+                </nav>
+                <nav class="mobile_nav">
+                    <div>
+                        <router-link to="/" class="nav_menu">Browse Photos</router-link>
+                        <router-link to="/" class="nav_menu">About</router-link>
+                        <router-link to="/" class="nav_menu">Contact</router-link>
+                    </div>
+                </nav>
+            </div>
         </header>
 
     </div>
@@ -59,25 +63,37 @@
     min-height: 10vh;
     width: 100%;
 
-
-    >.header_span{
-        justify-items: center;
-        align-items: center;
-        display:grid;
+    >.wrapper{
         width: 100%;
+        justify-items: center;
+        display: grid;
+        align-items: center;
 
-        >.div_{
+    
 
-            display: grid;
-            align-items: center;
+            >.header_span{
             justify-items: center;
-        }
+            align-items: center;
+            display:grid;
+            width: 100%;
+            grid-template-columns: 40vw 1fr;
 
+            >.btn_div{
 
-        
+              
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                display: grid;
+                align-items: center;
+                justify-items: center;
+            }
 
 
     }
+    }
+
+
 }
 
 .hamburger{
@@ -98,9 +114,9 @@ content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color: white;
+background-color: #FFFFFF;
 
-margin-top: 6px;
+margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
 
@@ -138,6 +154,8 @@ background-color: #FFFFFF;
 
 }
 .nav_menu{
+
+    background-color: #5F4BB6;
     
     display: block;
 
@@ -145,13 +163,19 @@ background-color: #FFFFFF;
 
     margin: 0 auto 16px;
 
-    width: 100%;
+    width: 35%;
 
     max-width: 200px;
 
     padding: 12px 16px;
 
+    border-radius: 10px;
+
     text-decoration: none;
+
+    color: #FFFFFF;
+
+
   }
 .mobile_nav.is-active {
 
