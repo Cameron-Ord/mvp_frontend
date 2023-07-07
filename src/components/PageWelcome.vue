@@ -37,7 +37,16 @@
 
                 let search = document.querySelector('.search');
 
+                let input = document.querySelector('.input');
+
+                let clear = document.querySelector('.clear');
+
+
                 search.classList.toggle('active');
+
+                input.classList.toggle('input_active');
+
+                clear.classList.toggle('clear_active');
             }
 
         }
@@ -126,7 +135,8 @@
 
 
             >.search.active{
-                width: 200px
+                width: 200px;
+              
             }
             >.search{
 
@@ -163,6 +173,10 @@
                     transform: rotate(315deg);
                 }
 
+                >.clear.clear_active{
+                    opacity: 1;
+                }
+
                 >.clear{
                     position: absolute;
                     top: 50%;
@@ -175,11 +189,19 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    opacity: 0;
+                    transition: 0.3s ease-in-out;
 
                 }
 
+                >.input.input_active{
+
+                    opacity: 1;
+
+                }
                 >.input{
 
+                    opacity: 0;
                     position: relative;
                     width: 150px;
                     height: 40px;
@@ -187,6 +209,7 @@
                     display: flex;
                     justify-items: center;
                     align-items: center;
+                    transition: 0.3s ease-in-out;
 
                     >.search_input{
 
@@ -223,7 +246,7 @@
                     position: absolute;
                     width: 8px;
                     height: 8px;
-                    border: 3px solid blue;
+                    border: 3px solid #5F4BB6;
                     border-radius: 50%;
                     transform: translate(-2px,-2px);
                 }
@@ -234,7 +257,7 @@
                     position: absolute;
                     width: 3px;
                     height: 8px;
-                    background-color: blue;
+                    background-color: #5F4BB6;
                     transform: translate(6px,6px) rotate(315deg);
                 }
             }
