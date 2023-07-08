@@ -1,11 +1,26 @@
 <template>
-    <div>
+    <div class="photostream_container">
+        <header-comp-main></header-comp-main>
+                        <main class="photo_stream_page">
 
+
+                        </main>
+        <footer-comp-main></footer-comp-main>
     </div>
 </template>
 
 <script>
+import FooterCompMain from '@/components/FooterCompMain.vue';
+import HeaderCompMain from '@/components/HeaderCompMain.vue';
     export default {
+
+
+        components:{
+            HeaderCompMain,
+            FooterCompMain
+        },
+
+
         mounted(){
 
             this.delete_classes();
@@ -21,7 +36,7 @@
 
                 let get_div = document.querySelector(`body`);
 
-                let hide_bar = document.querySelector('.wrapper_span');
+                let hide_footer = document.querySelector('.page_footer');
                 
                 menu_btn.classList.remove(`is-active`);
                 
@@ -29,7 +44,8 @@
 
                 get_div.classList.remove(`no-scroll`);
 
-                hide_bar.classList.remove('hide_bar');
+                hide_footer.classList.remove('hide_footer');
+
             },
 
         }
@@ -39,5 +55,16 @@
 
 
 <style lang="scss" scoped>
+.photostream_container{
+
+    background-image: url('~@/assets/DSC_3473.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.photo_stream_page{
+
+    min-height: 80vh;
+}
 
 </style>

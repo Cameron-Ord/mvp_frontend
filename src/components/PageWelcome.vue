@@ -93,6 +93,7 @@
         align-items: center;
         transition: 0.3s ease-in-out;
         opacity: 1;
+        grid-template-rows: 1fr 1fr;
       
 
         >.heading_text{
