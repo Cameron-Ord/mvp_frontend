@@ -109,7 +109,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            color: #FFFFFF;
+            color: #DFD9E2;
             
             animation: fadeIn 3.5s;
             -webkit-animation: fadeIn 3.5s;
@@ -122,7 +122,7 @@
 
                 border-radius: 10px;
 
-                color: rgba($color: #FFFFFF, $alpha: 1);
+                color: rgba($color: #DFD9E2, $alpha: 1);
             }
         }
 
@@ -152,7 +152,7 @@
 
                     display: grid;
                     border-bottom: 2px solid #488286;
-                    color: #FFFFFF;
+                    color: #DFD9E2;
                     font-size: 1.25em;
                     margin-bottom: 10px;
 
@@ -193,7 +193,7 @@
                     content:'';
                     width: 1px;
                     height: 10px;
-                    background-color: #FFFFFF;
+                    background-color: #DFD9E2;
                     transform: rotate(45deg);
                 }
                 >.clear::after{
@@ -202,7 +202,7 @@
                     content:'';
                     width: 1px;
                     height: 10px;
-                    background-color: #FFFFFF;
+                    background-color: #DFD9E2;
                     transform: rotate(315deg);
                 }
 
@@ -256,8 +256,8 @@
                         border: none;
                         outline: none;
                         font-size: 14px;
-                        color: #FFFFFF;
-                        background-color: rgba($color: #5F4BB6, $alpha: 0);
+                        color: #DFD9E2;
+                        background-color: rgba($color: #FFFFFF, $alpha: 0);
                         
              
                     }
@@ -284,7 +284,7 @@
                     position: absolute;
                     width: 8px;
                     height: 8px;
-                    border: 3px solid #FFFFFF;
+                    border: 3px solid #DFD9E2;
                     border-radius: 50%;
                     transform: translate(-2px,-2px);
                 }
@@ -295,7 +295,7 @@
                     position: absolute;
                     width: 3px;
                     height: 8px;
-                    background-color: #FFFFFF;
+                    background-color: #DFD9E2;
                     transform: translate(6px,6px) rotate(315deg);
                 }
             }

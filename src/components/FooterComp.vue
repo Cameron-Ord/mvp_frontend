@@ -38,6 +38,7 @@ export default {
 }
 .page_footer{
 
+    background-color: rgba($color: #488286, $alpha: 0.25);
     display: grid;
     align-items: center;
     justify-items: center;
@@ -51,7 +52,7 @@ export default {
         justify-items: center;
         align-items: center;
         display: grid;
-        color: white;
+        color: #DFD9E2;
 
         >div{
 
@@ -79,7 +80,8 @@ export default {
     >.nav_div{
         display: grid;
         justify-items: center;
-        color: white;
+        align-items: center;
+        color: #DFD9E2;
 
         >nav{
           

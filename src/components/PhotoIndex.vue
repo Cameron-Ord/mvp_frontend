@@ -121,14 +121,16 @@ opacity: 0;
             display: grid;
             align-self: center;
             justify-self: center;
-            width: 100%;
+            width: 0%;
+            height: 100%;
             max-width: 300px;
             
-            border-radius: 10px;
+            border-radius: 50%;
+            object-fit: cover;
 
             border-style: solid;
-            color: #FFFFFF;
-            border-width: 5px;
+            color: rgba($color: #488286, $alpha: 0.25);
+            border-width: 15px;
             
 
         }
@@ -143,14 +145,17 @@ opacity: 0;
             display: grid;
             justify-items: center;
 
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgba($color: #488286, $alpha: 0.25);
 
             >.arrow_border{
 
              
                 height: 20px;
                 width: 20px;
-                border-top: 6px solid #FFFFFF;
-                border-left: 6px solid #FFFFFF;
+                border-top: 6px solid #DFD9E2;
+                border-left: 6px solid #DFD9E2;
                 transform: rotate(45deg);
 
          
@@ -166,13 +171,17 @@ opacity: 0;
             align-items: center;
             display: grid;
             justify-items: center;
+
+            padding: 10px;
+            border-radius: 50%;
+            background-color: rgba($color: #488286, $alpha: 0.25);
             >.arrow_border{
 
                 
                 height: 20px;
                 width: 20px;
-                border-top: 6px solid #FFFFFF;
-                border-left: 6px solid #FFFFFF;
+                border-top: 6px solid #DFD9E2;
+                border-left: 6px solid #DFD9E2;
                 transform: rotate(45deg);
      
          
@@ -225,7 +234,7 @@ opacity: 0;
     >.image_box{
   
         width: 100%;    
-
+    
         max-width: 500px;
         
 
