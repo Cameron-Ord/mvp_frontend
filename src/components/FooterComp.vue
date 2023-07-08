@@ -1,5 +1,5 @@
 <template>
-    <div class="footer_parent">
+   
         <div class="page_footer">
             <div class="credits_div">
                 <div>
@@ -18,7 +18,7 @@
         </div>
 
 
-    </div>
+
 </template>
 
 <script>
@@ -64,13 +64,13 @@ export default {
 
 
             >p{
-
                 margin-left: 10px;
             }
 
             >h2{
 
 
+                font-size: 1em;
                 margin-left: 10px;
 
             }

@@ -1,5 +1,4 @@
 <template>
-    <div class="top">
         <article class="nav_welcome">
             <span class="wrapper_span">
                 <div class="heading_text">
@@ -19,7 +18,6 @@
                 </nav>
             </span>
         </article>
-    </div>
 </template>
 
 <script>
@@ -76,17 +74,12 @@
 
 <style lang="scss" scoped>
 
-.top{
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    height: 100%;
-}
 .nav_welcome{
 
     display: grid;
     justify-items: center;
     align-items: center;
+    margin-bottom: 50px;
  
 
 
@@ -98,7 +91,6 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-rows: 1fr 1fr;
         transition: 0.3s ease-in-out;
         opacity: 1;
       
@@ -307,15 +299,15 @@
 @media only screen and (min-width: 770px){
 .nav_welcome{
 
+  margin-bottom: 75px;
 }
 }
 
 
 @media only screen and (min-width: 1024px){
 .nav_welcome{
-    display: grid;
-    justify-items: center;
-    align-items: center;
+
+   margin-bottom: 100px;
 }
 
 .heading_navigation{
@@ -327,10 +319,6 @@ grid-template-columns: 1fr 1fr;
 
 }
 .nav_welcome{
-
-display: grid;
-justify-items: center;
-align-items: center;
 
 
 >.wrapper_span{

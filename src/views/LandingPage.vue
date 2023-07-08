@@ -3,9 +3,9 @@
         <header-comp></header-comp>
         <main class="page_main">
             <section class="section_main">
+            
                 <page-welcome></page-welcome>
-                <photo-index></photo-index>
-
+            
             </section>
         </main>
         <footer-comp></footer-comp>
@@ -16,14 +16,14 @@
 import HeaderComp from '@/components/HeaderComp.vue';
 import FooterComp from '@/components/FooterComp.vue';
 import PageWelcome from '@/components/PageWelcome.vue';
-import PhotoIndex from '@/components/PhotoIndex.vue';
+
     export default {
         
         components:{
             HeaderComp,
             FooterComp,
             PageWelcome,
-            PhotoIndex
+            
         },
 
         mounted(){
@@ -52,7 +52,7 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
 
                 let hide_footer = document.querySelector('.page_footer');
 
-                let hide_images = document.querySelector('.wrapper_article');
+        
 
                 search.classList.remove('active');
 
@@ -70,8 +70,7 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
 
                 hide_footer.classList.remove('hide_footer');
 
-                hide_images.classList.remove('hide_image');
-
+       
      
             },
 
@@ -92,52 +91,20 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
 
 .page_main{
 
-    display: grid;
-    justify-items: center;
-    align-items: center;
     min-height: 80vh;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
 
     >.section_main{
-        display: grid;
-        justify-items: center;
+
+        display:grid;
         align-items: center;
-        width: 100%;
+        justify-items: center;
         height: 100%;
-        grid-template-rows: 1fr 2fr;
     }
 }
-
-
-@media only screen and (min-width: 770px){
-.page_main{
-
-    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-
-
->.section_main{
-    grid-template-rows: 1fr 2fr;
-    height: 100%;
-}
-}
-
-
-}
-
-@media only screen and (min-width: 1024px){
-.page_main{
-
-grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
-justify-items: center;
-align-items: center;
-
-
->.section_main{
-justify-content: center;
-justify-items: center;
-grid-template-rows: 1fr 2fr;
-}
-}
-    
-}
+@media only screen and (min-width: 770px){}
+@media only screen and (min-width: 1024px){}
 </style>

@@ -1,5 +1,5 @@
 <template>
-    <div class="div_parent">
+  
         <header class="page_header">
             <div class="wrapper">
                 <nav class="header_span">
@@ -22,7 +22,7 @@
             </div>
         </header>
 
-    </div>
+
 </template>
 
 <script>
@@ -72,13 +72,9 @@
 
             let hide_bar = document.querySelector('.wrapper_span');
 
-            let hide_images = document.querySelector('.wrapper_article');
-
             let hide_footer = document.querySelector('.page_footer');
 
             hide_footer.classList.toggle('hide_footer');
-
-            hide_images.classList.toggle('hide_image');
 
             menu_btn.classList.toggle(`is-active`);
 
@@ -100,12 +96,6 @@
     100% {opacity: 1}
 }
 
-.div_parent{
-
-    display: grid;
-    justify-items: center;
-    align-items: center;
-}
 .page_header{
 
     display: grid;
