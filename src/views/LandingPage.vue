@@ -49,7 +49,11 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
                 let input = document.querySelector('.input');
 
                 let clear = document.querySelector('.clear');
-        
+
+                let hide_footer = document.querySelector('.page_footer');
+
+                let hide_images = document.querySelector('.wrapper_article');
+
                 search.classList.remove('active');
 
                 input.classList.remove('input_active');
@@ -63,6 +67,12 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
                 get_div.classList.remove(`no-scroll`);
 
                 hide_bar.classList.remove('hide_bar');
+
+                hide_footer.classList.remove('hide_footer');
+
+                hide_images.classList.remove('hide_image');
+
+     
             },
 
         }
@@ -93,7 +103,35 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
         justify-items: center;
         align-items: center;
         width: 100%;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 2fr;
     }
+}
+
+
+@media only screen and (min-width: 770px){
+.page_main{
+
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+
+
+>.section_main{
+    grid-template-rows: 30vh 2fr;
+}
+}
+
+
+}
+
+@media only screen and (min-width: 1024px){
+.page_main{
+
+grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+
+
+>.section_main{
+grid-template-columns: 1fr 1fr;
+}
+}
+    
 }
 </style>

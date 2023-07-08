@@ -80,6 +80,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
+ 
 
 
     >.wrapper_span.hide_bar{
@@ -90,7 +91,7 @@
         display: grid;
         justify-items: center;
         align-items: center;
-        grid-template-rows: 8vh 12vh;
+        grid-template-rows: 1fr 1fr;
         transition: 0.3s ease-in-out;
         opacity: 1;
       
@@ -112,8 +113,6 @@
 
                 font-size: 1.5em;
 
-                padding: 10px;
-
                 border-radius: 10px;
 
                 color: rgba($color: #FFFFFF, $alpha: 1);
@@ -125,7 +124,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            grid-auto-flow: row;
+            grid-template-rows: 1fr 1fr;
             >.browse_link{
 
                 display: grid;

@@ -1,7 +1,7 @@
 <template>
     <div>
-        <article class="wrapper_article" v-if="j !== undefined">
-            <div class="container">
+        <article class="wrapper_article">
+            <div class="container" v-if="j !== undefined">
                 <div class="arrow_left" @click="prev"><div class="arrow_border"></div></div>
                 <img :src="img_src[j]" alt="" class="image_box">
                 <div class="arrow_right" @click="next"><div class="arrow_border"></div></div>
@@ -26,12 +26,15 @@ import axios from 'axios';
         mounted(){
 
             this.get_image();
+      
+         
 
         },
 
         
 
         methods:{
+
 
 
             next(){
@@ -95,8 +98,8 @@ opacity: 0;
     display: grid;
     align-items: center;
     justify-items: center;
-    grid-template-rows: 40vh;
     transition: 0.3s ease-in-out;
+    grid-template-rows: 1fr;
 
 
     >.container{
@@ -104,11 +107,11 @@ opacity: 0;
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-columns: 25vw 1fr 25vw;
+        grid-template-columns: 20vw 1fr 20vw;
 
         >.image_box{
             display: grid;
-            width: 100%;
+            width: 200px;
             
             border-radius: 10px;
 
@@ -170,6 +173,56 @@ opacity: 0;
 
     }
 }
+@media only screen and (min-width: 770px){
 
 
+
+.wrapper_article{
+
+
+
+
+>.container{
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    >.image_box{
+  
+        width: 80%;    
+
+        
+
+        }
+
+
+    }
+
+}
+}
+@media only screen and (min-width: 1024px){
+.wrapper_article{
+
+
+grid-template-rows: 1fr;
+
+>.container{
+
+
+    grid-template-columns: 1fr 1fr 1fr;
+
+    >.image_box{
+  
+        width: 100%;    
+
+        
+
+        }
+
+
+    }
+
+}
+
+}
 </style>

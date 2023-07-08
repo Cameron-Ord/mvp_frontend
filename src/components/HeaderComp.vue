@@ -46,6 +46,8 @@
             let hide_bar = document.querySelector('.wrapper_span');
 
             let hide_images = document.querySelector('.wrapper_article');
+
+            let hide_footer = document.querySelector('.page_footer');
             
             hide_images.classList.remove('hide_image');
 
@@ -56,6 +58,8 @@
             get_div.classList.remove(`no-scroll`);
 
             hide_bar.classList.remove('hide_bar');
+
+            hide_footer.classList.remove('hide_footer');
             },
 
             make_active() {
@@ -69,6 +73,10 @@
             let hide_bar = document.querySelector('.wrapper_span');
 
             let hide_images = document.querySelector('.wrapper_article');
+
+            let hide_footer = document.querySelector('.page_footer');
+
+            hide_footer.classList.toggle('hide_footer');
 
             hide_images.classList.toggle('hide_image');
 

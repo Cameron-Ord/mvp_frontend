@@ -35,7 +35,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.page_footer.hide_footer{
 
+    opacity: 0;
+}
 .page_footer{
 
     display: grid;
@@ -43,6 +46,7 @@ export default {
     justify-items: center;
     min-height: 10vh;
 
+    transition: 0.3s ease-in-out;
     grid-template-columns: 1fr 1fr;
 
     >.credits_div{
