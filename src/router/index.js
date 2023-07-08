@@ -11,10 +11,10 @@ const routes = [
   {
     path: '/',
     component: LandingPage,
-    name: 'Photostream',
+    name: 'Home',
     meta: [
       {
-        title: 'Photostream',
+        title: 'Home',
       },
       {
         name: 'description',

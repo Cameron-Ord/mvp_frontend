@@ -44,7 +44,11 @@
             let get_div = document.querySelector(`body`);
 
             let hide_bar = document.querySelector('.wrapper_span');
+
+            let hide_images = document.querySelector('.wrapper_article');
             
+            hide_images.classList.remove('hide_image');
+
             menu_btn.classList.remove(`is-active`);
             
             mobile_menu.classList.remove(`is-active`);
@@ -63,6 +67,10 @@
             let get_div = document.querySelector(`body`);
 
             let hide_bar = document.querySelector('.wrapper_span');
+
+            let hide_images = document.querySelector('.wrapper_article');
+
+            hide_images.classList.toggle('hide_image');
 
             menu_btn.classList.toggle(`is-active`);
 
@@ -191,7 +199,7 @@ display: grid;
 z-index: 98;
 padding-top: 60px;
 transition: 0.4s ease-in-out;
-grid-template-rows: 25vh 25vh;
+grid-template-rows: 1fr 2fr;
 
 >div{
 
@@ -204,7 +212,7 @@ grid-template-rows: 25vh 25vh;
 }
 .nav_menu{
 
-    background-color: rgba($color: #5F4BB6, $alpha: 0.5);
+    background-color: rgba($color: #488286, $alpha: 0.5);
     
     display: block;
 

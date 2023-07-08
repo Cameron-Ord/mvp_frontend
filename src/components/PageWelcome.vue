@@ -102,7 +102,7 @@
             justify-items: center;
             align-items: center;
             color: #FFFFFF;
-            font-size: 2em;
+            
             animation: fadeIn 3.5s;
             -webkit-animation: fadeIn 3.5s;
             -moz-animation: fadeIn 3.5s;
@@ -110,7 +110,7 @@
             -ms-animation: fadeIn 3.5s;
             >.h1_text{
 
-            
+                font-size: 1.5em;
 
                 padding: 10px;
 
@@ -125,7 +125,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            grid-template-rows: 8vh 4vh;
+            grid-auto-flow: row;
             >.browse_link{
 
                 display: grid;
@@ -145,9 +145,10 @@
 
 
                     display: grid;
-                    border-bottom: 2px solid #5F4BB6;
+                    border-bottom: 2px solid #488286;
                     color: #FFFFFF;
                     font-size: 1.25em;
+                    margin-bottom: 10px;
 
 
 
@@ -171,13 +172,14 @@
                 -o-animation: fadeIn 3.5s;
                 -ms-animation: fadeIn 3.5s;
                 position: relative;
-                background-color: rgba($color: #5F4BB6, $alpha: 0.75);
+                background-color: rgba($color: #488286, $alpha: 0.75);
                 height: 40px;
                 width: 40px;
                 border-radius: 40px;
                 transition: 0.5s ease-in-out;
                 opacity: 1;
                 overflow: hidden;
+                border: none;
 
                 >.clear::before{
 
@@ -250,6 +252,7 @@
                         font-size: 14px;
                         color: #FFFFFF;
                         background-color: rgba($color: #5F4BB6, $alpha: 0);
+                        
              
                     }
                 }

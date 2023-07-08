@@ -49,7 +49,7 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
                 let input = document.querySelector('.input');
 
                 let clear = document.querySelector('.clear');
-
+        
                 search.classList.remove('active');
 
                 input.classList.remove('input_active');

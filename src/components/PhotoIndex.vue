@@ -1,15 +1,11 @@
 <template>
     <div>
-        <article class="wrapper" v-if="j !== undefined">
-
+        <article class="wrapper_article" v-if="j !== undefined">
             <div class="container">
-                <div class="left_arrow"></div>
+                <div class="arrow_left" @click="prev"><div class="arrow_border"></div></div>
                 <img :src="img_src[j]" alt="" class="image_box">
-                <div class="right_arrow"></div>
+                <div class="arrow_right" @click="next"><div class="arrow_border"></div></div>
             </div>
-
-            
-
         </article>
 
     </div>
@@ -90,23 +86,87 @@ import axios from 'axios';
 </script>
 
 <style lang="scss" scoped>
+.wrapper_article.hide_image{
 
-.wrapper{
+opacity: 0;
+}
+.wrapper_article{
 
     display: grid;
     align-items: center;
     justify-items: center;
+    grid-template-rows: 40vh;
+    transition: 0.3s ease-in-out;
+
 
     >.container{
 
         display: grid;
         align-items: center;
         justify-items: center;
+        grid-template-columns: 25vw 1fr 25vw;
 
         >.image_box{
             display: grid;
-            width: 50%
+            width: 100%;
+            
+            border-radius: 10px;
+
+            border-style: solid;
+            color: #FFFFFF;
+            border-width: 5px;
+            
+
         }
+
+        >.arrow_left{
+
+            height: 30px;
+            width: 30px;
+            transform: rotate(-90deg);
+            cursor: pointer;
+            align-items: center;
+            display: grid;
+            justify-items: center;
+
+
+            >.arrow_border{
+
+             
+                height: 20px;
+                width: 20px;
+                border-top: 6px solid #FFFFFF;
+                border-left: 6px solid #FFFFFF;
+                transform: rotate(45deg);
+
+         
+             
+            }
+        }
+            >.arrow_right{
+
+            height: 30px;
+            width: 30px;
+            transform: rotate(90deg);
+            cursor: pointer;
+            align-items: center;
+            display: grid;
+            justify-items: center;
+            >.arrow_border{
+
+                
+                height: 20px;
+                width: 20px;
+                border-top: 6px solid #FFFFFF;
+                border-left: 6px solid #FFFFFF;
+                transform: rotate(45deg);
+     
+         
+             
+            }
+        }
+
+
 
     }
 }
