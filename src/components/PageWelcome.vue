@@ -311,7 +311,7 @@
 }
 
 
-@media only screen and (min-width: 1024px){}
+@media only screen and (min-width: 1024px){
 .nav_welcome{
     display: grid;
     justify-items: center;
@@ -333,43 +333,23 @@ justify-items: center;
 align-items: center;
 
 
-
->.wrapper_span.hide_bar{
-    opacity: 0;
-}
 >.wrapper_span{
 
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    grid-template-rows: 1fr 1fr;
-    transition: 0.3s ease-in-out;
-    opacity: 1;
+
   
 
     >.heading_text{
 
         
-        display: grid;
-        justify-items: center;
-        align-items: center;
-        color: #FFFFFF;
-        
-        animation: fadeIn 3.5s;
-        -webkit-animation: fadeIn 3.5s;
-        -moz-animation: fadeIn 3.5s;
-        -o-animation: fadeIn 3.5s;
-        -ms-animation: fadeIn 3.5s;
+
         >.h1_text{
 
             font-size: 3em;
 
-            border-radius: 10px;
-
-            color: rgba($color: #FFFFFF, $alpha: 1);
         }
     }
 
+}
 }
 }
 @keyframes fadeIn {
