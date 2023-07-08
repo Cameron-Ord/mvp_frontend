@@ -1,10 +1,16 @@
 <template>
     <div>
-        <div class="wrapper">
+        <article class="wrapper" v-if="j !== undefined">
 
-          <img :src="img_src[0]" alt="">
+            <div class="container">
+                <div class="left_arrow"></div>
+                <img :src="img_src[j]" alt="" class="image_box">
+                <div class="right_arrow"></div>
+            </div>
 
-        </div>
+            
+
+        </article>
 
     </div>
 </template>
@@ -16,7 +22,8 @@ import axios from 'axios';
         data() {
             return {
                 img_src: [],
-                status: undefined
+                status: undefined,
+                j: undefined
             }
         },
 
@@ -29,21 +36,48 @@ import axios from 'axios';
         
 
         methods:{
+
+
+            next(){
+
+                this.j++;
+
+                if (this.j > this.img_src.length - 1) {
+
+                    this.j = 0;
+
+                    }
+
+            },
+
+            prev(){
+
+                this.j--;
+
+                if (this.j < 0) {
+
+                    this.j = this.img_src.length - 1;
+            }
+            },
+
             get_image(){
 
                 axios({
                     url: `${process.env.VUE_APP_BASE_DOMAIN}/api/images`,
-                    responseType: 'blob',
+        
 
                 }).then((res) =>{
 
+                    for(let i = 0; i<res['data'].length; i++){
 
+                        this.img_src.push(res['data'][i]['file_path']);                   
+                    }
+                
                   
-                    this.img_src.push(URL.createObjectURL(res["data"]));
                   
                   
-                    console.log(this.img_src)
 
+                    this.j = 0;
 
                 }).catch(async (err) => {
 
@@ -56,5 +90,26 @@ import axios from 'axios';
 </script>
 
 <style lang="scss" scoped>
+
+.wrapper{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    >.container{
+
+        display: grid;
+        align-items: center;
+        justify-items: center;
+
+        >.image_box{
+            display: grid;
+            width: 50%
+        }
+
+    }
+}
+
 
 </style>
