@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="top">
         <article class="nav_welcome">
             <span class="wrapper_span">
                 <div class="heading_text">
@@ -75,6 +75,13 @@
 </script>
 
 <style lang="scss" scoped>
+
+.top{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
 .nav_welcome{
 
     display: grid;
@@ -297,8 +304,74 @@
     }
 }
 
+@media only screen and (min-width: 770px){
+.nav_welcome{
+
+}
+}
 
 
+@media only screen and (min-width: 1024px){}
+.nav_welcome{
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+.heading_navigation{
+
+display: grid;
+justify-items: center;
+align-items: center;
+grid-template-columns: 1fr 1fr;
+
+}
+.nav_welcome{
+
+display: grid;
+justify-items: center;
+align-items: center;
+
+
+
+>.wrapper_span.hide_bar{
+    opacity: 0;
+}
+>.wrapper_span{
+
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    transition: 0.3s ease-in-out;
+    opacity: 1;
+  
+
+    >.heading_text{
+
+        
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        color: #FFFFFF;
+        
+        animation: fadeIn 3.5s;
+        -webkit-animation: fadeIn 3.5s;
+        -moz-animation: fadeIn 3.5s;
+        -o-animation: fadeIn 3.5s;
+        -ms-animation: fadeIn 3.5s;
+        >.h1_text{
+
+            font-size: 3em;
+
+            border-radius: 10px;
+
+            color: rgba($color: #FFFFFF, $alpha: 1);
+        }
+    }
+
+}
+}
 @keyframes fadeIn {
     0% {opacity: 0;}
     100% {opacity: 1}

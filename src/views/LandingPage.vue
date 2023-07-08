@@ -103,6 +103,7 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
         justify-items: center;
         align-items: center;
         width: 100%;
+        height: 100%;
         grid-template-rows: 1fr 2fr;
     }
 }
@@ -115,7 +116,8 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
 
 
 >.section_main{
-    grid-template-rows: 30vh 2fr;
+    grid-template-rows: 1fr 2fr;
+    height: 100%;
 }
 }
 
@@ -126,10 +128,14 @@ import PhotoIndex from '@/components/PhotoIndex.vue';
 .page_main{
 
 grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+justify-items: center;
+align-items: center;
 
 
 >.section_main{
-grid-template-columns: 1fr 1fr;
+justify-content: center;
+justify-items: center;
+grid-template-rows: 1fr 2fr;
 }
 }
     

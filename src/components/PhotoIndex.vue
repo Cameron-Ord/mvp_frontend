@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="top">
         <article class="wrapper_article">
             <div class="container" v-if="j !== undefined">
                 <div class="arrow_left" @click="prev"><div class="arrow_border"></div></div>
@@ -89,6 +89,14 @@ import axios from 'axios';
 </script>
 
 <style lang="scss" scoped>
+
+
+.top{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+}
 .wrapper_article.hide_image{
 
 opacity: 0;
@@ -99,7 +107,7 @@ opacity: 0;
     align-items: center;
     justify-items: center;
     transition: 0.3s ease-in-out;
-    grid-template-rows: 1fr;
+   
 
 
     >.container{
@@ -107,11 +115,14 @@ opacity: 0;
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-columns: 20vw 1fr 20vw;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
 
         >.image_box{
             display: grid;
-            width: 200px;
+            align-self: center;
+            justify-self: center;
+            width: 100%;
+            max-width: 300px;
             
             border-radius: 10px;
 
@@ -182,6 +193,7 @@ opacity: 0;
 
 
 
+
 >.container{
 
 
@@ -189,7 +201,7 @@ opacity: 0;
 
     >.image_box{
   
-        width: 80%;    
+        width: 90%;    
 
         
 
@@ -204,12 +216,11 @@ opacity: 0;
 .wrapper_article{
 
 
-grid-template-rows: 1fr;
 
 >.container{
 
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 5vw 1fr 5vw;
 
     >.image_box{
   
