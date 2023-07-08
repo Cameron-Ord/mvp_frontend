@@ -115,7 +115,7 @@ opacity: 0;
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-columns: 18vw 1fr 18vw;
 
         >.image_box{
             display: grid;
@@ -197,7 +197,7 @@ opacity: 0;
 >.container{
 
 
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 5vw 1fr 5vw;
 
     >.image_box{
   
