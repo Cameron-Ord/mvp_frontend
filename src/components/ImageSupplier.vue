@@ -1,22 +1,23 @@
 <template>
-    <div class="article_container" v-if="stored_images !== undefined">
-        <article class="image_container" v-for="(image, i) in stored_images" :key="i">
-            <span>
+    <div class="divtacular">
+        <div class="article_container" v-if="stored_images !== undefined">
+            <article class="image_container" v-for="(image, i) in stored_images" :key="i">
+                <span>
 
-                <img :src="image">
+                    <img :src="image">
 
-            </span>
-        </article>
+                </span>
+            </article>
 
-        <div class="load_btn_div">
+            <div class="load_btn_div">
 
-            <button @click="handle_images"><h3>Load more images</h3></button>
+                <button @click="handle_images"><h3>Load more images</h3></button>
 
-            <button @click="back_button" v-if="stored_date !== null"><h3>Go back</h3></button>
+                <button @click="back_button" v-if="stored_date !== null"><h3>Go back</h3></button>
 
         </div>
-
     </div>
+</div>
 </template>
 
 <script>
@@ -130,7 +131,17 @@ import Cookies from 'vue-cookies';
 </script>
 
 <style lang="scss" scoped>
+.divtacular.hide_display_image{
 
+    opacity: 0;
+ 
+}
+.divtacular{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: 0.3s ease-in-out;
+}
 .article_container{
 
     display: grid;
@@ -138,6 +149,7 @@ import Cookies from 'vue-cookies';
     justify-items: center;
     grid-auto-flow: row;
     margin-top: 50px;
+    transition: 0.3s ease-in-out;
 
 
     >.load_btn_div{
