@@ -140,7 +140,11 @@
     }
 
             >.icon_nav{
-
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
                 >.nav_router{
 
                     text-decoration: none;

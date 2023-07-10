@@ -36,6 +36,13 @@ setup () {
 
 opacity: 0;
 }
+
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
+
 .page_footer{
 
 background-color: rgba($color: #FCFAF9, $alpha: 0.50);
@@ -53,6 +60,11 @@ grid-template-columns: 1fr 1fr;
     align-items: center;
     display: grid;
     color: #333333;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 
     >div{
 
@@ -90,6 +102,11 @@ grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: end;
 
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -moz-animation: fadeIn 2s;
+        -o-animation: fadeIn 2s;
+        -ms-animation: fadeIn 2s;
         >img{
             margin-left: 5px;
             margin-right: 5px;

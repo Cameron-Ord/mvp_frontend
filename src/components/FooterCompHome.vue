@@ -36,6 +36,11 @@ export default {
 
     opacity: 0;
 }
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1}
+}
 .page_footer{
 
     background-color: rgba($color: #488286, $alpha: 0.25);
@@ -53,7 +58,11 @@ export default {
         align-items: center;
         display: grid;
         color: #DFD9E2;
-
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -moz-animation: fadeIn 2s;
+        -o-animation: fadeIn 2s;
+        -ms-animation: fadeIn 2s;
         >div{
 
             display: grid;
@@ -82,7 +91,11 @@ export default {
         justify-items: center;
         align-items: center;
         color: #DFD9E2;
-
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -moz-animation: fadeIn 2s;
+        -o-animation: fadeIn 2s;
+        -ms-animation: fadeIn 2s;
         >nav{
           
             display: grid;

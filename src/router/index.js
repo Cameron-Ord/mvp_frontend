@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import LandingPage from '@/views/LandingPage.vue'
 import PhotoStream from '@/views/PhotoStream.vue'
+import ImageLoader from '@/views/ImageLoader.vue'
 
 
 Vue.use(VueRouter)
@@ -30,6 +31,24 @@ const routes = [
     path: '/PhotoStream',
     component: PhotoStream,
     name: 'Photostream',
+    meta: [
+      {
+        title: 'Photostream',
+      },
+      {
+        name: 'description',
+        content: 'Welcome'
+      },
+      {
+        name: 'author',
+        content: 'Cameron Ord'
+      }
+    ]
+  },
+  {
+    path: '/ImageLoader',
+    component: ImageLoader,
+    name: 'Photo Viewer',
     meta: [
       {
         title: 'Photostream',

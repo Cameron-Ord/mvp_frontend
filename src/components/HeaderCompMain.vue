@@ -48,6 +48,8 @@ export default {
 
         let hide_footer = document.querySelector('.page_footer');
 
+        let hide_display = document.querySelector('.summer_article');
+
         menu_btn.classList.remove(`is-active`);
         
         mobile_menu.classList.remove(`is-active`);
@@ -55,6 +57,8 @@ export default {
         get_div.classList.remove(`no-scroll`);
 
         hide_footer.classList.remove('hide_footer');
+
+        hide_display.classList.remove('hide_display');
         },
 
         make_active() {
@@ -66,6 +70,10 @@ export default {
         let get_div = document.querySelector(`body`);
 
         let hide_footer = document.querySelector('.page_footer');
+
+        let hide_display = document.querySelector('.summer_article');
+
+        hide_display.classList.toggle('hide_display');
 
         hide_footer.classList.toggle('hide_footer');
 
@@ -95,7 +103,7 @@ justify-items: center;
 align-items: center;
 min-height: 10vh;
 width: 100%;
-
+background-color: rgba($color: #FCFAF9, $alpha: 0.25);
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -125,13 +133,17 @@ width: 100%;
             display: grid;
             align-items: center;
             justify-items: center;
-            background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+     
         }
   
 }
 
         >.icon_nav{
-
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
             >.nav_router{
 
                 text-decoration: none;
@@ -139,7 +151,7 @@ width: 100%;
 
                     font-size: 2em;
                     color: #333333;
-                    background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+          
                     padding: 5px;
                     border-radius: 10px;
                 }

@@ -2,6 +2,7 @@
     <div class="photostream_container">
         <header-comp-main></header-comp-main>
                         <main class="photo_stream_page">
+                            <summer-pictures></summer-pictures>
 
 
                         </main>
@@ -12,12 +13,14 @@
 <script>
 import FooterCompMain from '@/components/FooterCompMain.vue';
 import HeaderCompMain from '@/components/HeaderCompMain.vue';
+import SummerPictures from '@/components/SummerPictures.vue';
     export default {
 
 
         components:{
             HeaderCompMain,
-            FooterCompMain
+            FooterCompMain,
+            SummerPictures
         },
 
 
@@ -61,10 +64,14 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 .photo_stream_page{
 
     min-height: 80vh;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 </style>
