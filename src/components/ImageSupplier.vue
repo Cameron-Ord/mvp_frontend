@@ -101,7 +101,6 @@ import Cookies from 'vue-cookies';
                 let date_get = Cookies.get('stored_int');
 
 
-                console.log(date_get, type_get)
 
                 axios({
                     url:`${process.env.VUE_APP_BASE_DOMAIN}/api/images-date`,
@@ -140,6 +139,26 @@ import Cookies from 'vue-cookies';
     grid-auto-flow: row;
     margin-top: 50px;
 
+
+    >.load_btn_div{
+
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 50px;
+        width: 100%;
+
+        >button{
+
+            color: #333333;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+            margin-bottom: 5px;
+            width: 40%;
+        }
+    }
 }
 .image_container{
 
