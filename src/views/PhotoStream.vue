@@ -72,6 +72,7 @@ import SummerPictures from '@/components/SummerPictures.vue';
     display: grid;
     align-items: center;
     justify-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(250, 1fr));
 }
 
 </style>

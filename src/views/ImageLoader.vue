@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="image_loader_parent_div">
         <header-comp-main></header-comp-main>
                 <main>
                     <section>
@@ -47,5 +47,27 @@ import FooterCompMain from '@/components/FooterCompMain.vue';
 </script>
 
 <style lang="scss" scoped>
+.image_loader_parent_div{
 
+    background-image: url('~@/assets/DSCF4028.JPG');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main{
+
+    display:grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-rows: repeat(auto-fit, minmax(250px, 1fr));
+    min-height: 80vh;
+
+    >section{
+
+        display:grid;
+        align-items: center;
+        justify-items: center;        
+    }
+}
 </style>
