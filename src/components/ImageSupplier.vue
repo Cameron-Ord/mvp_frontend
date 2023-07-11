@@ -4,16 +4,16 @@
             <article class="image_container" v-for="(image, i) in stored_images" :key="i">
                 <span>
 
-                    <img :src="image">
+                    <img :src="image" class="fade_in">
 
                 </span>
             </article>
 
             <div class="load_btn_div">
 
-                <button @click="handle_images"><h3>Load more images</h3></button>
+                <h3 @click="handle_images" class="load_button">Load more images</h3>
 
-                <button @click="back_button" v-if="stored_date !== null"><h3>Go back</h3></button>
+                <h3 @click="back_button" v-if="stored_date !== null" class="back_button">Go back</h3>
 
         </div>
     </div>
@@ -52,8 +52,11 @@ import Cookies from 'vue-cookies';
             handle_images(){
 
                 this.get_created_at();
+               
                 this.get_images();
 
+            
+              
             },
 
 
@@ -131,6 +134,20 @@ import Cookies from 'vue-cookies';
 </script>
 
 <style lang="scss" scoped>
+
+.fade_in{
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
+
 .divtacular.hide_display_image{
 
     opacity: 0;
@@ -150,7 +167,11 @@ import Cookies from 'vue-cookies';
     grid-auto-flow: row;
     margin-top: 50px;
     transition: 0.3s ease-in-out;
-
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 
     >.load_btn_div{
 
@@ -161,14 +182,30 @@ import Cookies from 'vue-cookies';
         margin-top: 50px;
         width: 100%;
 
-        >button{
+        >.back_button{
 
-            color: #333333;
+            text-align: center;
+            color: #F7F7F2;
             padding: 5px;
             border-radius: 5px;
-            background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+            background-color: rgba($color: #899878, $alpha: 0.85);
             margin-bottom: 5px;
-            width: 40%;
+            width: 25%;
+            cursor: pointer;
+        }
+
+        >.load_button{
+
+
+            text-align: center;
+            color: #F7F7F2;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: rgba($color: #899878, $alpha: 0.85);
+            margin-bottom: 5px;
+            width: 50%;
+            cursor: pointer;
+
         }
     }
 }
@@ -190,7 +227,6 @@ import Cookies from 'vue-cookies';
         >img{
 
             padding: 10px;
-            background-color: rgba($color: #FCFAF9, $alpha: 0.50);
             width: 90%;
             border-radius: 5px;
         }

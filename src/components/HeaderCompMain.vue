@@ -48,7 +48,7 @@ export default {
 
         let hide_footer = document.querySelector('.page_footer');
 
-        let hide_display = document.querySelector('.summer_article');
+        let hide_display = document.querySelector('.photo_stream_section');
 
         menu_btn.classList.remove(`is-active`);
         
@@ -71,7 +71,7 @@ export default {
 
         let hide_footer = document.querySelector('.page_footer');
 
-        let hide_display = document.querySelector('.summer_article');
+        let hide_display = document.querySelector('.photo_stream_section');
 
         hide_display.classList.toggle('hide_display');
 
@@ -103,7 +103,7 @@ justify-items: center;
 align-items: center;
 min-height: 10vh;
 width: 100%;
-background-color: rgba($color: #FCFAF9, $alpha: 0.25);
+background-color: rgba($color: #488286 , $alpha: 0.85);
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -150,7 +150,8 @@ background-color: rgba($color: #FCFAF9, $alpha: 0.25);
                 >.nav_icon_button{
 
                     font-size: 2em;
-                    color: #333333;
+                    color: #F7F7F2;
+            
           
                     padding: 5px;
                     border-radius: 10px;
@@ -180,7 +181,7 @@ content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color: #333333;
+background-color: #F7F7F2;
 
 margin-top: 5px;
 margin-bottom: 6px;
@@ -222,14 +223,15 @@ grid-template-rows: 1fr 1fr;
 
 >.router{
     text-decoration: none;
-    color: #FFFFFF;
+  
+    color: #F7F7F2;
 }
 }
 
 }
 .nav_menu{
 
-background-color: rgba($color: #FCFAF9, $alpha: 0.5);
+background-color: rgba($color: #488286, $alpha: 0.85);
 
 display: block;
 
@@ -247,7 +249,7 @@ border-radius: 10px;
 
 text-decoration: none;
 
-color: #333333;
+color: #F7F7F2;
 
 
 }

@@ -1,6 +1,6 @@
 <template>
    
-    <div class="page_footer">
+    <div class="page_footer_image">
         <div class="credits_div">
             <div>
                 <h2>Photography portfolio</h2>
@@ -32,7 +32,7 @@ setup () {
 </script>
 
 <style lang="scss" scoped>
-.page_footer.hide_footer{
+.page_footer_image.hide_footer{
 
 opacity: 0;
 }
@@ -43,9 +43,9 @@ opacity: 0;
     100% {opacity: 1}
 }
 
-.page_footer{
+.page_footer_image{
 
-background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+
 display: grid;
 align-items: center;
 justify-items: center;
@@ -59,7 +59,7 @@ grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     display: grid;
-    color: #333333;
+    color: #F7F7F2;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
     -moz-animation: fadeIn 2s;
@@ -77,6 +77,8 @@ grid-template-columns: 1fr 1fr;
 
         >p{
             margin-left: 10px;
+            padding: 5px;
+            border-radius: 5px;
         }
 
         >h2{
@@ -84,6 +86,9 @@ grid-template-columns: 1fr 1fr;
 
             font-size: 1em;
             margin-left: 10px;
+            width: 60%;
+            padding: 5px;
+            border-radius: 5px;
 
         }
     }
@@ -93,7 +98,7 @@ grid-template-columns: 1fr 1fr;
     display: grid;
     justify-items: center;
     align-items: center;
-    color: #DFD9E2;
+    color: #899878;
 
     >nav{
       
@@ -117,7 +122,7 @@ grid-template-columns: 1fr 1fr;
 }
 @media only screen and (min-width: 770px){
 
-.page_footer{
+.page_footer_image{
 
 >.credits_div{
 
@@ -158,7 +163,7 @@ grid-template-columns: 1fr 1fr;
 @media only screen and (min-width: 1024px){
 
 
-.page_footer{
+.page_footer_image{
 
 >.credits_div{
 

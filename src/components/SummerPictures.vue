@@ -111,10 +111,6 @@ import Cookies from 'vue-cookies';
 100% {opacity: 1}
 }
 
-.summer_article.hide_display{
-
-    opacity: 0;
-}
 .summer_article{
 
     display: grid;
@@ -126,7 +122,7 @@ import Cookies from 'vue-cookies';
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-rows: 15vh 1fr 8vh;
+        grid-template-rows: 8vh 1fr 8vh;
 
         animation: fadeIn 4s;
         -webkit-animation: fadeIn 4s;
@@ -135,8 +131,9 @@ import Cookies from 'vue-cookies';
         -ms-animation: fadeIn 4s;
 
         >h2{
-            color: #333333;
-            background-color: rgba($color: #FCFAF9, $alpha: 0.5);
+            color: #F7F7F2;
+  
+            background-color: rgba($color: #488286, $alpha: 0.85);
             padding: 5px;
             border-radius: 10px;
         }
@@ -146,16 +143,18 @@ import Cookies from 'vue-cookies';
             text-decoration: none;
 
             >.p_tag_summer{
-                color: #333333;
-                background-color: rgba($color: #FCFAF9, $alpha: 0.5);
-                padding: 5px;
+                color: #F7F7F2;
+          
+                padding: 10px;
                 border-radius: 10px;
+
+                background-color: rgba($color: #488286, $alpha: 0.85);
             }
         }
 
         >img{
-            background-color: rgba($color: #FCFAF9, $alpha: 0.5);
-            border-radius: 10px;
+
+            border-radius: 15px;
             width: 70%;
             padding: 10px;
         }

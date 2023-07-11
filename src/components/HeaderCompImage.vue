@@ -1,6 +1,6 @@
 <template>
   
-    <header class="page_header">
+    <header class="page_header_image">
         <div class="wrapper">
             <nav class="header_span">
                 <div class="btn_div">
@@ -46,7 +46,7 @@ export default {
 
         let get_div = document.querySelector(`body`);
 
-        let hide_footer = document.querySelector('.page_footer');
+        let hide_footer = document.querySelector('.page_footer_image');
 
         let hide_display_image_supplier = document.querySelector('.divtacular');
 
@@ -69,15 +69,11 @@ export default {
 
         let get_div = document.querySelector(`body`);
 
-        let hide_footer = document.querySelector('.page_footer');
+        let hide_footer = document.querySelector('.page_footer_image');
 
         let hide_display_image_supplier = document.querySelector('.divtacular');
 
         hide_display_image_supplier.classList.toggle('hide_display_image');
-
-
-        console.log(hide_display_image_supplier)
-
 
         hide_footer.classList.toggle('hide_footer');
 
@@ -99,7 +95,7 @@ export default {
 100% {opacity: 1}
 }
 
-.page_header{
+.page_header_image{
 
 display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -107,7 +103,6 @@ justify-items: center;
 align-items: center;
 min-height: 10vh;
 width: 100%;
-background-color: rgba($color: #FCFAF9, $alpha: 0.25);
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -154,7 +149,7 @@ background-color: rgba($color: #FCFAF9, $alpha: 0.25);
                 >.nav_icon_button{
 
                     font-size: 2em;
-                    color: #333333;
+                    color: #F7F7F2;
           
                     padding: 5px;
                     border-radius: 10px;
@@ -184,7 +179,7 @@ content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color: #333333;
+background-color: #F7F7F2;
 
 margin-top: 5px;
 margin-bottom: 6px;
@@ -233,7 +228,7 @@ grid-template-rows: 1fr 1fr;
 }
 .nav_menu{
 
-background-color: rgba($color: #FCFAF9, $alpha: 0.5);
+background-color: rgba($color: #899878, $alpha: 0.85);
 
 display: block;
 
@@ -251,7 +246,7 @@ border-radius: 10px;
 
 text-decoration: none;
 
-color: #333333;
+color: #F7F7F2;
 
 
 }

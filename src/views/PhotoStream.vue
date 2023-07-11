@@ -2,7 +2,10 @@
     <div class="photostream_container">
         <header-comp-main></header-comp-main>
                         <main class="photo_stream_page">
+                            <section class="photo_stream_section">
                             <summer-pictures></summer-pictures>
+                            <black-white-pictures></black-white-pictures>
+                            </section>
 
 
                         </main>
@@ -14,10 +17,12 @@
 import FooterCompMain from '@/components/FooterCompMain.vue';
 import HeaderCompMain from '@/components/HeaderCompMain.vue';
 import SummerPictures from '@/components/SummerPictures.vue';
+import BlackWhitePictures from '@/components/BlackWhitePictures.vue';
     export default {
 
 
         components:{
+            BlackWhitePictures,
             HeaderCompMain,
             FooterCompMain,
             SummerPictures
@@ -58,14 +63,16 @@ import SummerPictures from '@/components/SummerPictures.vue';
 
 
 <style lang="scss" scoped>
+
+
+.photo_stream_section.hide_display{
+
+    opacity: 0;
+}
 .photostream_container{
 
-    background-image: url('~@/assets/DSC_3473.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
+    background-color: rgba($color: #F7F7F2, $alpha: 1);
+}  
 .photo_stream_page{
 
     min-height: 80vh;
@@ -73,6 +80,19 @@ import SummerPictures from '@/components/SummerPictures.vue';
     align-items: center;
     justify-items: center;
     grid-template-rows: repeat(auto-fit, minmax(250, 1fr));
+
+    >.photo_stream_section{
+
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        margin-top: 50px;
+        transition: 0.3s ease-in-out;
+
+    }
+
+
 }
+
 
 </style>

@@ -45,7 +45,7 @@ opacity: 0;
 
 .page_footer{
 
-background-color: rgba($color: #FCFAF9, $alpha: 0.50);
+background-color: rgba($color: #488286, $alpha: 0.85);
 display: grid;
 align-items: center;
 justify-items: center;
@@ -59,7 +59,7 @@ grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     display: grid;
-    color: #333333;
+    color: #F7F7F2;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
     -moz-animation: fadeIn 2s;
@@ -73,17 +73,25 @@ grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: start;
         text-align: start;
+       
 
 
         >p{
+         
             margin-left: 10px;
+            padding: 5px;
+            border-radius: 5px;
+       
         }
 
         >h2{
 
-
             font-size: 1em;
             margin-left: 10px;
+            width: 55%;
+            padding: 5px;
+            border-radius: 5px;
+
 
         }
     }
@@ -93,7 +101,7 @@ grid-template-columns: 1fr 1fr;
     display: grid;
     justify-items: center;
     align-items: center;
-    color: #DFD9E2;
+    color: #F7F7F2;
 
     >nav{
       

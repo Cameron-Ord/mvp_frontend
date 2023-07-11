@@ -83,7 +83,7 @@ import PageWelcome from '@/components/PageWelcome.vue';
 .main_container{
 
     background-image: url('~@/assets/DSC_3634.JPG');
-
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
