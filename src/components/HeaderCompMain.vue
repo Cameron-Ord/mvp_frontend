@@ -23,6 +23,21 @@
                 </div>
             </nav>
         </div>
+        <div class="desktop_wrapper">
+            <nav>
+                <div class="icon_div">
+                <h1 class="icon">[C]</h1>
+                </div>
+                <div class="htag_div">
+
+                    <router-link to="/PhotoStream" class="router"><h2 class="nav_tag">Browse</h2></router-link>
+                    <router-link to="/AboutPage" class="router"><h2 class="nav_tag">About</h2></router-link>
+                    <router-link to="/ContactPage" class="router"><h2 class="nav_tag">Contact</h2></router-link>
+                    <a class="router" href="https://www.linkedin.com/in/camord34/" target="_blank"><h2 class="nav_tag">LinkedIn</h2></a>
+
+                </div>
+            </nav>
+        </div>
     </header>
 
 
@@ -89,6 +104,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+.desktop_wrapper{
+
+display: none;
+}
 
 @keyframes fadeIn {
 0% {opacity: 0;}
@@ -258,12 +278,205 @@ right: 0;
 }
 @media only screen and (min-width: 770px){
 
+.desktop_wrapper{
+
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
+
+.page_header{
+
+>.wrapper{
+        >.header_span{
+        >.btn_div{
+        }
+  
+}
+        >.icon_nav{
+            >.nav_router{
+
+           
+                >.nav_icon_button{
+
+                }
+            }
+        }
+}
+
+
+}
+
+.hamburger{
+
+}
+
+
+.hamburger .bar, .hamburger:after, .hamburger:before{
+
+}
+
+
+.hamburger.is-active:before {
+
+}
+
+.hamburger.is-active:after {
+
+}
+
+.hamburger.is-active .bar {
+
+
+
+}
+
+.mobile_nav {
+
+
+
+>div{
+
+>.router{
+
+}
+}
+
+}
+.nav_menu{
+
+}
+.mobile_nav.is-active {
+
+}
 
 }
 
 
 @media only screen and (min-width: 1024px){
+.desktop_wrapper{
 
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    >nav{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr 3fr;
+
+        width: 100%;
+       
+        >.htag_div{
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+          
+            >.router{
+
+                text-decoration: none;
+                color: #F7F7F2;
+                cursor: pointer;
+
+                >.nav_tag{
+
+                    cursor: pointer;
+                    color: #F7F7F2;
+                    border-bottom: #F7F7F2 solid 2px;
+
+
+                }
+            }
+
+        }
+       
+        >.icon_div{
+            font-size: 1.5em;
+            cursor: pointer;
+            width: 100%;
+            color: #F7F7F2;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
+
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
+
+.page_header{
+
+>.wrapper{
+    display: none;
+        >.header_span{
+        >.btn_div{
+        }
+  
+}
+        >.icon_nav{
+            >.nav_router{
+
+           
+                >.nav_icon_button{
+
+                }
+            }
+        }
+}
+
+
+}
+
+.hamburger{
+
+}
+
+
+.hamburger .bar, .hamburger:after, .hamburger:before{
+
+}
+
+
+.hamburger.is-active:before {
+
+}
+
+.hamburger.is-active:after {
+
+}
+
+.hamburger.is-active .bar {
+
+
+
+}
+
+.mobile_nav {
+
+
+
+>div{
+
+>.router{
+
+}
+}
+
+}
+.nav_menu{
+
+}
+.mobile_nav.is-active {
+
+}
 
 }
 </style>

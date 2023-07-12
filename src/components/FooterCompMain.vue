@@ -4,6 +4,7 @@
         <div class="credits_div">
             <div>
                 <h2>Photography portfolio</h2>
+                <p>by</p>
                 <p>Cameron Ord</p>
             </div>
         </div>
@@ -45,14 +46,14 @@ opacity: 0;
 
 .page_footer{
 
-background-color: rgba($color: #7392B7, $alpha: 0.85);
+
 display: grid;
 align-items: center;
 justify-items: center;
 min-height: 15vh;
 
 transition: 0.3s ease-in-out;
-grid-template-columns: 1fr 1fr;
+grid-template-columns: 2fr 1fr;
 
 >.credits_div{
     justify-items: center;
@@ -64,30 +65,33 @@ grid-template-columns: 1fr 1fr;
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
-
+    background-color: rgba($color: #7392B7, $alpha: 0.85);
+    padding: 8px;
+    border-radius: 8px;
+    width: 82%;
     >div{
 
         display: grid;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
         align-items: center;
-        justify-items: start;
-        text-align: start;
+        justify-items: center;
+        text-align: center;
 
 
         >p{
          
-            margin-left: 10px;
-            padding: 5px;
-            border-radius: 5px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+
         }
 
         >h2{
 
+
+            margin-top: 2px;
+            margin-bottom: 2px;
             font-size: 1em;
-            margin-left: 10px;
-            width: 60%;
-            padding: 5px;
-            border-radius: 5px;
+
 
         }
     }
@@ -98,11 +102,14 @@ grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: center;
     color: #DFD9E2;
-
+    background-color: rgba($color: #7392B7, $alpha: 0.85);
+    padding: 8px;
+    border-radius: 5px;
     >nav{
       
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: end;
 
@@ -112,6 +119,8 @@ grid-template-columns: 1fr 1fr;
         -o-animation: fadeIn 2s;
         -ms-animation: fadeIn 2s;
         >img{
+            margin-top: 5px;
+            margin-bottom: 5px;
             margin-left: 5px;
             margin-right: 5px;
             width: 25px;
@@ -166,18 +175,24 @@ grid-template-columns: 1fr 1fr;
 
 >.credits_div{
 
-
+    align-items: center;
+    justify-items: center;
 >div{
 
 
-
-
+    align-items: center;
+    justify-items: start;
+    grid-template-rows: 1fr 1fr;
+    text-align: start;
     >p{
-
+        align-items: center;
+        justify-items: center;
     }
 
     >h2{
-
+        margin-top: 20px;
+        align-items: center;
+        justify-items: center;
 
         font-size: 1.50em;
         margin-left: 10px;
@@ -190,10 +205,14 @@ grid-template-columns: 1fr 1fr;
 
 
 >nav{
+
+    grid-template-columns: 1fr 1fr;
   
+    grid-template-rows: 1fr 1fr;
 
     >img{
 
+        margin-top: 10px;
     }
 }
 }
