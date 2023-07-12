@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header-comp-home></header-comp-home>
+        <header-comp-main></header-comp-main>
 
         <main class="contact_page">
             <section class="contact_section">
@@ -9,21 +9,21 @@
             </section>
         </main>
 
-        <footer-comp-home></footer-comp-home>
+        <footer-comp-main></footer-comp-main>
     </div>
 </template>
 
 <script>
 import ContactComp from '@/components/ContactComp.vue';
-import FooterCompHome from '@/components/FooterCompHome.vue';
-import HeaderCompHome from '@/components/HeaderCompHome.vue';
+import FooterCompMain from '@/components/FooterCompMain.vue';
+import HeaderCompMain from '@/components/HeaderCompMain.vue';
     export default {
         
         components:{
 
             ContactComp,
-            HeaderCompHome,
-            FooterCompHome
+            HeaderCompMain,
+            FooterCompMain
         }
     }
 </script>

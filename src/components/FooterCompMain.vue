@@ -170,7 +170,7 @@ grid-template-columns: 2fr 1fr;
 
 
 .page_footer{
-    min-height: 75px;
+    min-height: 125px;
     background-color: rgba($color: #7392B7, $alpha: 0.85);
     grid-template-columns: 3fr 1fr;
     width: 100%;

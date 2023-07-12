@@ -4,7 +4,13 @@
         <div class="wrapper">
             <nav class="header_span">
                 <div class="btn_div">
-                <button @click="make_active" class="hamburger"><div class="bar"></div></button>
+                <button @click="make_active" class="hamburger"><div>
+
+                    <div class="bar_1"></div>
+                    <div class="bar_2"></div>
+                    <div class="bar_3"></div>
+
+                </div></button>
                 </div>
             </nav>
             <nav class="icon_nav">
@@ -12,9 +18,9 @@
             </nav>
             <nav class="mobile_nav">
                 <div>
-                    <router-link to="/PhotoStream" class="router"><h3 class="nav_menu" @click="delete_classes">Browse</h3></router-link>
-                    <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="delete_classes">About</h3></router-link>
-                    <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="delete_classes">Contact</h3></router-link>
+                    <router-link to="/PhotoStream" class="router"><h3 class="nav_menu" @click="handle_click">Browse</h3></router-link>
+                    <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="handle_click">About</h3></router-link>
+                    <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="handle_click">Contact</h3></router-link>
                 </div>
                 <div>
                     <a class="nav_menu" href="https://github.com/NuckenMcFuggets" target="_blank"><h3>Github</h3></a>
@@ -44,6 +50,7 @@
 </template>
 
 <script>
+import Cookies from 'vue-cookies';
 export default {
 
     mounted(){
@@ -52,6 +59,20 @@ export default {
 
     
     methods:{
+
+
+        handle_click(){
+
+            this.delete_classes();
+            this.delete_cookies();
+
+        },
+
+        delete_cookies(){
+                Cookies.remove('stored_int');
+                Cookies.remove('photo_type');
+        },
+
 
 
         delete_classes(){
@@ -65,6 +86,10 @@ export default {
 
         let hide_display = document.querySelector('.photo_stream_section');
 
+        let hide_display_image_supplier = document.querySelector('.divtacular');
+
+        let hide_bar = document.querySelector('.wrapper_span');
+
         menu_btn.classList.remove(`is-active`);
         
         mobile_menu.classList.remove(`is-active`);
@@ -72,8 +97,16 @@ export default {
         get_div.classList.remove(`no-scroll`);
 
         hide_footer.classList.remove('hide_footer');
-
+        if(hide_bar !== null){
+        hide_bar.classList.remove('hide_bar');
+        }
+        if(hide_display !== null){
         hide_display.classList.remove('hide_display');
+        }
+        if(hide_display_image_supplier !== null){
+        hide_display_image_supplier.classList.remove('hide_display_image');
+        }
+
         },
 
         make_active() {
@@ -86,9 +119,11 @@ export default {
 
         let hide_footer = document.querySelector('.page_footer');
 
+        let hide_display_image_supplier = document.querySelector('.divtacular');
+
         let hide_display = document.querySelector('.photo_stream_section');
 
-        hide_display.classList.toggle('hide_display');
+        let hide_bar = document.querySelector('.wrapper_span');
 
         hide_footer.classList.toggle('hide_footer');
 
@@ -97,6 +132,17 @@ export default {
         mobile_menu.classList.toggle(`is-active`);
 
         get_div.classList.toggle(`no-scroll`);
+
+
+        if(hide_bar !== null){
+        hide_bar.classList.toggle('hide_bar');
+        }
+        if(hide_display !== null){
+        hide_display.classList.toggle('hide_display');
+        }
+        if(hide_display_image_supplier !== null){
+        hide_display_image_supplier.classList.toggle('hide_display_image');
+        }
     }
     }
 
@@ -198,31 +244,55 @@ border: none;
 }
 
 
-.hamburger .bar, .hamburger:after, .hamburger:before{
+.hamburger>div>.bar_1{
 content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color: #F7F7F2;
-
 margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
+background-color: #f5f1ed;
 
 }
+.hamburger>div>.bar_2{
+content: '';
+display: block;
+width: 100%;
+height: 5px;
+margin-top: 5px;
+margin-bottom: 6px;
+transition: 0.4s;
+background-color: #f5f1ed;
+}
 
+.hamburger>div>.bar_3{
+content: '';
+display: block;
+width: 100%;
+height: 5px;
+margin-top: 5px;
+margin-bottom: 6px;
+transition: 0.4s;
+background-color: #f5f1ed;
+}
 
-.hamburger.is-active:before {
+.hamburger.is-active>div>.bar_1 {
 
 transform: rotate(-45deg) translate(-8px, 6px);
 }
 
-.hamburger.is-active:after {
+
+.hamburger.is-active>div>.bar_2 {
+opacity: 0;
+}
+
+.hamburger.is-active>div>.bar_3 {
 
 transform: rotate(45deg) translate(-9px, -8px);
 }
 
-.hamburger.is-active .bar {
+.hamburger.is-active .bar_image {
 
 opacity: 0;
 
@@ -307,30 +377,6 @@ right: 0;
             }
         }
 }
-
-
-}
-
-.hamburger{
-
-}
-
-
-.hamburger .bar, .hamburger:after, .hamburger:before{
-
-}
-
-
-.hamburger.is-active:before {
-
-}
-
-.hamburger.is-active:after {
-
-}
-
-.hamburger.is-active .bar {
-
 
 
 }
@@ -438,30 +484,6 @@ right: 0;
             }
         }
 }
-
-
-}
-
-.hamburger{
-
-}
-
-
-.hamburger .bar, .hamburger:after, .hamburger:before{
-
-}
-
-
-.hamburger.is-active:before {
-
-}
-
-.hamburger.is-active:after {
-
-}
-
-.hamburger.is-active .bar {
-
 
 
 }

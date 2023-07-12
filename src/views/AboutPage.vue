@@ -1,6 +1,6 @@
 <template>
     <div class="about_page_div">
-        <header-comp-home></header-comp-home>
+        <header-comp-main></header-comp-main>
 
         <main class="about_main">
             <section class="about_section">
@@ -10,19 +10,19 @@
             </section>
         </main>
 
-        <footer-comp-home></footer-comp-home>
+        <footer-comp-main></footer-comp-main>
     </div>
 </template>
 
 <script>
 import AboutComp from '@/components/AboutComp.vue';
-import FooterCompHome from '@/components/FooterCompHome.vue';
-import HeaderCompHome from '@/components/HeaderCompHome.vue';
+import FooterCompMain from '@/components/FooterCompMain.vue';
+import HeaderCompMain from '@/components/HeaderCompMain.vue';
     export default {
         components:{
 
-            HeaderCompHome,
-            FooterCompHome,
+            HeaderCompMain,
+            FooterCompMain,
             AboutComp
         },
 

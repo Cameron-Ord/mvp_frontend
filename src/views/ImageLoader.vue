@@ -1,27 +1,27 @@
 <template>
     <div class="image_loader_parent_div" v-if="cookie_holder !== null">
-        <header-comp-image></header-comp-image>
+        <header-comp-main></header-comp-main>
                 <main class="image_main">
                     <section>
                         <image-supplier></image-supplier>
                     </section>
                 </main>
-        <footer-comp-image></footer-comp-image>
+        <footer-comp-main></footer-comp-main>
     </div>
 </template>
 
 <script>
 import ImageSupplier from '@/components/ImageSupplier.vue';
-import HeaderCompImage from '@/components/HeaderCompImage.vue';
-import FooterCompImage from '@/components/FooterCompImage.vue';
+import HeaderCompMain from '@/components/HeaderCompMain.vue';
+import FooterCompMain from '@/components/FooterCompMain.vue';
 import Cookies from 'vue-cookies';
     export default {
 
         components:{
 
             ImageSupplier,
-            HeaderCompImage,
-            FooterCompImage
+            HeaderCompMain,
+            FooterCompMain
 
         },
 
