@@ -117,6 +117,10 @@ import Cookies from 'vue-cookies';
     align-items: center;
     justify-items: center;
     transition: 0.3s ease-in-out;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+
 
     >.summer_span{
         display: grid;
@@ -124,6 +128,7 @@ import Cookies from 'vue-cookies';
         justify-items: center;
         grid-template-rows: 8vh 1fr 8vh;
 
+     
         animation: fadeIn 4s;
         -webkit-animation: fadeIn 4s;
         -moz-animation: fadeIn 4s;
@@ -133,9 +138,11 @@ import Cookies from 'vue-cookies';
         >h2{
             color: #F7F7F2;
   
+            font-size: 1em;
             background-color: rgba($color: #488286, $alpha: 0.85);
             padding: 5px;
-            border-radius: 10px;
+            border-radius: 5px;
+        
         }
 
         >.summer_router{
@@ -145,8 +152,10 @@ import Cookies from 'vue-cookies';
             >.p_tag_summer{
                 color: #F7F7F2;
           
-                padding: 10px;
-                border-radius: 10px;
+              
+                font-size: 1em;
+                border-radius: 5px;
+                padding: 5px;
 
                 background-color: rgba($color: #488286, $alpha: 0.85);
             }
@@ -156,9 +165,77 @@ import Cookies from 'vue-cookies';
 
             border-radius: 15px;
             width: 70%;
-            padding: 10px;
+            max-width: 450px;
+          
+            margin-bottom: 10px;
+            margin-top: 10px;
         }
     }
 }
+@media only screen and (min-width: 770px){
+.summer_article{
 
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+>.summer_span{
+    
+    grid-template-rows: 10vh 1fr 10vh;
+
+    >h2{
+
+        font-size: 1.25em;
+    }
+
+    >.summer_router{
+
+
+        >.p_tag_summer{
+
+            font-size: 1.25em;
+        }
+    }
+
+    >img{
+
+        border-radius: 15px;
+        width: 70%;
+        max-width: 650px;
+        padding: 10px;
+    }
+}
+}
+
+}
+
+
+@media only screen and (min-width: 1024px){
+
+.summer_article{
+
+
+
+>.summer_span{
+
+
+>h2{
+
+}
+
+>.summer_router{
+
+
+    >.p_tag_summer{
+
+    }
+}
+
+>img{
+
+    width: 80%;
+    max-width: 750px;
+}
+}
+}
+}
 </style>

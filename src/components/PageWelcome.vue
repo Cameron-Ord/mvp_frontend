@@ -345,5 +345,14 @@ grid-template-columns: 1fr 1fr;
     0% {opacity: 0;}
     100% {opacity: 1}
 }
+@media only screen and (min-width: 770px){
 
+
+}
+
+
+@media only screen and (min-width: 1024px){
+
+
+}
 </style>

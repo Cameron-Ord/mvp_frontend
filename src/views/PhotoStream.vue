@@ -96,10 +96,42 @@ import Cookies from 'vue-cookies';
         justify-items: center;
         margin-top: 50px;
         transition: 0.3s ease-in-out;
+        grid-template-rows: 1fr 1fr;
+  
 
     }
 
 
+}
+@media only screen and (min-width: 770px){
+
+
+}
+@media only screen and (min-width: 1024px){
+
+.photo_stream_page{
+
+min-height: 80vh;
+display: grid;
+align-items: center;
+justify-items: center;
+grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
+
+>.photo_stream_section{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+    transition: 0.3s ease-in-out;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+
+}
+
+
+}
 }
 
 

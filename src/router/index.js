@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 import LandingPage from '@/views/LandingPage.vue'
 import PhotoStream from '@/views/PhotoStream.vue'
 import ImageLoader from '@/views/ImageLoader.vue'
-
+import AboutPage from '@/views/AboutPage.vue'
+import ContactPage from '@/views/ContactPage.vue'
 
 Vue.use(VueRouter)
 
@@ -52,6 +53,42 @@ const routes = [
     meta: [
       {
         title: 'Photostream',
+      },
+      {
+        name: 'description',
+        content: 'Welcome'
+      },
+      {
+        name: 'author',
+        content: 'Cameron Ord'
+      }
+    ]
+  },
+  {
+    path: '/AboutPage',
+    component: AboutPage,
+    name: 'About page',
+    meta: [
+      {
+        title: 'about',
+      },
+      {
+        name: 'description',
+        content: 'Welcome'
+      },
+      {
+        name: 'author',
+        content: 'Cameron Ord'
+      }
+    ]
+  },
+  {
+    path: '/ContactPage',
+    component: ContactPage,
+    name: 'Contact page',
+    meta: [
+      {
+        title: 'Contact',
       },
       {
         name: 'description',

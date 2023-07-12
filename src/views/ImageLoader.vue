@@ -137,6 +137,7 @@ main{
         display:grid;
         align-items: center;
         justify-items: center;        
+        grid-template-rows: auto;
     }
 }
 </style>

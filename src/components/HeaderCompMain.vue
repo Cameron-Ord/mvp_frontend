@@ -256,5 +256,14 @@ color: #F7F7F2;
 
 right: 0;
 }
+@media only screen and (min-width: 770px){
 
+
+}
+
+
+@media only screen and (min-width: 1024px){
+
+
+}
 </style>

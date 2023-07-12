@@ -1,21 +1,22 @@
 <template>
-    <div class="divtacular">
-        <div class="article_container" v-if="stored_images !== undefined">
-            <article class="image_container" v-for="(image, i) in stored_images" :key="i">
-                <span>
+    <div class="over_div">
+        <div class="divtacular">
+            <div class="article_container" v-if="stored_images !== undefined">
+                <article class="image_container" v-for="(image, i) in stored_images" :key="i">
+                    <span>
 
-                    <img :src="image" class="fade_in">
+                        <img :src="image">
 
-                </span>
+                    </span>
             </article>
+        </div>
 
-            <div class="load_btn_div">
+        <div class="load_btn_div">
 
-                <h3 @click="handle_images" class="load_button">Load more images</h3>
-
-                <h3 @click="back_button" class="back_button">Go back</h3>
+            <p class="load_button" @click="handle_images">Load more images</p><p class="back_button" @click="back_button">Go back</p>
 
         </div>
+        
     </div>
 </div>
 </template>
@@ -35,7 +36,7 @@ import Cookies from 'vue-cookies';
         mounted(){
 
             this.get_images();
-            this.get_created_at();
+         
       
         },
 
@@ -133,6 +134,47 @@ import Cookies from 'vue-cookies';
 
 <style lang="scss" scoped>
 
+.over_div{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.load_btn_div{
+
+display: grid;
+align-items: center;
+justify-items: center;
+grid-template-rows: 1fr 1fr;
+margin-top: 50px;
+width: 100%;
+
+>.back_button{
+
+    text-align: center;
+
+    padding: 5px;
+    border-radius: 5px;
+
+    margin-bottom: 5px;
+    width: 25%;
+    cursor: pointer;
+}
+
+>.load_button{
+
+
+    text-align: center;
+
+    padding: 5px;
+    border-radius: 5px;
+
+    margin-bottom: 5px;
+    width: 60%;
+    cursor: pointer;
+
+}
+}
 .fade_in{
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -170,42 +212,6 @@ import Cookies from 'vue-cookies';
     -moz-animation: fadeIn 2s;
     -o-animation: fadeIn 2s;
     -ms-animation: fadeIn 2s;
-
-    >.load_btn_div{
-
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        grid-template-rows: 1fr 1fr;
-        margin-top: 50px;
-        width: 100%;
-
-        >.back_button{
-
-            text-align: center;
-
-            padding: 5px;
-            border-radius: 5px;
-
-            margin-bottom: 5px;
-            width: 25%;
-            cursor: pointer;
-        }
-
-        >.load_button{
-
-
-            text-align: center;
-
-            padding: 5px;
-            border-radius: 5px;
- 
-            margin-bottom: 5px;
-            width: 50%;
-            cursor: pointer;
-
-        }
-    }
 }
 .image_container{
 
@@ -224,10 +230,96 @@ import Cookies from 'vue-cookies';
    
         >img{
 
-            padding: 10px;
+
             width: 90%;
             border-radius: 5px;
         }
     }
+}
+
+@media only screen and (min-width: 770px){
+.load_btn_div{
+
+  
+
+>.back_button{
+
+    width: 12.5%;
+
+}
+
+>.load_button{
+
+    width: 25%;
+
+}
+}
+.divtacular{
+
+}
+.article_container{
+
+}
+.image_container{
+
+
+
+    >span{
+
+   
+        >img{
+
+
+         
+        }
+    }
+}
+}
+
+
+@media only screen and (min-width: 1024px){
+.divtacular{
+
+}
+
+
+.load_btn_div{
+
+  
+
+>.back_button{
+
+    width: 5.5%;
+
+}
+
+>.load_button{
+
+    width: 10%;
+
+}
+}
+.article_container{
+grid-template-columns: 1fr 1fr;
+
+
+}
+.image_container{
+
+
+
+    >span{
+
+   
+        >img{
+
+
+            width: 80%;
+            max-width: 1000px;
+         
+        }
+    }
+}
+
 }
 </style>
