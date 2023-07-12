@@ -118,13 +118,13 @@ import Cookies from 'vue-cookies';
     transition: 0.3s ease-in-out;
     margin-top: 5px;
     margin-bottom: 5px;
-    transform: translateY(-50px);
+    transform: translateY(0px);
    
     >.bw_span{
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-rows: 1fr;
+
 
         animation: fadeIn 4s;
         -webkit-animation: fadeIn 4s;
@@ -144,14 +144,14 @@ import Cookies from 'vue-cookies';
         >.bw_router{
 
             text-decoration: none;
-
+            transform: translateY(-140px);
             >.p_tag_bw{
                 color: #F7F7F2;
                 font-size: 1em;
-                padding: 5px;
+                padding: 25px;
                 border-radius: 5px;
 
-                transform: translateY(-125px);
+               
                 background-color: rgba($color: #7392B7, $alpha: 0.85);
             }
         }
@@ -165,15 +165,13 @@ import Cookies from 'vue-cookies';
             max-width: 225px;
          
             object-fit: cover;
-            margin-bottom: 10px;
-            margin-top: 10px;
         }
     }
 }
 @media only screen and (min-width: 770px){
 .bw_article{
 
-    transform: translateY(-75px);
+    transform: translateY(0px);
 >.bw_span{
 
     >h2{
@@ -182,9 +180,9 @@ import Cookies from 'vue-cookies';
     }
 
     >.bw_router{
-
+        transform: translateY(-250px);
         >.p_tag_bw{
-            transform: translateY(-225px);
+        
             font-size: 1.25em;
         }
     }
@@ -198,8 +196,7 @@ import Cookies from 'vue-cookies';
         max-width: 425px;
         
         object-fit: cover;
-        margin-bottom: 10px;
-        margin-top: 10px;
+
     }
 }
 }
@@ -207,7 +204,7 @@ import Cookies from 'vue-cookies';
 
 @media only screen and (min-width: 1024px){
 .bw_article{
-    transform: translateX(-30px);
+    transform: translateX(-40px);
 >.bw_span{
 
     >h2{
@@ -218,7 +215,7 @@ import Cookies from 'vue-cookies';
     >.bw_router{
 
         >.p_tag_bw{
-            transform: translateY(-275px);
+            transform: translateY(-300px);
             font-size: 1.25em;
         }
     }

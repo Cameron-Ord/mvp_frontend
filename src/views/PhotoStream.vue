@@ -3,8 +3,13 @@
         <header-comp-main></header-comp-main>
                         <main class="photo_stream_page">
                             <section class="photo_stream_section">
-                            <summer-pictures></summer-pictures>
-                            <black-white-pictures></black-white-pictures>
+                                <div class="header_sep">   
+                                    <gallery-header></gallery-header>
+                                    <div class="images_sep">
+                                        <summer-pictures></summer-pictures>
+                                        <black-white-pictures></black-white-pictures>
+                                    </div>
+                                </div>
                             </section>
                         </main>
         <footer-comp-main></footer-comp-main>
@@ -16,6 +21,7 @@ import FooterCompMain from '@/components/FooterCompMain.vue';
 import HeaderCompMain from '@/components/HeaderCompMain.vue';
 import SummerPictures from '@/components/SummerPictures.vue';
 import BlackWhitePictures from '@/components/BlackWhitePictures.vue';
+import GalleryHeader from '@/components/GalleryHeader.vue';
 import Cookies from 'vue-cookies';
     export default {
 
@@ -24,7 +30,8 @@ import Cookies from 'vue-cookies';
             BlackWhitePictures,
             HeaderCompMain,
             FooterCompMain,
-            SummerPictures
+            SummerPictures,
+            GalleryHeader
         },
 
 
@@ -91,12 +98,27 @@ import Cookies from 'vue-cookies';
 
     >.photo_stream_section{
 
+        width: 100%;
         display: grid;
         align-items: center;
         justify-items: center;
         margin-top: 50px;
         transition: 0.3s ease-in-out;
-        grid-template-rows: 1fr 1fr;
+    >.header_sep{
+        width: 100%;
+        display:grid;
+        align-items: center;
+        justify-items: center;
+
+        >.images_sep{
+        
+            transform: translateY(-20px);
+            grid-template-rows: 180px 180px;
+            display:grid;
+            align-items: center;
+            justify-items: center;
+        }
+    }
   
 
     }
@@ -104,7 +126,31 @@ import Cookies from 'vue-cookies';
 
 }
 @media only screen and (min-width: 770px){
+    .photo_stream_page{
+    
 
+
+    grid-template-rows: repeat(auto-fit, minmax(480, 1fr));
+
+    >.photo_stream_section{
+
+
+    >.header_sep{
+
+
+        >.images_sep{
+        
+            transform: translateY(-20px);
+            grid-template-rows: 375px 375px;
+ 
+        }
+    }
+  
+
+    }
+
+
+}
 
 }
 @media only screen and (min-width: 1024px){
@@ -124,8 +170,16 @@ grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
     justify-items: center;
     margin-top: 50px;
     transition: 0.3s ease-in-out;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+
+    >div{
+
+
+        >div{
+
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+        }
+    }
 
 
 }
