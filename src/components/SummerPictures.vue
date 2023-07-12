@@ -75,8 +75,6 @@ import Cookies from 'vue-cookies';
 
                     params:{
 
-                        created_at: this.stored_interval,
-
                         type: 'summer',
                     }
                 }).then((response => {

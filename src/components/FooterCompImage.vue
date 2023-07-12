@@ -50,7 +50,7 @@ display: grid;
 align-items: center;
 justify-items: center;
 min-height: 15vh;
-
+background-color:#252323 ;
 transition: 0.3s ease-in-out;
 grid-template-columns: 1fr 1fr;
 

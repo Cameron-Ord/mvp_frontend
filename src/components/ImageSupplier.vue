@@ -1,24 +1,28 @@
 <template>
-    <div class="over_div">
-        <div class="divtacular">
-            <div class="article_container" v-if="stored_images !== undefined">
-                <article class="image_container" v-for="(image, i) in stored_images" :key="i">
+    
+    <div class="divtacular">
+            <div class="article_container" v-if="(stored_images !== undefined && p !== undefined)">
+                <article class="image_container">
                     <span>
+                        <div @click="prev" class="previous_image">
+                        
+                            <div class="prev_bar_1"></div>
+                            <div class="prev_bar_2"></div>
+                        
+                        </div>
+                        <img :src="stored_images[p]">
+                        <div @click="next" class="next_image">
+                        
+                            <div class="next_bar_1"></div>
+                            <div class="next_bar_2"></div>
 
-                        <img :src="image">
-
+                        </div>
                     </span>
             </article>
         </div>
-
-        <div class="load_btn_div">
-
-            <p class="load_button" @click="handle_images">Load more images</p><p class="back_button" @click="back_button">Go back</p>
-
-        </div>
         
     </div>
-</div>
+
 </template>
 
 <script>
@@ -29,7 +33,8 @@ import Cookies from 'vue-cookies';
             return {
                 stored_images: [],
                 stored_type: undefined,
-                stored_date: undefined
+                stored_date: undefined,
+                p: undefined
             }
         },
 
@@ -43,16 +48,33 @@ import Cookies from 'vue-cookies';
 
         methods:{
 
-            back_button(){
 
-                Cookies.remove('stored_int');
-                this.$router.go();
+            next() {
+
+                this.p++;
+
+                if (this.p > this.stored_images.length - 1) {
+
+                    this.p = 0;
+
+                }
 
             },
 
-            handle_images(){
 
-                this.get_created_at();
+            prev() {
+
+                this.p--;
+
+                if (this.p < 0) {
+
+                    this.p = this.stored_images.length - 1;
+                }
+
+            },
+
+
+            handle_images(){
                
                 this.get_images();
 
@@ -63,16 +85,10 @@ import Cookies from 'vue-cookies';
 
                 let type_get = Cookies.get('photo_type');
 
-                let date_get = Cookies.get('stored_int');
-
-                this.stored_date = Cookies.get('stored_int');
-
                 axios({
 
                     url:`${process.env.VUE_APP_BASE_DOMAIN}/api/images`,
                     params:{
-
-                        created_at: date_get,
 
                         type: type_get
 
@@ -87,7 +103,7 @@ import Cookies from 'vue-cookies';
                         this.stored_images.push(response['data'][i]['file_path']);
                     }
               
-                    
+                    this.p = 0;
 
                 })).catch((err =>{
 
@@ -97,42 +113,76 @@ import Cookies from 'vue-cookies';
 
             },
 
-            get_created_at(){
-
-                let type_get = Cookies.get('photo_type');
-
-                let date_get = Cookies.get('stored_int');
-
-
-
-                axios({
-                    url:`${process.env.VUE_APP_BASE_DOMAIN}/api/images-date`,
-
-                    params:{
-
-                        created_at: date_get,
-
-                        type: type_get,
-
-                    }
-                }).then((response => {
-
-                    Cookies.set('stored_int', response['data'][0]['created_at']);
-                    
-                })).catch((error => {
-
-                    error;
-                }))
-
-            },
-
-
 
         }
     }
 </script>
 
 <style lang="scss" scoped>
+.next_image{
+align-items: center;
+justify-items: center;
+display: grid;
+width: 75px;
+height: 75px;
+cursor: pointer;
+appearance: none;
+background: none;
+outline: none;
+border: none;
+border-radius: 50%;
+background-color:#252323 ;
+>.next_bar_2{
+display: block;
+width: 40px;
+height: 5px;
+
+transition: 0.4s;
+background-color: #f5f1ed;
+
+}
+>.next_bar_1{
+display: block;
+width: 40px;
+height: 5px;
+
+transition: 0.4s;
+background-color: #f5f1ed;
+
+}
+}
+.previous_image{
+align-items: center;
+justify-items: center;
+display: grid;
+width: 75px;
+height: 75px;
+cursor: pointer;
+appearance: none;
+background: none;
+outline: none;
+border: none;
+background-color:#252323 ;
+border-radius: 50%;
+>.prev_bar_2{
+display: block;
+width: 40px;
+height: 5px;
+
+transition: 0.4s;
+background-color: #f5f1ed;
+
+}
+>.prev_bar_1{
+display: block;
+width: 40px;
+height: 5px;
+
+transition: 0.4s;
+background-color: #f5f1ed;
+
+}
+}
 
 .over_div{
 
@@ -140,41 +190,6 @@ import Cookies from 'vue-cookies';
     align-items: center;
     justify-items: center;
     margin-bottom: 25px;
-}
-.load_btn_div{
-
-display: grid;
-align-items: center;
-justify-items: center;
-grid-template-rows: 1fr 1fr;
-margin-top: 50px;
-width: 100%;
-
->.back_button{
-
-    text-align: center;
-
-    padding: 5px;
-    border-radius: 5px;
-
-    margin-bottom: 5px;
-    width: 25%;
-    cursor: pointer;
-}
-
->.load_button{
-
-
-    text-align: center;
-
-    padding: 5px;
-    border-radius: 5px;
-
-    margin-bottom: 5px;
-    width: 60%;
-    cursor: pointer;
-
-}
 }
 .fade_in{
     animation: fadeIn 2s;
@@ -207,6 +222,7 @@ width: 100%;
     justify-items: center;
     grid-auto-flow: row;
     margin-top: 50px;
+    margin-bottom: 50px;
     transition: 0.3s ease-in-out;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
@@ -219,7 +235,7 @@ width: 100%;
     display: grid;
     align-items: center;
     justify-items: center;
-
+    
     margin-top: 10px;
     margin-bottom: 10px;
 
@@ -227,6 +243,7 @@ width: 100%;
         display: grid;
         align-items: center;
         justify-items: center;
+        grid-template-columns: 1fr 1fr 1fr;
         width:90%;
    
         >img{
@@ -301,7 +318,7 @@ width: 100%;
 }
 }
 .article_container{
-grid-template-columns: 1fr 1fr;
+
 
 
 }
