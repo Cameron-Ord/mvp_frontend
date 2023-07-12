@@ -63,12 +63,12 @@ import Cookies from 'vue-cookies';
 
                     for(let i=0; i<nav_menu.length; i++){
 
-                    nav_menu[i]['style']['background-color'] = 'rgba(42, 127, 98, 1)';
+                    nav_menu[i]['style']['background-color'] = 'rgba(42, 127, 98, 0.65)';
                     nav_menu[i]['style']['color'] = '#F7F7F2';
                     }
 
-                    load_button['style']['background-color'] = 'rgba(42, 127, 98, 0.85)';
-                    back_button['style']['background-color'] = 'rgba(42, 127, 98, 0.85)';
+                    load_button['style']['background-color'] = 'rgba(42, 127, 98, 0.65)';
+                    back_button['style']['background-color'] = 'rgba(42, 127, 98, 0.65)';
                     back_button['style']['color'] = '#F7F7F2';
                     load_button['style']['color'] = '#F7F7F2';
                     bar_1['style']['background-color'] = '#F7F7F2';
@@ -76,8 +76,8 @@ import Cookies from 'vue-cookies';
                     bar_3['style']['background-color'] = '#F7F7F2';
                     icon_selection['style']['color'] = '#F7F7F2';
                     bg_selection['style']['background-color'] = '#F7F7F2';
-                    header_selection['style']['background-color'] = 'rgba(42, 127, 98, 0.85)';
-                    footer_selection['style']['background-color'] = 'rgba(42, 127, 98, 0.85)';
+                    header_selection['style']['background-color'] = 'rgba(42, 127, 98, 0.65)';
+                    footer_selection['style']['background-color'] = 'rgba(42, 127, 98, 0.65)';
 
                 }else if(photo_selection === 'black/white'){
 
