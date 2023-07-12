@@ -30,4 +30,24 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 
 <style lang="scss" scoped>
 
+.contact_page{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 80vh;
+    
+    grid-template-rows: repeat(auto-fit, minmax(250, 1fr));
+}
+@media only screen and (min-width: 770px){
+    .contact_page{
+        grid-template-rows: repeat(auto-fit, minmax(480, 1fr));
+    }
+}
+@media only screen and (min-width: 1024px){
+
+    .contact_page{
+        grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
+    }
+}
 </style>

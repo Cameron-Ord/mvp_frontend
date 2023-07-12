@@ -370,7 +370,7 @@ right: 0;
 }
 
 .page_header{
-
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
 >.wrapper{
         >.header_span{
         >.btn_div{
@@ -415,7 +415,7 @@ right: 0;
 
 @media only screen and (min-width: 1024px){
 .page_header{
-
+    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     background-color: rgba($color: #7392B7 , $alpha: 0.85);
     min-height: 75px;
 }

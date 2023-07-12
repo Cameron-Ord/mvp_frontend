@@ -52,6 +52,22 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
         align-items: center;
         justify-items: center;
         min-height: 80vh;
+        grid-template-rows: repeat(auto-fit, minmax(250, 1fr));
+    }
+}
+
+@media only screen and (min-width: 770px){
+
+    .about_main{
+
+        grid-template-rows: repeat(auto-fit, minmax(480, 1fr));
+    }
+}
+@media only screen and (min-width: 1024px){
+
+    .about_main{
+
+        grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
     }
 }
 </style>

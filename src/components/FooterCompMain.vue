@@ -1,7 +1,8 @@
 <template>
    
     <div class="page_footer">
-        <div class="credits_div">
+        <nav class="container_">        
+            <div class="credits_div">
             <div>
                 <h2>Photography portfolio</h2>
                 <p>by</p>
@@ -13,9 +14,9 @@
                 <img src="@/assets/linkedin.png" alt="">
                 <img src="@/assets/Instagram-Icon.png" alt="">
                 <img src="@/assets/facebook.png" alt="">
-
             </nav>
         </div>
+    </nav>
     </div>
 
 
@@ -51,118 +52,129 @@ display: grid;
 align-items: center;
 justify-items: center;
 min-height: 150px;
-
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 transition: 0.3s ease-in-out;
-grid-template-columns: 2fr 1fr;
 
->.credits_div{
-    justify-items: center;
-    align-items: center;
-    display: grid;
-    color: #F7F7F2;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
-    background-color: rgba($color: #7392B7, $alpha: 0.85);
-    padding: 8px;
-    border-radius: 8px;
-    width: 82%;
-    >div{
 
+    >.container_{
         display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
         align-items: center;
         justify-items: center;
-        text-align: center;
+
+        width: 100%;
+        grid-template-columns: 2fr 1fr;
+        >.credits_div{
+            justify-items: center;
+            align-items: center;
+            display: grid;
+            color: #F7F7F2;
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
+            background-color: rgba($color: #7392B7, $alpha: 0.85);
+            padding: 8px;
+            border-radius: 8px;
+            width: 82%;
+            >div{
+
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+                align-items: center;
+                justify-items: center;
+                text-align: center;
 
 
-        >p{
-            margin-top: 2px;
-            margin-bottom: 2px;
+                >p{
+                    margin-top: 2px;
+                    margin-bottom: 2px;
 
+                }
+
+                >h2{
+
+                    margin-top: 2px;
+                    margin-bottom: 2px;
+                    font-size: 1em;
+
+
+                }
+            }
         }
 
-        >h2{
+        >.nav_div{
+            display: grid;
+            justify-items: center;
+            align-items: center;
+            color: #DFD9E2;
+            background-color: rgba($color: #7392B7, $alpha: 0.85);
+            padding: 8px;
+            border-radius: 5px;
+            >nav{
+            
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                justify-items: end;
 
-            margin-top: 2px;
-            margin-bottom: 2px;
-            font-size: 1em;
-
-
+                animation: fadeIn 2s;
+                -webkit-animation: fadeIn 2s;
+                -moz-animation: fadeIn 2s;
+                -o-animation: fadeIn 2s;
+                -ms-animation: fadeIn 2s;
+                >img{
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                    margin-left: 5px;
+                    margin-right: 5px;
+                    width: 25px;
+                }
+            }
         }
     }
-}
-
->.nav_div{
-    display: grid;
-    justify-items: center;
-    align-items: center;
-    color: #DFD9E2;
-    background-color: rgba($color: #7392B7, $alpha: 0.85);
-    padding: 8px;
-    border-radius: 5px;
-    >nav{
-      
-        display: grid;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        justify-items: end;
-
-        animation: fadeIn 2s;
-        -webkit-animation: fadeIn 2s;
-        -moz-animation: fadeIn 2s;
-        -o-animation: fadeIn 2s;
-        -ms-animation: fadeIn 2s;
-        >img{
-            margin-top: 5px;
-            margin-bottom: 5px;
-            margin-left: 5px;
-            margin-right: 5px;
-            width: 25px;
-        }
-    }
-}
 }
 @media only screen and (min-width: 770px){
 
 .page_footer{
 
->.credits_div{
+    grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    >.container_{
+        >.credits_div{
 
 
->div{
+        >div{
 
 
 
 
-    >p{
+            >p{
 
+            }
+
+            >h2{
+
+
+                font-size: 1.25em;
+                margin-left: 10px;
+
+            }
+        }
+        }
+
+        >.nav_div{
+
+
+        >nav{
+        
+
+            >img{
+
+            }
+        }
+        }
     }
-
-    >h2{
-
-
-        font-size: 1.25em;
-        margin-left: 10px;
-
-    }
-}
-}
-
->.nav_div{
-
-
->nav{
-  
-
-    >img{
-
-    }
-}
-}
 }
 
 }
@@ -172,55 +184,61 @@ grid-template-columns: 2fr 1fr;
 .page_footer{
     min-height: 125px;
     background-color: rgba($color: #7392B7, $alpha: 0.85);
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     width: 100%;
->.credits_div{
 
-    width: 100%;
-    background-color: rgba($color: #7392B7, $alpha: 0);
+    >.container_{
 
->div{
+        grid-template-columns: 3fr 1fr;
+        >.credits_div{
 
-    width: 80%;
-    grid-template-rows: 1fr 1fr 1fr;
+            width: 100%;
+            background-color: rgba($color: #7392B7, $alpha: 0);
 
-    align-items: start;
-    justify-items: start;
-    text-align: start;
-    >p{
-    align-items: start;
-    justify-items: start;
-    text-align: start;
+        >div{
+
+            width: 80%;
+            grid-template-rows: 1fr 1fr 1fr;
+
+            align-items: start;
+            justify-items: start;
+            text-align: start;
+            >p{
+            align-items: start;
+            justify-items: start;
+            text-align: start;
+            }
+
+            >h2{
+            align-items: start;
+            justify-items: start;
+            text-align: start;
+            margin-left: 0px;
+
+            }
+        }
+        }
+    
+
+        >.nav_div{
+
+
+            width: 100%;
+            background-color: rgba($color: #7392B7, $alpha: 0);
+        >nav{
+            width: 25%;
+
+            grid-template-columns: 1fr 1fr;
+        
+            grid-template-rows: 1fr 1fr;
+
+            >img{
+
+                margin-top: 10px;
+            }
+        }
+        }
     }
-
-    >h2{
-    align-items: start;
-    justify-items: start;
-    text-align: start;
-    margin-left: 0px;
-
-    }
-}
-}
-
->.nav_div{
-
-
-    width: 100%;
-    background-color: rgba($color: #7392B7, $alpha: 0);
->nav{
-    width: 25%;
-
-    grid-template-columns: 1fr 1fr;
-  
-    grid-template-rows: 1fr 1fr;
-
-    >img{
-
-        margin-top: 10px;
-    }
-}
-}
 }
 
 }

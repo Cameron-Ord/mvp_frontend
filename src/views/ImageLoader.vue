@@ -74,4 +74,17 @@ import Cookies from 'vue-cookies';
         grid-template-rows: auto;
     }
 }
+@media only screen and (min-width: 770px){
+
+    .image_main{
+
+        grid-template-rows: repeat(auto-fit, minmax(480, 1fr));
+    }
+}
+@media only screen and (min-width: 1024px){
+    .image_main{
+
+        grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
+    } 
+}
 </style>

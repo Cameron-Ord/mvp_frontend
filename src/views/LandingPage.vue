@@ -105,6 +105,17 @@ import PageWelcome from '@/components/PageWelcome.vue';
         height: 100%;
     }
 }
-@media only screen and (min-width: 770px){}
-@media only screen and (min-width: 1024px){}
+@media only screen and (min-width: 770px){
+
+    .page_main{
+
+        grid-template-rows: repeat(auto-fit, minmax(480px, 1fr));
+    }
+}
+@media only screen and (min-width: 1024px){
+
+    .page_main{
+        grid-template-rows: repeat(auto-fit, minmax(770px, 1fr));
+    }
+}
 </style>
