@@ -17,9 +17,9 @@
                         <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="delete_classes">Contact</h3></router-link>
                     </div>
                     <div>
-                        <p class="nav_menu">example</p>
-                        <p class="nav_menu">example</p>
-                        <p class="nav_menu">example</p>
+                        <a class="nav_menu" href="https://github.com/NuckenMcFuggets" target="_blank"><h3>Github</h3></a>
+                        <a class="nav_menu" href="https://www.linkedin.com/in/camord34/" target="_blank"><h3>LinkedIn</h3></a>
+                        <a class="nav_menu" href="mailto:cameron.ian.ronald.ord@outlook.com" target="_blank"><h3>Email</h3></a>
                     </div>
                 </nav>
             </div>

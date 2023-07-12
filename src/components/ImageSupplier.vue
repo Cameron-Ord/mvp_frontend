@@ -13,7 +13,7 @@
 
                 <h3 @click="handle_images" class="load_button">Load more images</h3>
 
-                <h3 @click="back_button" v-if="stored_date !== null" class="back_button">Go back</h3>
+                <h3 @click="back_button" class="back_button">Go back</h3>
 
         </div>
     </div>
@@ -55,8 +55,6 @@ import Cookies from 'vue-cookies';
                
                 this.get_images();
 
-            
-              
             },
 
 
@@ -67,7 +65,6 @@ import Cookies from 'vue-cookies';
                 let date_get = Cookies.get('stored_int');
 
                 this.stored_date = Cookies.get('stored_int');
-
 
                 axios({
 
@@ -89,6 +86,7 @@ import Cookies from 'vue-cookies';
                         this.stored_images.push(response['data'][i]['file_path']);
                     }
               
+                    
 
                 })).catch((err =>{
 
@@ -185,10 +183,10 @@ import Cookies from 'vue-cookies';
         >.back_button{
 
             text-align: center;
-            color: #F7F7F2;
+
             padding: 5px;
             border-radius: 5px;
-            background-color: rgba($color: #899878, $alpha: 0.85);
+
             margin-bottom: 5px;
             width: 25%;
             cursor: pointer;
@@ -198,10 +196,10 @@ import Cookies from 'vue-cookies';
 
 
             text-align: center;
-            color: #F7F7F2;
+
             padding: 5px;
             border-radius: 5px;
-            background-color: rgba($color: #899878, $alpha: 0.85);
+ 
             margin-bottom: 5px;
             width: 50%;
             cursor: pointer;

@@ -4,7 +4,13 @@
         <div class="wrapper">
             <nav class="header_span">
                 <div class="btn_div">
-                <button @click="make_active" class="hamburger"><div class="bar"></div></button>
+                <button @click="make_active" class="hamburger_image"><div>
+
+                    <div class="bar_1"></div>
+                    <div class="bar_2"></div>
+                    <div class="bar_3"></div>
+
+                </div></button>
                 </div>
             </nav>
             <nav class="icon_nav">
@@ -12,14 +18,14 @@
             </nav>
             <nav class="mobile_nav">
                 <div>
-                    <router-link to="/PhotoStream" class="router"><h3 class="nav_menu" @click="delete_classes">Browse</h3></router-link>
-                    <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="delete_classes">About</h3></router-link>
-                    <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="delete_classes">Contact</h3></router-link>
+                    <router-link to="/PhotoStream" class="router"><h3 class="nav_menu_image" @click="handle_click">Browse</h3></router-link>
+                    <router-link to="/AboutPage" class="router"><h3 class="nav_menu_image" @click="handle_click">About</h3></router-link>
+                    <router-link to="/ContactPage" class="router"><h3 class="nav_menu_image" @click="handle_click">Contact</h3></router-link>
                 </div>
                 <div>
-                    <p class="nav_menu">example</p>
-                    <p class="nav_menu">example</p>
-                    <p class="nav_menu">example</p>
+                    <a class="nav_menu_image" href="https://github.com/NuckenMcFuggets" target="_blank"><h3>Github</h3></a>
+                    <a class="nav_menu_image" href="https://www.linkedin.com/in/camord34/" target="_blank"><h3>LinkedIn</h3></a>
+                    <a class="nav_menu_image" href="mailto:cameron.ian.ronald.ord@outlook.com" target="_blank"><h3>Email</h3></a>
                 </div>
             </nav>
         </div>
@@ -29,6 +35,7 @@
 </template>
 
 <script>
+import Cookies from 'vue-cookies';
 export default {
 
     mounted(){
@@ -38,9 +45,22 @@ export default {
     
     methods:{
 
+        handle_click(){
+
+            this.delete_classes();
+            this.delete_cookies();
+
+        },
+
+        delete_cookies(){
+                Cookies.remove('stored_int');
+                Cookies.remove('photo_type');
+        },
+
+
 
         delete_classes(){
-        let menu_btn = document.querySelector(`.hamburger`);
+        let menu_btn = document.querySelector(`.hamburger_image`);
 
         let mobile_menu = document.querySelector(`.mobile_nav`);
 
@@ -63,7 +83,7 @@ export default {
 
         make_active() {
 
-        let menu_btn = document.querySelector(`.hamburger`);
+        let menu_btn = document.querySelector(`.hamburger_image`);
 
         let mobile_menu = document.querySelector(`.mobile_nav`);
 
@@ -148,9 +168,8 @@ width: 100%;
                 text-decoration: none;
                 >.nav_icon_button{
 
+               
                     font-size: 2em;
-                    color: #F7F7F2;
-          
                     padding: 5px;
                     border-radius: 10px;
                 }
@@ -161,7 +180,7 @@ width: 100%;
 
 }
 
-.hamburger{
+.hamburger_image{
 position: relative;
 display: block;
 width: 35px;
@@ -174,31 +193,55 @@ border: none;
 }
 
 
-.hamburger .bar, .hamburger:after, .hamburger:before{
+.hamburger_image>div>.bar_1{
 content: '';
 display: block;
 width: 100%;
 height: 5px;
-background-color: #F7F7F2;
+margin-top: 5px;
+margin-bottom: 6px;
+transition: 0.4s;
 
+
+}
+.hamburger_image>div>.bar_2{
+content: '';
+display: block;
+width: 100%;
+height: 5px;
 margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
 
 }
 
+.hamburger_image>div>.bar_3{
+content: '';
+display: block;
+width: 100%;
+height: 5px;
+margin-top: 5px;
+margin-bottom: 6px;
+transition: 0.4s;
 
-.hamburger.is-active:before {
+}
+
+.hamburger_image.is-active>div>.bar_1 {
 
 transform: rotate(-45deg) translate(-8px, 6px);
 }
 
-.hamburger.is-active:after {
+
+.hamburger_image.is-active>div>.bar_2 {
+opacity: 0;
+}
+
+.hamburger_image.is-active>div>.bar_3 {
 
 transform: rotate(45deg) translate(-9px, -8px);
 }
 
-.hamburger.is-active .bar {
+.hamburger_image.is-active .bar_image {
 
 opacity: 0;
 
@@ -221,14 +264,13 @@ grid-template-rows: 1fr 1fr;
 
 >.router{
     text-decoration: none;
-    color: #FFFFFF;
+
+
 }
 }
 
 }
-.nav_menu{
-
-background-color: rgba($color: #899878, $alpha: 0.85);
+.nav_menu_image{
 
 display: block;
 
@@ -245,8 +287,6 @@ padding: 12px 16px;
 border-radius: 10px;
 
 text-decoration: none;
-
-color: #F7F7F2;
 
 
 }

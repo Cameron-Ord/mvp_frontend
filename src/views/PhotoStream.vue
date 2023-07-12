@@ -18,6 +18,7 @@ import FooterCompMain from '@/components/FooterCompMain.vue';
 import HeaderCompMain from '@/components/HeaderCompMain.vue';
 import SummerPictures from '@/components/SummerPictures.vue';
 import BlackWhitePictures from '@/components/BlackWhitePictures.vue';
+import Cookies from 'vue-cookies';
     export default {
 
 
@@ -33,9 +34,16 @@ import BlackWhitePictures from '@/components/BlackWhitePictures.vue';
 
             this.delete_classes();
 
+            this.delete_cookies();
+
         },
 
         methods:{
+
+            delete_cookies(){
+                Cookies.remove('stored_int');
+                Cookies.remove('photo_type');
+            },
 
             delete_classes(){
                 let menu_btn = document.querySelector(`.hamburger`);
