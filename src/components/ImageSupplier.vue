@@ -123,29 +123,29 @@ import Cookies from 'vue-cookies';
 align-items: center;
 justify-items: center;
 display: grid;
-width: 75px;
-height: 75px;
+width: 50px;
+height: 50px;
 cursor: pointer;
 appearance: none;
 background: none;
 outline: none;
 border: none;
 border-radius: 50%;
-background-color:#252323 ;
+
 >.next_bar_2{
 display: block;
-width: 40px;
+width: 30px;
 height: 5px;
-
+transform: rotate(-60deg) translate(6.5px, 10px);
 transition: 0.4s;
 background-color: #f5f1ed;
 
 }
 >.next_bar_1{
 display: block;
-width: 40px;
+width: 30px;
 height: 5px;
-
+transform: rotate(60deg) translate(6.5px, -10px);
 transition: 0.4s;
 background-color: #f5f1ed;
 
@@ -155,29 +155,29 @@ background-color: #f5f1ed;
 align-items: center;
 justify-items: center;
 display: grid;
-width: 75px;
-height: 75px;
+width: 50px;
+height: 50px;
 cursor: pointer;
 appearance: none;
 background: none;
 outline: none;
 border: none;
-background-color:#252323 ;
+
 border-radius: 50%;
 >.prev_bar_2{
 display: block;
-width: 40px;
+width: 30px;
 height: 5px;
-
+transform: rotate(-120deg) translate(6.5px, -10px);
 transition: 0.4s;
 background-color: #f5f1ed;
 
 }
 >.prev_bar_1{
 display: block;
-width: 40px;
+width: 30px;
 height: 5px;
-
+transform: rotate(120deg) translate(6.5px, 10px);
 transition: 0.4s;
 background-color: #f5f1ed;
 
@@ -243,13 +243,13 @@ background-color: #f5f1ed;
         display: grid;
         align-items: center;
         justify-items: center;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 10vw 1fr 10vw;
         width:90%;
    
         >img{
 
 
-            width: 90%;
+            width: 100%;
             border-radius: 5px;
         }
     }

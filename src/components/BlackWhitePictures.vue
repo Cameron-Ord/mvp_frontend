@@ -118,7 +118,7 @@ import Cookies from 'vue-cookies';
     transition: 0.3s ease-in-out;
     margin-top: 5px;
     margin-bottom: 5px;
-    transform: translateY(-7vh);
+    transform: translateY(-50px);
    
     >.bw_span{
         display: grid;
@@ -151,7 +151,7 @@ import Cookies from 'vue-cookies';
                 padding: 5px;
                 border-radius: 5px;
 
-                transform: translateY(-35vw);
+                transform: translateY(-125px);
                 background-color: rgba($color: #7392B7, $alpha: 0.85);
             }
         }
@@ -173,7 +173,7 @@ import Cookies from 'vue-cookies';
 @media only screen and (min-width: 770px){
 .bw_article{
 
-    transform: translateY(-8vh);
+    transform: translateY(-75px);
 >.bw_span{
 
     >h2{
@@ -184,7 +184,7 @@ import Cookies from 'vue-cookies';
     >.bw_router{
 
         >.p_tag_bw{
-            transform: translateY(-22.5vh);
+            transform: translateY(-225px);
             font-size: 1.25em;
         }
     }
@@ -207,7 +207,7 @@ import Cookies from 'vue-cookies';
 
 @media only screen and (min-width: 1024px){
 .bw_article{
-    transform: translateX(-3vw);
+    transform: translateX(-30px);
 >.bw_span{
 
     >h2{
@@ -218,7 +218,7 @@ import Cookies from 'vue-cookies';
     >.bw_router{
 
         >.p_tag_bw{
-            transform: translateY(-25vh);
+            transform: translateY(-275px);
             font-size: 1.25em;
         }
     }
