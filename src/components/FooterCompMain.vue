@@ -50,7 +50,7 @@ opacity: 0;
 display: grid;
 align-items: center;
 justify-items: center;
-min-height: 15vh;
+min-height: 150px;
 
 transition: 0.3s ease-in-out;
 grid-template-columns: 2fr 1fr;
@@ -79,14 +79,12 @@ grid-template-columns: 2fr 1fr;
 
 
         >p{
-         
             margin-top: 2px;
             margin-bottom: 2px;
 
         }
 
         >h2{
-
 
             margin-top: 2px;
             margin-bottom: 2px;
@@ -172,30 +170,34 @@ grid-template-columns: 2fr 1fr;
 
 
 .page_footer{
-
+    min-height: 75px;
+    background-color: rgba($color: #7392B7, $alpha: 0.85);
+    grid-template-columns: 3fr 1fr;
+    width: 100%;
 >.credits_div{
 
-    align-items: center;
-    justify-items: center;
+    width: 100%;
+    background-color: rgba($color: #7392B7, $alpha: 0);
+
 >div{
 
+    width: 80%;
+    grid-template-rows: 1fr 1fr 1fr;
 
-    align-items: center;
+    align-items: start;
     justify-items: start;
-    grid-template-rows: 1fr 1fr;
     text-align: start;
     >p{
-        align-items: center;
-        justify-items: center;
+    align-items: start;
+    justify-items: start;
+    text-align: start;
     }
 
     >h2{
-        margin-top: 20px;
-        align-items: center;
-        justify-items: center;
-
-        font-size: 1.50em;
-        margin-left: 10px;
+    align-items: start;
+    justify-items: start;
+    text-align: start;
+    margin-left: 0px;
 
     }
 }
@@ -204,7 +206,10 @@ grid-template-columns: 2fr 1fr;
 >.nav_div{
 
 
+    width: 100%;
+    background-color: rgba($color: #7392B7, $alpha: 0);
 >nav{
+    width: 25%;
 
     grid-template-columns: 1fr 1fr;
   

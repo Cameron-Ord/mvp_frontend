@@ -121,9 +121,9 @@ display: grid;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 justify-items: center;
 align-items: center;
-min-height: 10vh;
+min-height: 125px;
 width: 100%;
-background-color: rgba($color: #7392B7 , $alpha: 0.85);
+
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -133,6 +133,7 @@ background-color: rgba($color: #7392B7 , $alpha: 0.85);
 
 
         >.header_span{
+            
             animation: fadeIn 2s;
         -webkit-animation: fadeIn 2s;
         -moz-animation: fadeIn 2s;
@@ -146,7 +147,7 @@ background-color: rgba($color: #7392B7 , $alpha: 0.85);
 
         >.btn_div{
 
-          
+            background-color: rgba($color: #7392B7 , $alpha: 0.85);
             width: 50px;
             height: 50px;
             border-radius: 10px;
@@ -159,6 +160,7 @@ background-color: rgba($color: #7392B7 , $alpha: 0.85);
 }
 
         >.icon_nav{
+            
             animation: fadeIn 2s;
             -webkit-animation: fadeIn 2s;
             -moz-animation: fadeIn 2s;
@@ -171,7 +173,7 @@ background-color: rgba($color: #7392B7 , $alpha: 0.85);
 
                     font-size: 2em;
                     color: #F7F7F2;
-            
+                    background-color: rgba($color: #7392B7 , $alpha: 0.85);
           
                     padding: 5px;
                     border-radius: 10px;
@@ -356,6 +358,11 @@ right: 0;
 
 
 @media only screen and (min-width: 1024px){
+.page_header{
+
+    background-color: rgba($color: #7392B7 , $alpha: 0.85);
+    min-height: 75px;
+}
 .desktop_wrapper{
 
     display: grid;
