@@ -56,7 +56,11 @@
 
             get_div.classList.remove(`no-scroll`);
 
-            hide_bar.classList.remove('hide_bar');
+            if(hide_bar !== null){
+
+                hide_bar.classList.remove('hide_bar');
+
+            }
 
             hide_footer.classList.remove('hide_footer');
             },
@@ -81,7 +85,12 @@
 
             get_div.classList.toggle(`no-scroll`);
 
-            hide_bar.classList.toggle('hide_bar');
+            if(hide_bar !== null){
+
+                hide_bar.classList.toggle('hide_bar');
+
+            }
+           
         }
         }
 
