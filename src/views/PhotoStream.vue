@@ -181,7 +181,7 @@ grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
             width: 100%;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 450px;
-   
+            transform: translateY(-40px);
         }
     }
 
