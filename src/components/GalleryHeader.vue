@@ -48,6 +48,9 @@ export default {
         align-items: center;
         width: 90%;
         background-color: rgba($color: #7392B7, $alpha: 0.85);
+        >h1{
+            font-size: 1.25em;
+        }
     }
 }
 
@@ -59,6 +62,9 @@ export default {
     border-radius: 10px;
     width: 80%;
 
+    >h1{
+        font-size: 1.50em;
+    }
 }
 }
 }
@@ -71,6 +77,10 @@ export default {
     border-radius: 10px;
     width: 45%;
 
+    >h1{
+
+        font-size: 1.75em;
+    }
 }
 }
 }
