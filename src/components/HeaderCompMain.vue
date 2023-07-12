@@ -32,7 +32,7 @@
         <div class="desktop_wrapper">
             <nav>
                 <div class="icon_div">
-                <h1 class="icon">[C]</h1>
+                <h1 class="icon" @click="gotoMain">[C]</h1>
                 </div>
                 <div class="htag_div">
 
@@ -59,6 +59,16 @@ export default {
 
     
     methods:{
+
+        gotoMain(){
+
+            if(this.$route.path !== '/'){
+
+                this.$router.push('/');
+
+            }
+            
+        },
 
 
         handle_click(){
