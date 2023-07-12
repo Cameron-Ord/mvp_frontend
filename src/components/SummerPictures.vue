@@ -117,6 +117,7 @@ justify-items: center;
 transition: 0.3s ease-in-out;
 margin-top: 5px;
 margin-bottom: 5px;
+transform: translateY(7vh);
 
 >.summer_span{
     display: grid;
@@ -149,22 +150,29 @@ margin-bottom: 5px;
             padding: 5px;
             border-radius: 5px;
             background-color: rgba($color: #7392B7, $alpha: 0.85);
+            transform: translateY(-35vw);
         }
     }
 
     >img{
 
-        border-radius: 15px;
-        width: 70%;
-        max-width: 450px;
-        margin-bottom: 10px;
-        margin-top: 10px;
+
+            border-radius: 50%;
+            height: 225px;
+            width: 225px;
+            max-height: 225px;
+            max-width: 225px;
+         
+            object-fit: cover;
+            margin-bottom: 10px;
+            margin-top: 10px;
     }
 }
 }
 @media only screen and (min-width: 770px){
 .summer_article{
 
+    transform: translateY(8vh);
 >.summer_span{
 
     >h2{
@@ -176,16 +184,22 @@ margin-bottom: 5px;
 
         >.p_tag_summer{
 
+            transform: translateY(-22.5vh);
             font-size: 1.25em;
         }
     }
 
     >img{
 
-        border-radius: 15px;
-        width: 70%;
-        padding: 10px;
-        max-width: 650px;
+        border-radius: 50%;
+        height: 425px;
+        width: 425px;
+        max-height: 425px;
+        max-width: 425px;
+        
+        object-fit: cover;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 }
 }
@@ -193,7 +207,7 @@ margin-bottom: 5px;
 
 @media only screen and (min-width: 1024px){
 .summer_article{
-    transform: translateX(10vw);
+    transform: translateX(3vw);
 >.summer_span{
 
     >h2{
@@ -204,7 +218,7 @@ margin-bottom: 5px;
     >.summer_router{
 
         >.p_tag_summer{
-            transform: translateY(-30vh);
+            transform: translateY(-25vh);
             font-size: 1.25em;
         }
     }
