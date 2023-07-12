@@ -288,6 +288,9 @@ background-color: #f5f1ed;
         >img{
 
 
+            width: 100%;
+
+            max-width: 1000px;
          
         }
     }
@@ -332,8 +335,8 @@ background-color: #f5f1ed;
         >img{
 
 
-            width: 80%;
-            max-width: 1000px;
+            width: 100%;
+            max-width: 1500px;
          
         }
     }

@@ -222,11 +222,11 @@ top: 10vh;
 right: 100%;
 width: 100%;
 min-height: 100vh;
-display: grid;
+display: block;
 z-index: 98;
-padding-top: 60px;
+padding-top: 100px;
 transition: 0.4s ease-in-out;
-grid-template-rows: 1fr 1fr;
+
 
 >div{
 

@@ -213,9 +213,9 @@ import Cookies from 'vue-cookies';
     }
 
     >.bw_router{
-
+        transform: translateY(-300px);
         >.p_tag_bw{
-            transform: translateY(-300px);
+
             font-size: 1.25em;
         }
     }

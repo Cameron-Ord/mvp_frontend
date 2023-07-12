@@ -212,9 +212,9 @@ transform: translateY(0px);
     }
 
     >.summer_router{
-
+        transform: translateY(-300px);
         >.p_tag_summer{
-            transform: translateY(-300px);
+        
             font-size: 1.25em;
         }
     }

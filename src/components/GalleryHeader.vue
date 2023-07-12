@@ -51,4 +51,27 @@ export default {
     }
 }
 
+@media only screen and (min-width: 770px){
+.gallery_article{
+
+
+>span{
+    border-radius: 10px;
+    width: 80%;
+
+}
+}
+}
+
+@media only screen and (min-width: 1024px){
+.gallery_article{
+
+
+>span{
+    border-radius: 10px;
+    width: 45%;
+
+}
+}
+}
 </style>

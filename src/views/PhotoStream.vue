@@ -164,20 +164,24 @@ justify-items: center;
 grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
 
 >.photo_stream_section{
-
+    width: 100%;
     display: grid;
     align-items: center;
     justify-items: center;
     margin-top: 50px;
     transition: 0.3s ease-in-out;
 
-    >div{
+    >.header_sep{
 
-
-        >div{
-
+        width: 100%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        >.images_sep{
+            width: 100%;
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr;
+            grid-template-rows: 450px;
+   
         }
     }
 
