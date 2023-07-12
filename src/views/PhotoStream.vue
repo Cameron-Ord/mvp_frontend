@@ -84,7 +84,7 @@ import Cookies from 'vue-cookies';
 }
 .photostream_container{
 
-    background-color: rgba($color: #FFF, $alpha: 1);
+    background-color: rgba($color: #F7f7f2, $alpha: 1);
 
 }  
 .photo_stream_page{

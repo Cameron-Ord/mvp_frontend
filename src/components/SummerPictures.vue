@@ -220,13 +220,16 @@ transform: translateY(0px);
     }
 
     >img{
-
+        object-fit: cover;
         border-radius: 50%;
         min-height: 500px;
         min-width: 500px;
         object-fit: cover;
         max-height: 750px;
         max-width: 750px;
+        border-style: solid;
+        color: #F7F7F2;
+        border-width: 10px;
     }
 }
 }

@@ -228,6 +228,9 @@ import Cookies from 'vue-cookies';
         object-fit: cover;
         max-height: 750px;
         max-width: 750px;
+        border-width: 10px;
+        border-style: solid;
+        color: #F7F7F2;
     }
 }
 }
