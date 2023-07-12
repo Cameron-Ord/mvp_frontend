@@ -45,13 +45,12 @@ opacity: 0;
 
 .page_footer{
 
-background-color: rgba($color: #488286, $alpha: 0.85);
+background-color: rgba($color: #7392B7, $alpha: 0.85);
 display: grid;
 align-items: center;
 justify-items: center;
 min-height: 15vh;
 
-margin-top: 50px;
 transition: 0.3s ease-in-out;
 grid-template-columns: 1fr 1fr;
 
@@ -73,7 +72,6 @@ grid-template-columns: 1fr 1fr;
         align-items: center;
         justify-items: start;
         text-align: start;
-       
 
 
         >p{
@@ -81,17 +79,15 @@ grid-template-columns: 1fr 1fr;
             margin-left: 10px;
             padding: 5px;
             border-radius: 5px;
-       
         }
 
         >h2{
 
             font-size: 1em;
             margin-left: 10px;
-            width: 55%;
+            width: 60%;
             padding: 5px;
             border-radius: 5px;
-
 
         }
     }
@@ -101,7 +97,7 @@ grid-template-columns: 1fr 1fr;
     display: grid;
     justify-items: center;
     align-items: center;
-    color: #F7F7F2;
+    color: #DFD9E2;
 
     >nav{
       

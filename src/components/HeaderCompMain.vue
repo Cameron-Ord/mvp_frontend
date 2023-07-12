@@ -103,7 +103,7 @@ justify-items: center;
 align-items: center;
 min-height: 10vh;
 width: 100%;
-background-color: rgba($color: #488286 , $alpha: 0.85);
+background-color: rgba($color: #7392B7 , $alpha: 0.85);
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -231,7 +231,7 @@ grid-template-rows: 1fr 1fr;
 }
 .nav_menu{
 
-background-color: rgba($color: #488286, $alpha: 0.85);
+background-color: rgba($color: #7392B7, $alpha: 0.85);
 
 display: block;
 

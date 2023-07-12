@@ -6,8 +6,6 @@
                             <summer-pictures></summer-pictures>
                             <black-white-pictures></black-white-pictures>
                             </section>
-
-
                         </main>
         <footer-comp-main></footer-comp-main>
     </div>
@@ -79,9 +77,11 @@ import Cookies from 'vue-cookies';
 }
 .photostream_container{
 
-    background-color: rgba($color: #F7F7F2, $alpha: 1);
+    background-color: rgba($color: #FFF, $alpha: 1);
+
 }  
 .photo_stream_page{
+    
 
     min-height: 80vh;
     display: grid;
@@ -125,7 +125,7 @@ grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
     margin-top: 50px;
     transition: 0.3s ease-in-out;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
+    grid-template-rows: 1fr;
 
 
 }

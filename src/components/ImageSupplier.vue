@@ -139,6 +139,7 @@ import Cookies from 'vue-cookies';
     display: grid;
     align-items: center;
     justify-items: center;
+    margin-bottom: 25px;
 }
 .load_btn_div{
 

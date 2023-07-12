@@ -1,7 +1,7 @@
 <template>
     <div class="image_loader_parent_div" v-if="cookie_holder !== null">
         <header-comp-image></header-comp-image>
-                <main>
+                <main class="image_main">
                     <section>
                         <image-supplier></image-supplier>
                     </section>
@@ -91,24 +91,27 @@ import Cookies from 'vue-cookies';
                     let load_button = document.querySelector('.load_button');
                     let back_button = document.querySelector('.back_button');
                     let nav_menu = document.querySelectorAll('.nav_menu_image');
+                    let make_border = document.querySelector('.image_main')
 
                     for(let i=0; i<nav_menu.length; i++){
 
-                    nav_menu[i]['style']['background-color'] = 'rgba(72, 130, 134, 0.85)';
-                    nav_menu[i]['style']['color'] = '#F7F7F2';
+                    nav_menu[i]['style']['background-color'] = 'rgba(255, 255, 255, 1)';
+                    nav_menu[i]['style']['color'] = '#000501';
                     }
 
-                    load_button['style']['background-color'] = 'rgba(72, 130, 134, 0.85)';
-                    back_button['style']['background-color'] = 'rgba(72, 130, 134, 0.85)';
-                    back_button['style']['color'] = '#F7F7F2';
-                    load_button['style']['color'] = '#F7F7F2';
+                    make_border['style']['border-top'] = '1px solid #FFFFFF'
+                    make_border['style']['border-bottom'] = '1px solid #FFFFFF'
+                    load_button['style']['background-color'] = 'rgba(255, 255, 255, 1)';
+                    back_button['style']['background-color'] = 'rgba(255, 255, 255, 1)';
+                    back_button['style']['color'] = '#000501';
+                    load_button['style']['color'] = '#000501';
                     bar_1['style']['background-color'] = '#F7F7F2';
                     bar_2['style']['background-color'] = '#F7F7F2';
                     bar_3['style']['background-color'] = '#F7F7F2';
                     icon_selection['style']['color'] = '#F7F7F2';
-                    bg_selection['style']['background-color'] = '#F7F7F2';
-                    header_selection['style']['background-color'] = 'rgba(72, 130, 134, 0.85)';
-                    footer_selection['style']['background-color'] = 'rgba(72, 130, 134, 0.85)';
+                    bg_selection['style']['background-color'] = 'rgba(51, 51, 51, 1)'
+                    header_selection['style']['background-color'] = 'rgba(0, 05, 1, 0.25)';
+                    footer_selection['style']['background-color'] = 'rgba(0, 05, 1, 0.25)';
 
                 }
 
