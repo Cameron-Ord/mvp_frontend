@@ -52,13 +52,10 @@ import Cookies from 'vue-cookies';
 <style lang="scss" scoped>
 .image_loader_parent_div{
 
-    background-color: #70798c;
+    background-color: rgba($color: #CCE3DE, $alpha: 1);
 }
 
 .image_main{
-
-    border-bottom: #f5f1ed 1px solid;
-    border-top: #f5f1ed 1px solid;
 
     display:grid;
     align-items: center;

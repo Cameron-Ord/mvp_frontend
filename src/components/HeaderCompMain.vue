@@ -106,6 +106,18 @@ export default {
 
         get_div.classList.remove(`no-scroll`);
 
+        let about_span = document.querySelector('.about_article');
+
+        let contact_span = document.querySelector('.contact_article');
+
+        if(contact_span !== null){
+        contact_span.classList.remove('hide_contact_info');
+        }
+
+
+        if(about_span !== null){
+        about_span.classList.remove('hide_about');
+        }
         hide_footer.classList.remove('hide_footer');
         if(hide_bar !== null){
         hide_bar.classList.remove('hide_bar');
@@ -135,6 +147,20 @@ export default {
 
         let hide_bar = document.querySelector('.wrapper_span');
 
+        let about_span = document.querySelector('.about_article');
+
+        let contact_span = document.querySelector('.contact_article');
+
+        if(contact_span !== null){
+        contact_span.classList.toggle('hide_contact_info');
+        }
+
+        if(about_span !== null){
+        about_span.classList.toggle('hide_about');
+        }
+
+
+
         hide_footer.classList.toggle('hide_footer');
 
         menu_btn.classList.toggle(`is-active`);
@@ -142,7 +168,6 @@ export default {
         mobile_menu.classList.toggle(`is-active`);
 
         get_div.classList.toggle(`no-scroll`);
-
 
         if(hide_bar !== null){
         hide_bar.classList.toggle('hide_bar');
@@ -203,7 +228,7 @@ width: 100%;
 
         >.btn_div{
 
-            background-color: rgba($color: #7392B7 , $alpha: 0.85);
+            background-color: rgba($color: #6B9080 , $alpha: 0.70);
             width: 50px;
             height: 50px;
             border-radius: 10px;
@@ -229,7 +254,7 @@ width: 100%;
 
                     font-size: 2em;
                     color: #F7F7F2;
-                    background-color: rgba($color: #7392B7 , $alpha: 0.85);
+                    background-color: rgba($color: #6B9080 , $alpha: 0.70);
           
                     padding: 5px;
                     border-radius: 10px;
@@ -262,7 +287,7 @@ height: 5px;
 margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #F6FFF8;
 
 }
 .hamburger>div>.bar_2{
@@ -273,7 +298,7 @@ height: 5px;
 margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #F6FFF8;
 }
 
 .hamburger>div>.bar_3{
@@ -284,7 +309,7 @@ height: 5px;
 margin-top: 5px;
 margin-bottom: 6px;
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #F6FFF8;
 }
 
 .hamburger.is-active>div>.bar_1 {
@@ -326,14 +351,14 @@ transition: 0.4s ease-in-out;
 >.router{
     text-decoration: none;
   
-    color: #F7F7F2;
+    color: #F6FFF8;
 }
 }
 
 }
 .nav_menu{
 
-background-color: rgba($color: #7392B7, $alpha: 0.85);
+background-color: rgba($color: #6B9080, $alpha: 0.70);
 
 display: block;
 
@@ -351,7 +376,7 @@ border-radius: 10px;
 
 text-decoration: none;
 
-color: #F7F7F2;
+color: #F6FFF8;
 
 }
 .mobile_nav.is-active {
@@ -416,7 +441,7 @@ right: 0;
 @media only screen and (min-width: 1024px){
 .page_header{
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
-    background-color: rgba($color: #7392B7 , $alpha: 0.85);
+    background-color: rgba($color: #6B9080 , $alpha: 0.50);
     min-height: 75px;
 }
 .desktop_wrapper{
@@ -443,14 +468,14 @@ right: 0;
             >.router{
 
                 text-decoration: none;
-                color: #F7F7F2;
+                color: #F6FFF8;
                 cursor: pointer;
 
                 >.nav_tag{
 
                     cursor: pointer;
-                    color: #F7F7F2;
-                    border-bottom: #F7F7F2 solid 2px;
+                    color: #F6FFF8;
+                    border-bottom: #F6FFF8 solid 2px;
 
 
                 }
@@ -462,7 +487,7 @@ right: 0;
             font-size: 1.5em;
             cursor: pointer;
             width: 100%;
-            color: #F7F7F2;
+            color: #F6FFF8;
             display: grid;
             align-items: center;
             justify-items: center;
@@ -479,41 +504,8 @@ right: 0;
 
 >.wrapper{
     display: none;
-        >.header_span{
-        >.btn_div{
-        }
-  
-}
-        >.icon_nav{
-            >.nav_router{
-
-           
-                >.nav_icon_button{
-
-                }
-            }
-        }
 }
 
-
-}
-
-.mobile_nav {
-
-
-
->div{
-
->.router{
-
-}
-}
-
-}
-.nav_menu{
-
-}
-.mobile_nav.is-active {
 
 }
 

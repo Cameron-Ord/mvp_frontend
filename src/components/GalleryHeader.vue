@@ -36,7 +36,7 @@ export default {
    
    
 
-    color: #F7F7F2;
+    color: #F6FFF8;
     width: 100%;
     >span{
         border-radius: 10px;
@@ -47,7 +47,7 @@ export default {
         justify-items: center;
         align-items: center;
         width: 90%;
-        background-color: rgba($color: #7392B7, $alpha: 0.85);
+        background-color: rgba($color: #6B9080, $alpha: 0.95);
         >h1{
             font-size: 1.25em;
         }

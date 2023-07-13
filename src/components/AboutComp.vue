@@ -22,12 +22,18 @@
 
 <style lang="scss" scoped>
 
+.about_article.hide_about{
+
+    opacity: 0;
+}
+
 .about_article{
 
     display: grid;
     align-items: center;
     justify-items: center;
 
+    transition: 0.3s ease-in-out;
     >span{
 
         display: grid;

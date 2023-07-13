@@ -63,8 +63,8 @@ transition: 0.3s ease-in-out;
             justify-items: center;
             align-items: center;
             display: grid;
-            color: #F7F7F2;
-            background-color: rgba($color: #7392B7, $alpha: 0.85);
+            color: #F6FFF8;
+            background-color: rgba($color: #6B9080, $alpha: 0.70);
 
 
             padding: 10px;
@@ -95,8 +95,8 @@ transition: 0.3s ease-in-out;
             display: grid;
             justify-items: center;
             align-items: center;
-            color: #DFD9E2;
-            background-color: rgba($color: #7392B7, $alpha: 0.85);
+            color: #F6FFF8;
+            background-color: rgba($color: #6B9080, $alpha: 0.70);
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
 
@@ -175,30 +175,27 @@ transition: 0.3s ease-in-out;
 
 .page_footer{
     min-height: 125px;
-    background-color: rgba($color: #7392B7, $alpha: 0.85);
+    background-color: rgba($color: #6B9080, $alpha: 0.50);
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     width: 100%;
 
     >.container_{
 
-        grid-template-columns: 3fr 1fr;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
         >.credits_div{
-
-            width: 100%;
-            background-color: rgba($color: #7392B7, $alpha: 0);
-
-        >div{
-
-            width: 80%;
-            grid-template-rows: 1fr 1fr 1fr;
-
+            
+            display:grid;
             align-items: start;
             justify-items: start;
-            text-align: start;
+            width: 25%;
+            background-color: rgba($color: #6B9080, $alpha: 0);
+
             >p{
             align-items: start;
             justify-items: start;
             text-align: start;
+            font-size: 1em;
             }
 
             >h2{
@@ -206,29 +203,25 @@ transition: 0.3s ease-in-out;
             justify-items: start;
             text-align: start;
             margin-left: 0px;
+            font-size: 1em;
 
             }
-        }
         }
     
 
         >.nav_div{
 
+            width: 15%;
 
-            width: 100%;
-            background-color: rgba($color: #7392B7, $alpha: 0);
-        >nav{
-            width: 25%;
-
+            background-color: rgba($color: #6B9080, $alpha: 0);
             grid-template-columns: 1fr 1fr;
-        
             grid-template-rows: 1fr 1fr;
 
             >img{
 
                 margin-top: 10px;
             }
-        }
+       
         }
     }
 }

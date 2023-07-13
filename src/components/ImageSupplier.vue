@@ -10,7 +10,9 @@
                             <div class="prev_bar_2"></div>
                         
                         </div>
+                        <div class="image_holder">
                         <img :src="stored_images[p]">
+                        </div>
                         <div @click="next" class="next_image">
                         
                             <div class="next_bar_1"></div>
@@ -138,7 +140,7 @@ width: 30px;
 height: 5px;
 transform: rotate(-60deg) translate(6.5px, 10px);
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #6B9080;
 
 }
 >.next_bar_1{
@@ -147,7 +149,7 @@ width: 30px;
 height: 5px;
 transform: rotate(60deg) translate(6.5px, -10px);
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #6B9080;
 
 }
 }
@@ -170,7 +172,7 @@ width: 30px;
 height: 5px;
 transform: rotate(-120deg) translate(6.5px, -10px);
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #6B9080;
 
 }
 >.prev_bar_1{
@@ -179,7 +181,7 @@ width: 30px;
 height: 5px;
 transform: rotate(120deg) translate(6.5px, 10px);
 transition: 0.4s;
-background-color: #f5f1ed;
+background-color: #6B9080;
 
 }
 }
@@ -246,12 +248,20 @@ background-color: #f5f1ed;
         grid-template-columns: 10vw 1fr 10vw;
         width:90%;
    
-        >img{
+
+        .image_holder{
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
 
 
+            >img{
             width: 100%;
             border-radius: 5px;
+            }
         }
+
     }
 }
 

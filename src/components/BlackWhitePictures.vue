@@ -133,10 +133,10 @@ import Cookies from 'vue-cookies';
         -ms-animation: fadeIn 4s;
 
         >h2{
-            color: #F7F7F2;
+            color: #F6FFF8;
   
             font-size: 1em;
-            background-color: rgba($color: #7392B7, $alpha: 0.85);
+            background-color: rgba($color: #6B9080, $alpha: 0.85);
             padding: 5px;
             border-radius: 5px;
         }
@@ -146,18 +146,20 @@ import Cookies from 'vue-cookies';
             text-decoration: none;
             transform: translateY(-140px);
             >.p_tag_bw{
-                color: #F7F7F2;
+                color: #F6FFF8;
                 font-size: 1em;
                 padding: 25px;
                 border-radius: 5px;
 
                
-                background-color: rgba($color: #7392B7, $alpha: 0.85);
+                background-color: rgba($color: #6B9080, $alpha: 0.85);
             }
         }
 
         >img{
-
+            border-style: solid;
+            color: #EAF4F4;
+            border-width: 5px;
             border-radius: 50%;
             height: 225px;
             width: 225px;
@@ -188,7 +190,9 @@ import Cookies from 'vue-cookies';
     }
 
     >img{
-
+        border-style: solid;
+        color: #EAF4F4;
+        border-width: 7.5px;
         border-radius: 50%;
         height: 425px;
         width: 425px;
@@ -230,7 +234,7 @@ import Cookies from 'vue-cookies';
         max-width: 750px;
         border-width: 10px;
         border-style: solid;
-        color: #F7F7F2;
+        color: #F6FFF8;
     }
 }
 }

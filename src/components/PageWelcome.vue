@@ -102,7 +102,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            color: #DFD9E2;
+            color: #F6FFF8;
             
             animation: fadeIn 3.5s;
             -webkit-animation: fadeIn 3.5s;
@@ -115,7 +115,7 @@
 
                 border-radius: 10px;
 
-                color: rgba($color: #DFD9E2, $alpha: 1);
+                color: rgba($color: #F6FFF8, $alpha: 1);
             }
         }
 
@@ -144,8 +144,8 @@
 
 
                     display: grid;
-                    border-bottom: 2px solid #488286;
-                    color: #DFD9E2;
+                    border-bottom: 2px solid #6B9080;
+                    color: #F6FFF8;
                     font-size: 1.25em;
                     margin-bottom: 10px;
 
@@ -171,7 +171,7 @@
                 -o-animation: fadeIn 3.5s;
                 -ms-animation: fadeIn 3.5s;
                 position: relative;
-                background-color: rgba($color: #488286, $alpha: 0.75);
+                background-color: rgba($color: #6B9080, $alpha: 0.75);
                 height: 40px;
                 width: 40px;
                 border-radius: 40px;
@@ -186,7 +186,7 @@
                     content:'';
                     width: 1px;
                     height: 10px;
-                    background-color: #DFD9E2;
+                    background-color: #F6FFF8;
                     transform: rotate(45deg);
                 }
                 >.clear::after{
@@ -249,8 +249,8 @@
                         border: none;
                         outline: none;
                         font-size: 14px;
-                        color: #DFD9E2;
-                        background-color: rgba($color: #FFFFFF, $alpha: 0);
+                        color: #F6FFF8;
+                        background-color: rgba($color: #F6FFF8, $alpha: 0);
                         
              
                     }
@@ -288,7 +288,7 @@
                     position: absolute;
                     width: 3px;
                     height: 8px;
-                    background-color: #DFD9E2;
+                    background-color: #F6FFF8;
                     transform: translate(6px,6px) rotate(315deg);
                 }
             }
