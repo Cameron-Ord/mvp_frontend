@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="image_bg">
         <header-comp-main></header-comp-main>
 
         <main class="contact_page">
@@ -30,6 +30,19 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 
 <style lang="scss" scoped>
 
+.image_bg{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+
+    background-image: url('~@/assets/DSC_3749.JPG');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .contact_page{
 
     display: grid;

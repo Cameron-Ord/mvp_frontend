@@ -3,20 +3,16 @@
     <div class="page_footer">
         <nav class="container_">        
             <div class="credits_div">
-            <div>
                 <h2>Photography portfolio</h2>
                 <p>by</p>
                 <p>Cameron Ord</p>
             </div>
-        </div>
-        <div class="nav_div">
-            <nav>
+            <div class="nav_div">
                 <img src="@/assets/linkedin.png" alt="">
                 <img src="@/assets/Instagram-Icon.png" alt="">
                 <img src="@/assets/facebook.png" alt="">
-            </nav>
-        </div>
-    </nav>
+            </div>
+        </nav>
     </div>
 
 
@@ -47,7 +43,7 @@ opacity: 0;
 
 .page_footer{
 
-
+width: 100%;
 display: grid;
 align-items: center;
 justify-items: center;
@@ -60,48 +56,40 @@ transition: 0.3s ease-in-out;
         display: grid;
         align-items: center;
         justify-items: center;
-
         width: 100%;
         grid-template-columns: 2fr 1fr;
+        
         >.credits_div{
             justify-items: center;
             align-items: center;
             display: grid;
             color: #F7F7F2;
+            background-color: rgba($color: #7392B7, $alpha: 0.85);
+
+
+            padding: 10px;
+            border-radius: 10px;
+            width: 75%;
+
+
             animation: fadeIn 2s;
             -webkit-animation: fadeIn 2s;
             -moz-animation: fadeIn 2s;
             -o-animation: fadeIn 2s;
             -ms-animation: fadeIn 2s;
-            background-color: rgba($color: #7392B7, $alpha: 0.85);
-            padding: 8px;
-            border-radius: 8px;
-            width: 82%;
-            >div{
-
-                display: grid;
-                grid-template-rows: 1fr 1fr 1fr;
-                align-items: center;
-                justify-items: center;
-                text-align: center;
-
-
+        
                 >p{
-                    margin-top: 2px;
-                    margin-bottom: 2px;
-
+                    font-size: 0.9em;
+                    margin-top: 2.5px;
+                    margin-bottom: 2.5px;
                 }
 
                 >h2{
-
-                    margin-top: 2px;
-                    margin-bottom: 2px;
-                    font-size: 1em;
-
-
+                    margin-top: 2.5px;
+                    margin-bottom: 2.5px;
+                    font-size: 0.9em;
                 }
             }
-        }
 
         >.nav_div{
             display: grid;
@@ -109,29 +97,33 @@ transition: 0.3s ease-in-out;
             align-items: center;
             color: #DFD9E2;
             background-color: rgba($color: #7392B7, $alpha: 0.85);
-            padding: 8px;
-            border-radius: 5px;
-            >nav{
-            
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-                grid-template-columns: 1fr 1fr;
-                align-items: center;
-                justify-items: end;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
 
-                animation: fadeIn 2s;
-                -webkit-animation: fadeIn 2s;
-                -moz-animation: fadeIn 2s;
-                -o-animation: fadeIn 2s;
-                -ms-animation: fadeIn 2s;
-                >img{
-                    margin-top: 5px;
-                    margin-bottom: 5px;
-                    margin-left: 5px;
-                    margin-right: 5px;
-                    width: 25px;
-                }
+            padding: 10px;
+            border-radius: 10px;
+
+
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
+                
+            >img{
+            
+                margin-top: 5px;
+            
+                margin-bottom: 5px;
+            
+                margin-left: 5px;
+            
+                margin-right: 5px;
+            
+                width: 25px;
+            
             }
+            
         }
     }
 }
