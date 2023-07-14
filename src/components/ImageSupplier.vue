@@ -141,7 +141,7 @@ height: 5px;
 transform: rotate(-60deg) translate(6.5px, 10px);
 transition: 0.4s;
 background-color: #6B9080;
-
+border-radius: 5px;
 }
 >.next_bar_1{
 display: block;
@@ -150,7 +150,7 @@ height: 5px;
 transform: rotate(60deg) translate(6.5px, -10px);
 transition: 0.4s;
 background-color: #6B9080;
-
+border-radius: 5px;
 }
 }
 .previous_image{
@@ -165,6 +165,7 @@ background: none;
 outline: none;
 border: none;
 
+
 border-radius: 50%;
 >.prev_bar_2{
 display: block;
@@ -173,6 +174,7 @@ height: 5px;
 transform: rotate(-120deg) translate(6.5px, -10px);
 transition: 0.4s;
 background-color: #6B9080;
+border-radius: 5px;
 
 }
 >.prev_bar_1{
@@ -182,23 +184,9 @@ height: 5px;
 transform: rotate(120deg) translate(6.5px, 10px);
 transition: 0.4s;
 background-color: #6B9080;
+border-radius: 5px;
 
 }
-}
-
-.over_div{
-
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    margin-bottom: 25px;
-}
-.fade_in{
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
 }
 
 @keyframes fadeIn {

@@ -37,6 +37,8 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+            this.assign_style();
+
             this.delete_classes();
 
             this.delete_cookies();
@@ -44,6 +46,31 @@ import Cookies from 'vue-cookies';
         },
 
         methods:{
+
+
+            assign_style(){
+
+                let btn_bgc = document.querySelector('.btn_div');
+                let icon_bgc = document.querySelector('.nav_icon_button');
+                let nav_menu_bgc = document.querySelectorAll('.nav_menu');
+                let ws_bgc = document.querySelector('.desktop_wrapper');
+                let footercreds = document.querySelector('.credits_div');
+                let footernav = document.querySelector('.nav_div');
+                let fscontainer = document.querySelector('.container_ws');
+
+                for(let i=0; i<nav_menu_bgc.length; i++){
+
+                nav_menu_bgc[i]['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+
+                }
+
+                fscontainer['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                footernav['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                footercreds['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                btn_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                icon_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                ws_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+            },
 
             delete_cookies(){
                 Cookies.remove('stored_int');

@@ -24,7 +24,6 @@
                 </div>
                 <div>
                     <a class="nav_menu" href="https://github.com/NuckenMcFuggets" target="_blank"><h3>Github</h3></a>
-                    <a class="nav_menu" href="https://www.linkedin.com/in/camord34/" target="_blank"><h3>LinkedIn</h3></a>
                     <a class="nav_menu" href="mailto:cameron.ian.ronald.ord@outlook.com" target="_blank"><h3>Email</h3></a>
                 </div>
             </nav>
@@ -36,10 +35,9 @@
                 </div>
                 <div class="htag_div">
 
-                    <router-link to="/PhotoStream" class="router"><h2 class="nav_tag">Browse</h2></router-link>
-                    <router-link to="/AboutPage" class="router"><h2 class="nav_tag">About</h2></router-link>
-                    <router-link to="/ContactPage" class="router"><h2 class="nav_tag">Contact</h2></router-link>
-                    <a class="router" href="https://www.linkedin.com/in/camord34/" target="_blank"><h2 class="nav_tag">LinkedIn</h2></a>
+                    <router-link to="/PhotoStream" class="router"><h2 class="nav_tag" @click="handle_click_pc">Browse</h2></router-link>
+                    <router-link to="/AboutPage" class="router"><h2 class="nav_tag" @click="handle_click_pc">About</h2></router-link>
+                    <router-link to="/ContactPage" class="router"><h2 class="nav_tag" @click="handle_click_pc">Contact</h2></router-link>
 
                 </div>
             </nav>
@@ -70,6 +68,10 @@ export default {
             
         },
 
+        handle_click_pc(){
+
+            this.delete_cookies();
+        },
 
         handle_click(){
 
@@ -79,7 +81,6 @@ export default {
         },
 
         delete_cookies(){
-                Cookies.remove('stored_int');
                 Cookies.remove('photo_type');
         },
 
@@ -253,7 +254,7 @@ width: 100%;
                 >.nav_icon_button{
 
                     font-size: 2em;
-                    color: #F7F7F2;
+                    color: #F6FFF8;
                     background-color: rgba($color: #6B9080 , $alpha: 0.70);
           
                     padding: 5px;
@@ -385,9 +386,6 @@ right: 0;
 }
 @media only screen and (min-width: 770px){
 
-.desktop_wrapper{
-
-}
 
 @keyframes fadeIn {
 0% {opacity: 0;}
@@ -396,59 +394,14 @@ right: 0;
 
 .page_header{
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
->.wrapper{
-        >.header_span{
-        >.btn_div{
-        }
-  
-}
-        >.icon_nav{
-            >.nav_router{
-
-           
-                >.nav_icon_button{
-
-                }
-            }
-        }
-}
 
 
-}
-
-.mobile_nav {
-
-
-
->div{
-
->.router{
-
-}
-}
-
-}
-.nav_menu{
-
-}
-.mobile_nav.is-active {
-
-}
-
-}
-
-
-@media only screen and (min-width: 1024px){
-.page_header{
-    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+    >.desktop_wrapper{
     background-color: rgba($color: #6B9080 , $alpha: 0.50);
-    min-height: 75px;
-}
-.desktop_wrapper{
-
     display: grid;
     align-items: center;
     justify-items: center;
+    min-height: 75px;
     width: 100%;
     >nav{
         display: grid;
@@ -463,7 +416,73 @@ right: 0;
             display: grid;
             align-items: center;
             justify-items: center;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+          
+            >.router{
+
+                text-decoration: none;
+                color: #F6FFF8;
+                cursor: pointer;
+
+                >.nav_tag{
+
+                    cursor: pointer;
+                    color: #F6FFF8;
+                    border-bottom: #F6FFF8 solid 2px;
+
+
+                }
+            }
+
+        }
+       
+        >.icon_div{
+            font-size: 1.5em;
+            cursor: pointer;
+            width: 100%;
+            color: #F6FFF8;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+        }
+    }
+}
+    >.wrapper{
+
+        display: none;
+        }
+}
+
+
+
+}
+
+@media only screen and (min-width: 1024px){
+.page_header{
+    grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
+   
+}
+.desktop_wrapper{
+    background-color: rgba($color: #6B9080 , $alpha: 0.50);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    min-height: 75px;
+    width: 100%;
+    >nav{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 1fr 3fr;
+
+        width: 100%;
+       
+        >.htag_div{
+            width: 100%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            grid-template-columns: 1fr 1fr 1fr;
           
             >.router{
 

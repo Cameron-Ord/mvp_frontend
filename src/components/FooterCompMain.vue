@@ -13,6 +13,18 @@
                 <img src="@/assets/facebook.png" alt="">
             </div>
         </nav>
+        <nav class="container_ws">        
+            <div class="credits_div_ws">
+                <h2>Photography portfolio</h2>
+                <p>by</p>
+                <p>Cameron Ord</p>
+            </div>
+            <div class="nav_div_ws">
+                <img src="@/assets/linkedin.png" alt="">
+                <img src="@/assets/Instagram-Icon.png" alt="">
+                <img src="@/assets/facebook.png" alt="">
+            </div>
+        </nav>
     </div>
 
 
@@ -41,6 +53,7 @@ opacity: 0;
     100% {opacity: 1}
 }
 
+
 .page_footer{
 
 width: 100%;
@@ -51,7 +64,10 @@ min-height: 150px;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 transition: 0.3s ease-in-out;
 
+    >.container_ws{
 
+    display: none;
+    }
     >.container_{
         display: grid;
         align-items: center;
@@ -69,7 +85,7 @@ transition: 0.3s ease-in-out;
 
             padding: 10px;
             border-radius: 10px;
-            width: 75%;
+            width: 80%;
 
 
             animation: fadeIn 2s;
@@ -129,45 +145,77 @@ transition: 0.3s ease-in-out;
 }
 @media only screen and (min-width: 770px){
 
-.page_footer{
 
+    .page_footer{
+    min-height: 125px;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+    width: 100%;
+
     >.container_{
-        >.credits_div{
+        display: none;
+        }
 
-
-        >div{
-
-
-
+    >.container_ws{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background-color: rgba($color: #6B9080, $alpha: 0.50);
+        min-height: 125px;
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        >.credits_div_ws{
+            
+            display:grid;
+            align-items: start;
+            justify-items: start;
+            width: 50%;
+            background-color: rgba($color: #6B9080, $alpha: 0);
 
             >p{
+            align-items: start;
+            justify-items: start;
+            text-align: start;
+            font-size: 1em;
+            color: #F6FFF8;
 
+            margin-top: 2px;
+            margin-bottom: 2px;
             }
 
             >h2{
-
-
-                font-size: 1.25em;
-                margin-left: 10px;
+            color: #F6FFF8;
+            align-items: start;
+            justify-items: start;
+            text-align: start;
+            margin-left: 0px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            font-size: 1em;
 
             }
         }
-        }
+    
 
-        >.nav_div{
+        >.nav_div_ws{
 
-
-        >nav{
-        
+            width: 25%;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: rgba($color: #6B9080, $alpha: 0);
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
 
             >img{
 
+                width: 25px;
+                margin-top: 10px;
             }
-        }
+       
         }
     }
 }
+
 
 }
 @media only screen and (min-width: 1024px){
@@ -175,15 +223,22 @@ transition: 0.3s ease-in-out;
 
 .page_footer{
     min-height: 125px;
-    background-color: rgba($color: #6B9080, $alpha: 0.50);
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     width: 100%;
 
     >.container_{
+        display: none;
+        }
 
+    >.container_ws{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        background-color: rgba($color: #6B9080, $alpha: 0.50);
+        min-height: 125px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
-        >.credits_div{
+        >.credits_div_ws{
             
             display:grid;
             align-items: start;
@@ -196,29 +251,39 @@ transition: 0.3s ease-in-out;
             justify-items: start;
             text-align: start;
             font-size: 1em;
+            color: #F6FFF8;
+
+            margin-top: 2px;
+            margin-bottom: 2px;
             }
 
             >h2{
+            color: #F6FFF8;
             align-items: start;
             justify-items: start;
             text-align: start;
             margin-left: 0px;
+            margin-top: 2px;
+            margin-bottom: 2px;
             font-size: 1em;
 
             }
         }
     
 
-        >.nav_div{
+        >.nav_div_ws{
 
             width: 15%;
-
+            display: grid;
+            align-items: center;
+            justify-items: center;
             background-color: rgba($color: #6B9080, $alpha: 0);
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
 
             >img{
 
+                width: 25px;
                 margin-top: 10px;
             }
        

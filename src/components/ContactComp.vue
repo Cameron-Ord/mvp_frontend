@@ -9,12 +9,12 @@
                 </span>
 
                 <div>
-                <h3>Phone number:</h3>
+                <h3>Phone number</h3>
                 <p>(587)-990-0854</p>
                 </div>
 
                 <div>
-                <h3>Email:</h3>
+                <h3>Email</h3>
                 <p>Cameron.Ian.Ronald.Ord@outlook.com</p>
                 </div>
 
@@ -48,8 +48,10 @@
         display: grid;
         align-items: center;
         justify-items: center;
+        background-color: rgba($color: #6B9080, $alpha: .80) ;
 
-
+        padding: 20px;
+        border-radius: 10px;
         >span{
 
             display: grid;
@@ -57,8 +59,9 @@
             justify-items: center;
 
             >h1{
-
-                color: #FFF;
+                margin-bottom: 15px;
+                margin-top: 15px;
+                color: #F6FFF8;
             }
         }
 
@@ -71,11 +74,15 @@
 
             >h3{
 
-                color: #FFF;
+                border-bottom: #F6FFF8 solid 1px;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                color: #F6FFF8;
             }
             >p{
-
-                color: #FFF;
+                margin-bottom: 5px;
+                margin-top: 5px;
+                color: #F6FFF8;
             }
 
         }
