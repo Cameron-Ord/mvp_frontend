@@ -15,7 +15,7 @@
 
                 <div>
                 <h3>Email</h3>
-                <p>Cameron.Ian.Ronald.Ord@outlook.com</p>
+                <a class="nav_menu" href="mailto:cameron.ian.ronald.ord@outlook.com" target="_blank"><h3>Email</h3></a>
                 </div>
 
             </span>
@@ -43,13 +43,14 @@
     align-items: center;
     justify-items: center;
 
+    width: 100%;
 
     >span{
         display: grid;
         align-items: center;
         justify-items: center;
-        background-color: rgba($color: #6B9080, $alpha: .80) ;
-
+        background-color: rgba($color: #6B9080, $alpha: .80);
+        width: 90%;
         padding: 20px;
         border-radius: 10px;
         >span{
@@ -59,6 +60,7 @@
             justify-items: center;
 
             >h1{
+                font-size: 1em;
                 margin-bottom: 15px;
                 margin-top: 15px;
                 color: #F6FFF8;
@@ -73,13 +75,14 @@
             grid-template-rows: 1fr 1fr;
 
             >h3{
-
+                font-size: 1em;
                 border-bottom: #F6FFF8 solid 1px;
                 margin-bottom: 5px;
                 margin-top: 5px;
                 color: #F6FFF8;
             }
             >p{
+                font-size: 1em;
                 margin-bottom: 5px;
                 margin-top: 5px;
                 color: #F6FFF8;
@@ -88,5 +91,67 @@
         }
     }
 }
+@media only screen and (min-width: 770px){
 
+.contact_article{
+
+
+
+>span{
+
+    width: 80%;
+
+    >span{
+
+        >h1{
+
+        }
+    }
+
+    >div{
+
+        >h3{
+ 
+        }
+        >p{
+
+        }
+
+    }
+}
+}
+}
+@media only screen and (min-width: 1024px){
+
+.contact_article{
+
+
+
+    width: 100%;
+
+>span{
+
+    width: 90%;
+
+    >span{
+
+        >h1{
+
+        }
+    }
+
+    >div{
+
+        >h3{
+ 
+        }
+        >p{
+
+        }
+
+    }
+}
+}
+
+}
 </style>

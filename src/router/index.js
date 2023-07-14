@@ -5,6 +5,7 @@ import PhotoStream from '@/views/PhotoStream.vue'
 import ImageLoader from '@/views/ImageLoader.vue'
 import AboutPage from '@/views/AboutPage.vue'
 import ContactPage from '@/views/ContactPage.vue'
+import SekretPage from '@/views/SekretPage.vue'
 
 Vue.use(VueRouter)
 
@@ -99,7 +100,26 @@ const routes = [
         content: 'Cameron Ord'
       }
     ]
+  },
+  {
+    path: '/SekretPage',
+    component: SekretPage,
+    name: 'secret page',
+    meta: [
+      {
+        title: 'secret',
+      },
+      {
+        name: 'description',
+        content: 'Welcome'
+      },
+      {
+        name: 'author',
+        content: 'Cameron Ord'
+      }
+    ]
   }
+
 
 ]
 

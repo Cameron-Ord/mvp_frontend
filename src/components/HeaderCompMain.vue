@@ -425,8 +425,7 @@ right: 0;
                 cursor: pointer;
 
                 >.nav_tag{
-
-                    cursor: pointer;
+                    
                     color: #F6FFF8;
                     border-bottom: #F6FFF8 solid 2px;
 

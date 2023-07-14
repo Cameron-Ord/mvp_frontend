@@ -243,7 +243,7 @@ transition: 0.3s ease-in-out;
             display:grid;
             align-items: start;
             justify-items: start;
-            width: 25%;
+            width: 40%;
             background-color: rgba($color: #6B9080, $alpha: 0);
 
             >p{
