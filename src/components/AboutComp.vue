@@ -61,5 +61,51 @@
         }
     }
 }
+@media only screen and (min-width: 770px){
 
+.about_article{
+
+>span{
+
+
+    width: 50%;
+
+
+    >h1{
+   
+    }
+
+    >p{
+
+
+        
+    }
+}
+}
+}
+
+@media only screen and (min-width: 1024px){
+
+.about_article{
+
+>span{
+
+
+    width: 58%;
+
+
+    >h1{
+   
+    }
+
+    >p{
+
+
+        
+    }
+}
+}
+
+
+}
 </style>

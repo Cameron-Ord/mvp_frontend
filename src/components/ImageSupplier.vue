@@ -330,13 +330,20 @@ border-radius: 5px;
     >span{
 
    
+        >.image_holder{
+
+
         >img{
 
 
             width: 100%;
-            max-width: 1500px;
+            max-width: 1200px;
+            max-height: 1000px;
          
         }
+
+        }
+
     }
 }
 
