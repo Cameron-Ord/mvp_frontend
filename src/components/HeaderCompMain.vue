@@ -111,6 +111,13 @@ export default {
 
         let contact_span = document.querySelector('.contact_article');
 
+        let contact_header = document.querySelector('.contact_header');
+
+        if(contact_header !== null){
+        contact_header.classList.remove('hide_contact_header');
+        }
+
+
         if(contact_span !== null){
         contact_span.classList.remove('hide_contact_info');
         }
@@ -151,6 +158,12 @@ export default {
         let about_span = document.querySelector('.about_article');
 
         let contact_span = document.querySelector('.contact_article');
+
+        let contact_header = document.querySelector('.contact_header');
+
+        if(contact_header !== null){
+        contact_header.classList.toggle('hide_contact_header');
+        }
 
         if(contact_span !== null){
         contact_span.classList.toggle('hide_contact_info');

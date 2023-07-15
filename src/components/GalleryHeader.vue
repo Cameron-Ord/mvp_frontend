@@ -24,6 +24,11 @@ export default {
 
 <style lang="scss" scoped>
 
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
+
 .gallery_div{
 
     width: 100%;
@@ -33,7 +38,11 @@ export default {
     display: grid;
     align-items: center;
     justify-items: center;
-   
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
    
 
     color: #F6FFF8;

@@ -57,12 +57,21 @@
 
 <style lang="scss" scoped>
 
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
+
 .divParent{
 
     display: grid;
     align-items: center;
     justify-items: center;
-
+    animation: fadeIn 4s;
+    -webkit-animation: fadeIn 4s;
+    -moz-animation: fadeIn 4s;
+    -o-animation: fadeIn 4s;
+    -ms-animation: fadeIn 4s;
     width: 100%;
 
 }
@@ -70,7 +79,9 @@
 
     opacity: 0;
 }
-
+.contact_header.hide_contact_header{
+    opacity: 0;
+}
 .contact_header{
     margin-top: 25px;
             
@@ -78,6 +89,7 @@
     align-items: center;
     justify-items: center;
     grid-template-rows: 1fr 1fr;
+    transition: 0.3s ease-in-out;
     
     >span{
     
@@ -110,7 +122,7 @@
 
 
     >.inputSpan{
-
+        min-width: 250px;
         display: grid;
         align-items: center;
         justify-items: center;
@@ -124,7 +136,7 @@
             display: grid;
             align-items: center;
             justify-items: center;
-            grid-template-rows: 12vh 12vh 18vh 12vh 14vh;
+            grid-template-rows: 100px 100px 225px 80px 160px;
             text-align: center;
             background-color: rgba($color: #F6FFF8, $alpha: 0.70);
             width: 70%;
@@ -132,12 +144,11 @@
             padding: 10px;
             border-radius: 10px;
             >.orDiv{
-
-            grid-template-rows: 8vh;
             display: grid;
             align-items: center;
             justify-items: center;
-            width: 75px;
+            width: 70px;
+            height: 70px;
 
             border-radius: 50%;
             background-color: rgba($color: #6B9080, $alpha: 0.80);
@@ -150,10 +161,11 @@
 
             >.emailDiv{
             background-color: rgba($color: #6B9080, $alpha: 0.80);
-            grid-template-rows: 4vh 6vh;
+            grid-template-rows: 40px 50px;
             padding: 10px;
             border-radius: 10px;
 
+            width: 80%;
             display: grid;
             align-items: center;
             justify-items: center;
@@ -174,11 +186,11 @@
                 display: grid;
                 align-items: center;
                 justify-items: center;
-                grid-template-rows: 4vh 10vh;
+                grid-template-rows: 25px 125px;
                 background-color: rgba($color: #6B9080, $alpha: 0.80);
                 padding: 10px;
                 border-radius: 10px;
-
+                width: 80%;
                 >p{
 
                     color: #F6FFF8;
@@ -186,10 +198,10 @@
 
                 }
                 >.inputTagBox{
-                height: 50%;
-                width: 100%;
-                max-height: 75px;
-                max-width:200px;
+                height: 80%;
+                width: 90%;
+                max-height: 60px;
+                max-width:180px;
                 }
             }
             >.innerDiv{
@@ -199,15 +211,15 @@
                 display: grid;
                 align-items: center;
                 justify-items: center;
-                grid-template-rows: 4vh 4vh;
-               
+                grid-template-rows: 25px 25px;
+                width: 70%;
                 >p{
                     color: #F6FFF8;
                     font-weight: bold;
 
                 }
                 >.inputTag{
-
+                    width: 90%;
 
                 };
             }
@@ -218,10 +230,186 @@
 
 }
 @media only screen and (min-width: 770px){
+    @keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
 
+.divParent{
+
+}
+.contact_article.hide_contact_info{
+
+}
+.contact_header.hide_contact_header{
+
+}
+.contact_header{
+    
+    >span{
+    
+            >h1{
+
+                font-size: 2.5em;
+            }
+        }
+}
+
+.contact_article{
+
+
+    >.inputSpan{
+
+        min-width: 480px;
+     
+        width: 75%;
+
+        >.inputDiv{
+            grid-template-rows: 125px 125px 250px 100px 180px;
+            >.orDiv{
+
+                width: 75px;
+                height: 75px;
+            >h3{
+
+            }
+        }
+
+            >.emailDiv{
+
+                grid-template-rows: 40px 50px;
+                width: 60%;
+            >h3{
+                font-size: 1.4em;
+            }
+
+            >img{
+
+            }
+        }
+            >.innerDivBox{
+                width: 80%;
+                grid-template-rows: 35px 125px;
+                >p{
+                    font-size: 1.2em;
+
+                }
+                >.inputTagBox{
+
+                    height: 80%;
+                    width: 90%;
+                    max-height: 80px;
+                    max-width:250px;
+                }
+            }
+            >.innerDiv{
+                width: 60%;
+                grid-template-rows: 25px 25px;
+                >p{
+        
+                    font-size: 1.2em;
+
+                }
+                >.inputTag{
+
+
+                };
+            }
+
+        }
+    }
+}
 }
 @media only screen and (min-width: 1024px){
 
+    @keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
 
+.divParent{
+
+}
+.contact_article.hide_contact_info{
+
+}
+.contact_header.hide_contact_header{
+
+}
+.contact_header{
+    
+    >span{
+    
+            >h1{
+
+                font-size: 2.5em;
+            }
+        }
+}
+
+.contact_article{
+
+
+    >.inputSpan{
+
+        min-width: 770px;
+     
+        width: 40%;
+
+        >.inputDiv{
+            grid-template-rows: 125px 125px 250px 100px 180px;
+            >.orDiv{
+
+                width: 75px;
+                height: 75px;
+            >h3{
+
+            }
+        }
+
+            >.emailDiv{
+
+                grid-template-rows: 50px 60px;
+                width: 70%;
+            >h3{
+                font-size: 1.4em;
+            }
+
+            >img{
+
+            }
+        }
+            >.innerDivBox{
+                width: 80%;
+                grid-template-rows: 50px 150px;
+                >p{
+                    font-size: 1.2em;
+
+                }
+                >.inputTagBox{
+
+                    height: 80%;
+                    width: 90%;
+                    max-height: 100px;
+                    max-width:300px;
+                }
+            }
+            >.innerDiv{
+                width: 50%;
+                grid-template-rows: 30px 30px;
+                >p{
+        
+                    font-size: 1.2em;
+
+                }
+                >.inputTag{
+                    width: 70%;
+
+                };
+            }
+
+        }
+    }
+}
 }
 </style>
