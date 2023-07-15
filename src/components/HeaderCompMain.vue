@@ -165,6 +165,10 @@ export default {
 
         let contact_header = document.querySelector('.contact_header');
 
+        if(about_span !== null){
+        about_span.classList.toggle('hide_about');
+        }
+
         if(contact_header !== null){
         contact_header.classList.toggle('hide_contact_header');
         }
@@ -172,12 +176,6 @@ export default {
         if(contact_span !== null){
         contact_span.classList.toggle('hide_contact_info');
         }
-
-        if(about_span !== null){
-        about_span.classList.toggle('hide_about');
-        }
-
-
 
         hide_footer.classList.toggle('hide_footer');
 
@@ -228,10 +226,10 @@ min-height: 125px;
 width: 100%;
 
 animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
+-webkit-animation: fadeIn 2s;
+-moz-animation: fadeIn 2s;
+-o-animation: fadeIn 2s;
+-ms-animation: fadeIn 2s;
 
 >.wrapper{
     width: 100%;
