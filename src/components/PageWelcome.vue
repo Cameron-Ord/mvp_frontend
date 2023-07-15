@@ -11,7 +11,7 @@
                     <div class="search">
                         <div class="icon" @click="icon_click"></div>
                         <div class="input">
-                            <input type="text" placeholder="search images" class="search_input" ref="search_input_value" maxlength="25">
+                            <input type="text" placeholder="summer, fall, etc..." class="search_input" ref="search_input_value" maxlength="25">
                         </div>
                         <span class="clear" @click="clear_bar"></span>
                     </div>

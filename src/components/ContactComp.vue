@@ -463,7 +463,7 @@ margin-bottom: 75px;
         width: 40%;
 
         >.inputDiv{
-            grid-template-rows: 125px 125px 300px 100px 180px;
+            grid-template-rows: 125px 125px 325px 100px 180px;
             >.orDiv{
 
                 width: 75px;
