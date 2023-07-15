@@ -142,6 +142,7 @@ transform: rotate(-60deg) translate(6.5px, 10px);
 transition: 0.4s;
 background-color: #6B9080;
 border-radius: 5px;
+
 }
 >.next_bar_1{
 display: block;
@@ -297,27 +298,52 @@ border-radius: 5px;
 
 
 @media only screen and (min-width: 1024px){
-.divtacular{
+
+
+
+.next_image{
+
+
+
+    &:hover>.next_bar_1{
+        padding: 2.5px;
+        border-radius: 15px;
+   
+    }
+    &:hover>.next_bar_2{
+        padding: 2.5px;
+        border-radius: 15px;
+        
+    }
+
+>.next_bar_2{
+
 
 }
-
-
-.load_btn_div{
-
-  
-
->.back_button{
-
-    width: 5.5%;
-
-}
-
->.load_button{
-
-    width: 10%;
+>.next_bar_1{
 
 }
 }
+.previous_image{
+
+    &:hover>.prev_bar_1{
+
+    padding: 2.5px;
+    border-radius: 15px;
+
+    }
+    &:hover>.prev_bar_2{
+        padding: 2.5px;
+        border-radius: 15px;
+    }
+>.prev_bar_2{
+
+
+}
+>.prev_bar_1{
+}
+}
+
 .article_container{
 
 
