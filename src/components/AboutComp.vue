@@ -30,7 +30,10 @@
 </script>
 
 <style lang="scss" scoped>
-
+@keyframes fadeIn {
+0% {opacity: 0;}
+100% {opacity: 1}
+}
 .about_article.hide_about{
 
     opacity: 0;
@@ -44,6 +47,11 @@
     transition: 0.3s ease-in-out;
     grid-template-rows: 1fr 300px;
 
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
     >span{
         
         display: grid;

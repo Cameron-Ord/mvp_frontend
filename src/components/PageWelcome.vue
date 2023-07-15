@@ -106,11 +106,11 @@
             padding: 10px;
             border-radius: 10px;
             background-color: rgba($color: #6B9080, $alpha: 0.80);
-            animation: fadeIn 3.5s;
-            -webkit-animation: fadeIn 3.5s;
-            -moz-animation: fadeIn 3.5s;
-            -o-animation: fadeIn 3.5s;
-            -ms-animation: fadeIn 3.5s;
+            animation: fadeIn 2s;
+            -webkit-animation: fadeIn 2s;
+            -moz-animation: fadeIn 2s;
+            -o-animation: fadeIn 2s;
+            -ms-animation: fadeIn 2s;
             >.h1_text{
 
                 font-size: 1.5em;
@@ -130,11 +130,11 @@
                 display: grid;
                 justify-items: center;
                 align-items: center;
-                animation: fadeIn 3.5s;
-                -webkit-animation: fadeIn 3.5s;
-                -moz-animation: fadeIn 3.5s;
-                -o-animation: fadeIn 3.5s;
-                -ms-animation: fadeIn 3.5s;
+                animation: fadeIn 2s;
+                -webkit-animation: fadeIn 2s;
+                -moz-animation: fadeIn 2s;
+                -o-animation: fadeIn 2s;
+                -ms-animation: fadeIn 2s;
 
                 >.router{
 
@@ -165,11 +165,11 @@
               
             }
             >.search{
-                animation: fadeIn 3.5s;
-                -webkit-animation: fadeIn 3.5s;
-                -moz-animation: fadeIn 3.5s;
-                -o-animation: fadeIn 3.5s;
-                -ms-animation: fadeIn 3.5s;
+                animation: fadeIn 2s;
+                -webkit-animation: fadeIn 2s;
+                -moz-animation: fadeIn 2s;
+                -o-animation: fadeIn 2s;
+                -ms-animation: fadeIn 2s;
                 position: relative;
                 background-color: rgba($color: #6B9080, $alpha: 0.80);
                 height: 40px;

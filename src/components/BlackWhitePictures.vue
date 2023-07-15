@@ -126,11 +126,11 @@ import Cookies from 'vue-cookies';
         justify-items: center;
 
 
-        animation: fadeIn 4s;
-        -webkit-animation: fadeIn 4s;
-        -moz-animation: fadeIn 4s;
-        -o-animation: fadeIn 4s;
-        -ms-animation: fadeIn 4s;
+        animation: fadeIn 2s;
+        -webkit-animation: fadeIn 2s;
+        -moz-animation: fadeIn 2s;
+        -o-animation: fadeIn 2s;
+        -ms-animation: fadeIn 2s;
 
         >h2{
             color: #F6FFF8;

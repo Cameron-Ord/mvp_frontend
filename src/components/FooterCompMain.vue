@@ -78,6 +78,12 @@ min-height: 150px;
 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 transition: 0.3s ease-in-out;
 
+animation: fadeIn 2s;
+-webkit-animation: fadeIn 2s;
+-moz-animation: fadeIn 2s;
+-o-animation: fadeIn 2s;
+-ms-animation: fadeIn 2s;
+
     >.container_ws{
 
     display: none;
@@ -100,11 +106,6 @@ transition: 0.3s ease-in-out;
             border-radius: 10px;
             width: 70%;
             text-align: center;
-            animation: fadeIn 2s;
-            -webkit-animation: fadeIn 2s;
-            -moz-animation: fadeIn 2s;
-            -o-animation: fadeIn 2s;
-            -ms-animation: fadeIn 2s;
             height: 80px;
         
                 >p{
@@ -132,11 +133,6 @@ transition: 0.3s ease-in-out;
 
             width: 70%;
             height: 80px;
-            animation: fadeIn 2s;
-            -webkit-animation: fadeIn 2s;
-            -moz-animation: fadeIn 2s;
-            -o-animation: fadeIn 2s;
-            -ms-animation: fadeIn 2s;
                 
             >img{
             
@@ -171,8 +167,12 @@ transition: 0.3s ease-in-out;
     width: 100%;
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 150px;
-
-    
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+        
     >.container_ws{
         display: grid;
         align-items: center;
@@ -249,6 +249,11 @@ display: none;
     width: 100%;
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 150px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
     >.container_ws{
         display: grid;
         align-items: center;

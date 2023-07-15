@@ -227,6 +227,12 @@ align-items: center;
 min-height: 125px;
 width: 100%;
 
+animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+
 >.wrapper{
     width: 100%;
     justify-items: center;
@@ -237,11 +243,6 @@ width: 100%;
 
         >.header_span{
             
-            animation: fadeIn 2s;
-        -webkit-animation: fadeIn 2s;
-        -moz-animation: fadeIn 2s;
-        -o-animation: fadeIn 2s;
-        -ms-animation: fadeIn 2s;
         justify-items: center;
         align-items: center;
         display:grid;
@@ -264,11 +265,6 @@ width: 100%;
 
         >.icon_nav{
             
-            animation: fadeIn 2s;
-            -webkit-animation: fadeIn 2s;
-            -moz-animation: fadeIn 2s;
-            -o-animation: fadeIn 2s;
-            -ms-animation: fadeIn 2s;
             >.nav_router{
 
                 text-decoration: none;
@@ -423,6 +419,11 @@ right: 0;
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 75px;
     width: 100%;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
     >.desktop_wrapper{
     display: grid;
     align-items: center;
@@ -490,6 +491,11 @@ right: 0;
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 75px;
     width: 100%;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 .desktop_wrapper{
     display: grid;
     align-items: center;
