@@ -1,5 +1,5 @@
 <template>
-   
+<div class="footersContainer">   
     <div class="page_footer">
         <nav class="container_">        
             <div class="credits_div">
@@ -13,6 +13,8 @@
                 <img src="@/assets/facebook.png" alt="">
             </div>
         </nav>
+    </div>
+    <div class="page_footer_ws">
         <nav class="container_ws">        
             <div class="credits_div_ws">
                 <h2>Photography portfolio</h2>
@@ -26,7 +28,7 @@
             </div>
         </nav>
     </div>
-
+</div>
 
 
 </template>
@@ -42,6 +44,13 @@ setup () {
 </script>
 
 <style lang="scss" scoped>
+
+.footersContainer{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
 .page_footer.hide_footer{
 
 opacity: 0;
@@ -53,6 +62,11 @@ opacity: 0;
     100% {opacity: 1}
 }
 
+
+.page_footer_ws{
+
+    display: none;
+}
 
 .page_footer{
 background-color: rgba($color: #6B9080, $alpha: 0);
@@ -145,17 +159,20 @@ transition: 0.3s ease-in-out;
 }
 @media only screen and (min-width: 770px){
 
+.page_footer{
+    display: none;
+}
 
-    .page_footer{
+.page_footer_ws{
+    display: grid;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     width: 100%;
-    background-color: rgba($color: #6B9080, $alpha: 0.80);
+    background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 150px;
 
-    >.container_{
-        display: none;
-        }
-
+    
     >.container_ws{
         display: grid;
         align-items: center;
@@ -218,17 +235,20 @@ transition: 0.3s ease-in-out;
 
 }
 @media only screen and (min-width: 1024px){
-
-
 .page_footer{
+display: none;
+}
+
+.page_footer_ws{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
     min-height: 100px;
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     width: 100%;
-    background-color: rgba($color: #6B9080, $alpha: 0.80);
-    >.container_{
-        display: none;
-        }
-
+    background-color: rgba($color: #6B9080 , $alpha: 0.70);
+    min-height: 150px;
     >.container_ws{
         display: grid;
         align-items: center;

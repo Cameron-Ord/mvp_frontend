@@ -312,7 +312,7 @@
         
         padding: 10px;
         border-radius: 10px;
-        background-color: rgba($color: #6B9080, $alpha: 0.80);
+        background-color: rgba($color: #6B9080, $alpha: 0.70);
 
         >.h1_text{
 
@@ -353,7 +353,7 @@ grid-template-columns: 1fr 1fr;
         
         padding: 10px;
         border-radius: 10px;
-        background-color: rgba($color: #6B9080, $alpha: 0.80);
+        background-color: rgba($color: #6B9080, $alpha: 0.70);
 
         >.h1_text{
 

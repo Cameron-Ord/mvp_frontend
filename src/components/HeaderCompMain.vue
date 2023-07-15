@@ -1,4 +1,5 @@
 <template>
+    <div class="headersContainer">
   
     <header class="page_header">
         <div class="wrapper">
@@ -28,7 +29,9 @@
                 </div>
             </nav>
         </div>
-        <div class="desktop_wrapper">
+    </header>
+    <header class="page_header_ws">
+            <div class="desktop_wrapper">
             <nav>
                 <div class="icon_div">
                 <h1 class="icon" @click="gotoMain">[C]</h1>
@@ -38,11 +41,12 @@
                     <router-link to="/PhotoStream" class="router"><h2 class="nav_tag" @click="handle_click_pc">Browse</h2></router-link>
                     <router-link to="/AboutPage" class="router"><h2 class="nav_tag" @click="handle_click_pc">About</h2></router-link>
                     <router-link to="/ContactPage" class="router"><h2 class="nav_tag" @click="handle_click_pc">Contact</h2></router-link>
-
                 </div>
             </nav>
         </div>
-    </header>
+        </header>
+    </div>
+ 
 
 
 </template>
@@ -199,9 +203,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.desktop_wrapper{
-
+.headersContainer{
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+.page_header_ws{
 display: none;
 }
 
@@ -404,13 +412,18 @@ right: 0;
 0% {opacity: 0;}
 100% {opacity: 1}
 }
-
 .page_header{
+    display: none;
+}
+.page_header_ws{
+    display: grid;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 75px;
+    width: 100%;
     >.desktop_wrapper{
-
     display: grid;
     align-items: center;
     justify-items: center;
@@ -458,10 +471,6 @@ right: 0;
         }
     }
 }
-    >.wrapper{
-
-        display: none;
-        }
 }
 
 
@@ -470,10 +479,17 @@ right: 0;
 
 @media only screen and (min-width: 1024px){
 .page_header{
+    display: none;
+}
+
+.page_header_ws{
+    display: grid;
+    align-items: center;
+    justify-items: center;
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     background-color: rgba($color: #6B9080 , $alpha: 0.70);
     min-height: 75px;
-}
+    width: 100%;
 .desktop_wrapper{
     display: grid;
     align-items: center;
@@ -522,6 +538,7 @@ right: 0;
             justify-items: center;
         }
     }
+}
 }
 
 @keyframes fadeIn {
