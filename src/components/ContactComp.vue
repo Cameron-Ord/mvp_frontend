@@ -18,17 +18,20 @@
 
                     <div class="innerDiv">
                     <p>Your Name</p>
-                    <input class="inputTag" type="text" ref="emailName">
+                    <input class="inputTag" type="text" ref="userName">
                     </div>
 
                     <div class="innerDiv">
                     <p>Your Email</p>
-                    <input class="inputTag" type="text" ref="emailEmail">
+                    <input class="inputTag" type="text" ref="userEmail">
                     </div>
 
                     <div class="innerDivBox">
                     <p>Your message</p>
                     <textarea class="inputTagBox" cols="30" rows="10" maxlength="300" ref="messageContent"></textarea>
+                    <p class="submitTag" @click="submitText">Submit</p>
+
+                    <p v-if="status !== undefined">{{ status }}</p>
                     </div>
 
                     <div class="orDiv">
@@ -49,8 +52,86 @@
 </template>
 
 <script>
+import axios from 'axios';
+
     export default {
         
+        data() {
+            return {
+               status: undefined,
+               name_value: undefined,
+               email_value: undefined,
+               content_value: undefined
+            }
+        },
+
+        mounted(){
+
+
+        },
+
+        methods:{
+
+            submitText(){
+
+                this.name_value = this.$refs['userName'].value
+                this.email_value = this.$refs['userEmail'].value
+                this.content_value = this.$refs['messageContent'].value
+
+
+
+                if(this.name_value === ''){
+                    this.name_value = null;
+                }
+
+                if(this.email_value === ''){
+                    this.email_value = null;
+                }
+
+
+                if(this.content_value === ''){
+                    this.content_value = null;
+                }
+
+                axios({
+
+                    url: `${process.env.VUE_APP_BASE_DOMAIN}/api/contact`,
+
+                    method: 'POST',
+
+                    data:{
+
+                        name: this.name_value,
+                        email: this.email_value,
+                        content: this.content_value
+                    }
+                }).then((res)=>{
+
+                    res;
+
+                    this.status = 'message sent!';
+
+                }).catch((err)=>{
+
+                    if(err['response']['data'] === 'the name must be sent!'){
+
+                        this.status = 'please provide your name!';
+
+                    }else if(err['response']['data'] === 'the email must be sent!'){
+
+                        this.status = 'please provide your email!';
+
+                    }else if(err['response']['data'] === 'the content must be sent!'){
+
+                        this.status = 'please write a message!';
+
+                    }else{
+
+                        this.status = 'something has gone wrong..';
+                    }
+                })
+            }
+        }
     }
 </script>
 
@@ -186,11 +267,22 @@
                 display: grid;
                 align-items: center;
                 justify-items: center;
-                grid-template-rows: 25px 125px;
+                grid-template-rows: 25px 125px 25px;
                 background-color: rgba($color: #6B9080, $alpha: 0.80);
                 padding: 10px;
                 border-radius: 10px;
                 width: 80%;
+
+                >.submitTag{
+
+
+                    background-color: #F6FFF8;
+                    color: #6B9080;
+                    border-radius: 5px;
+                    padding: 5px;
+                    cursor: pointer;
+
+                }
                 >p{
 
                     color: #F6FFF8;
@@ -265,7 +357,7 @@ margin-bottom: 75px;
         width: 75%;
 
         >.inputDiv{
-            grid-template-rows: 125px 125px 250px 100px 180px;
+            grid-template-rows: 125px 125px 285px 100px 180px;
             >.orDiv{
 
                 width: 75px;
@@ -289,7 +381,21 @@ margin-bottom: 75px;
         }
             >.innerDivBox{
                 width: 80%;
-                grid-template-rows: 35px 125px;
+                grid-template-rows: 35px 125px 35px;
+
+
+                >.submitTag{
+
+
+                background-color: #F6FFF8;
+                color: #6B9080;
+                border-radius: 5px;
+                padding: 5px;
+                cursor: pointer;
+
+                }
+
+
                 >p{
                     font-size: 1.2em;
 
@@ -357,7 +463,7 @@ margin-bottom: 75px;
         width: 40%;
 
         >.inputDiv{
-            grid-template-rows: 125px 125px 250px 100px 180px;
+            grid-template-rows: 125px 125px 300px 100px 180px;
             >.orDiv{
 
                 width: 75px;
@@ -381,7 +487,20 @@ margin-bottom: 75px;
         }
             >.innerDivBox{
                 width: 80%;
-                grid-template-rows: 50px 150px;
+                grid-template-rows: 50px 150px 50px;
+
+
+
+                >.submitTag{
+
+
+                background-color: #F6FFF8;
+                color: #6B9080;
+                border-radius: 5px;
+                padding: 5px;
+                cursor: pointer;
+
+                }
                 >p{
                     font-size: 1.2em;
 
