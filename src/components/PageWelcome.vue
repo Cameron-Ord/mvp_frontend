@@ -105,7 +105,7 @@
 
             padding: 10px;
             border-radius: 10px;
-            background-color: rgba($color: #6B9080, $alpha: 0.70);
+            background-color: rgba($color: #6B9080, $alpha: 0.80);
             animation: fadeIn 3.5s;
             -webkit-animation: fadeIn 3.5s;
             -moz-animation: fadeIn 3.5s;
@@ -171,7 +171,7 @@
                 -o-animation: fadeIn 3.5s;
                 -ms-animation: fadeIn 3.5s;
                 position: relative;
-                background-color: rgba($color: #6B9080, $alpha: 0.75);
+                background-color: rgba($color: #6B9080, $alpha: 0.80);
                 height: 40px;
                 width: 40px;
                 border-radius: 40px;
@@ -312,7 +312,7 @@
         
         padding: 10px;
         border-radius: 10px;
-        background-color: rgba($color: #6B9080, $alpha: 0.50);
+        background-color: rgba($color: #6B9080, $alpha: 0.80);
 
         >.h1_text{
 
@@ -353,7 +353,7 @@ grid-template-columns: 1fr 1fr;
         
         padding: 10px;
         border-radius: 10px;
-        background-color: rgba($color: #6B9080, $alpha: 0.50);
+        background-color: rgba($color: #6B9080, $alpha: 0.80);
 
         >.h1_text{
 

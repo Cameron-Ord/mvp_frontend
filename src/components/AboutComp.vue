@@ -4,17 +4,19 @@
             <span>
 
                 <div class="aboutHeaderDiv"><h1>About me</h1></div>
+
                 <div class="aboutContentDiv">
+                    <div>
+                        <p> Hi, my name's Cameron. I am a Web Developer, and this is my personal photography portfolio website.</p>
+                    </div>
 
-                    <p>
-                        Hi,
-                        my name's Cameron. I am a Web Developer, and this is my personal photography portfolio website. Here you will find 
-                        a database full of categorized photos. You can view all my photo galleries by going 
-                        to the browse section! If you wish to contact me for any purpose, you can leave a message on the contact page, or directly email me.
-                        Thanks for visiting!
-                    </p>
-
-                </div>a
+                    <div>
+                        <p>You can find all my work in the galleries <router-link to="/PhotoStream" class="routerStream">here</router-link> </p>
+                    </div>
+                    <div>
+                        <p>If you wish to contact me for any purpose, you can submit a message or directly email me. My contact information is <router-link to="/ContactPage" class="routerStream">here</router-link></p>
+                    </div>
+                </div>
 
             </span>
         </article>
@@ -39,34 +41,71 @@
     display: grid;
     align-items: center;
     justify-items: center;
-
     transition: 0.3s ease-in-out;
-    >span{
+    grid-template-rows: 1fr 300px;
 
+    >span{
+        
         display: grid;
         align-items: center;
-        justify-items: start;
-        text-align: start;
-        grid-template-rows: 6vh 1fr;
-        width: 80%;
-        background-color: rgba($color: #6B9080, $alpha: 0.70);
+        justify-items: center;
+        text-align: center;
+        grid-template-rows: 1fr 1fr;
         padding: 5px;
         border-radius: 10px;
 
+        >.aboutHeaderDiv{
 
-        >h1{
-            margin-left: 10px;
-            border-bottom: #F6FFF8 solid 1px;
-            color: #F6FFF8;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba($color: #6B9080, $alpha: 0.80);
+            >h1{
+
+                color: #F6FFF8;
+
+                font-size: 2.5em;
+
+                border-bottom: #F6FFF8 solid 1px;
+            }
+
         }
 
-        >p{
+        >.aboutContentDiv{
+            background-color: rgba($color: #F6FFF8, $alpha: 0.80);
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
 
-            margin-left: 10px;
-            color: #F6FFF8;
-            margin-top: 15px;
-            margin-bottom: 15px;
-            
+            grid-template-rows: 1fr 1fr 1fr;
+
+            >div{
+                background-color: rgba($color: #6B9080, $alpha: 0.80);
+                padding: 10px;
+                border-radius: 10px;
+                >p{
+
+                letter-spacing: 1px;
+                
+                color: #F6FFF8;
+
+                >.routerStream{
+
+                    font-weight: bolder;
+                    text-decoration: none;
+                    color: #EAF4F4;
+                    cursor: pointer;
+                    border-bottom: #EAF4F4 solid 1px;
+                }
+                }
+            }
         }
     }
 }

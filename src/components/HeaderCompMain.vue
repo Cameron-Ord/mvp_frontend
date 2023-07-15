@@ -242,7 +242,7 @@ width: 100%;
 
         >.btn_div{
 
-            background-color: rgba($color: #6B9080 , $alpha: 0.70);
+            background-color: rgba($color: #6B9080 , $alpha: 0.80);
             width: 50px;
             height: 50px;
             border-radius: 10px;
@@ -268,7 +268,7 @@ width: 100%;
 
                     font-size: 2em;
                     color: #F6FFF8;
-                    background-color: rgba($color: #6B9080 , $alpha: 0.70);
+                    background-color: rgba($color: #6B9080 , $alpha: 0.80);
           
                     padding: 5px;
                     border-radius: 10px;
@@ -372,7 +372,7 @@ transition: 0.4s ease-in-out;
 }
 .nav_menu{
 
-background-color: rgba($color: #6B9080, $alpha: 0.70);
+background-color: rgba($color: #6B9080, $alpha: 0.80);
 
 display: block;
 
@@ -407,14 +407,13 @@ right: 0;
 
 .page_header{
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-
-
+    background-color: rgba($color: #6B9080 , $alpha: 0.70);
+    min-height: 75px;
     >.desktop_wrapper{
-    background-color: rgba($color: #6B9080 , $alpha: 0.50);
+
     display: grid;
     align-items: center;
     justify-items: center;
-    min-height: 75px;
     width: 100%;
     >nav{
         display: grid;
@@ -472,14 +471,13 @@ right: 0;
 @media only screen and (min-width: 1024px){
 .page_header{
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
-   
+    background-color: rgba($color: #6B9080 , $alpha: 0.70);
+    min-height: 75px;
 }
 .desktop_wrapper{
-    background-color: rgba($color: #6B9080 , $alpha: 0.50);
     display: grid;
     align-items: center;
     justify-items: center;
-    min-height: 75px;
     width: 100%;
     >nav{
         display: grid;

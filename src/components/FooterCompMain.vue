@@ -55,7 +55,7 @@ opacity: 0;
 
 
 .page_footer{
-
+background-color: rgba($color: #6B9080, $alpha: 0);
 width: 100%;
 display: grid;
 align-items: center;
@@ -80,7 +80,7 @@ transition: 0.3s ease-in-out;
             align-items: center;
             display: grid;
             color: #F6FFF8;
-            background-color: rgba($color: #6B9080, $alpha: 0.70);
+            background-color: rgba($color: #6B9080, $alpha: 0.80);
             grid-template-rows: 1fr 1fr 1fr;
             padding: 10px;
             border-radius: 10px;
@@ -109,7 +109,7 @@ transition: 0.3s ease-in-out;
             justify-items: center;
             align-items: center;
             color: #F6FFF8;
-            background-color: rgba($color: #6B9080, $alpha: 0.70);
+            background-color: rgba($color: #6B9080, $alpha: 0.80);
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
 
@@ -147,9 +147,10 @@ transition: 0.3s ease-in-out;
 
 
     .page_footer{
-    min-height: 125px;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
     width: 100%;
+    background-color: rgba($color: #6B9080, $alpha: 0.80);
+    min-height: 150px;
 
     >.container_{
         display: none;
@@ -159,8 +160,6 @@ transition: 0.3s ease-in-out;
         display: grid;
         align-items: center;
         justify-items: center;
-        background-color: rgba($color: #6B9080, $alpha: 0.50);
-        min-height: 125px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
         >.credits_div_ws{
@@ -222,10 +221,10 @@ transition: 0.3s ease-in-out;
 
 
 .page_footer{
-    min-height: 125px;
+    min-height: 100px;
     grid-template-columns: repeat(auto-fit, minmax(770px, 1fr));
     width: 100%;
-
+    background-color: rgba($color: #6B9080, $alpha: 0.80);
     >.container_{
         display: none;
         }
@@ -234,8 +233,6 @@ transition: 0.3s ease-in-out;
         display: grid;
         align-items: center;
         justify-items: center;
-        background-color: rgba($color: #6B9080, $alpha: 0.50);
-        min-height: 125px;
         width: 100%;
         grid-template-columns: 1fr 1fr;
         >.credits_div_ws{

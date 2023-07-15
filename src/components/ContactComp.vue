@@ -205,7 +205,7 @@
                 }
             }
             >.innerDiv{
-                background-color: rgba($color: #6B9080, $alpha: 0.70);
+                background-color: rgba($color: #6B9080, $alpha: 0.80);
                 padding: 10px;
                 border-radius: 10px;
                 display: grid;
