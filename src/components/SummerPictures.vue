@@ -1,6 +1,6 @@
 <template>
     <article v-if="p !== undefined" class="summer_article">
-        <span class="summer_span">
+        <span class="summer_span" v-if="stored_images !== undefined">
 
             <img :src="stored_images[p]" alt="">
 
