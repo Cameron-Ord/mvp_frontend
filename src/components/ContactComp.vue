@@ -245,7 +245,7 @@
 
 }
 .contact_header{
-    
+    margin-top: 75px;
     >span{
     
             >h1{
@@ -257,7 +257,7 @@
 
 .contact_article{
 
-
+margin-bottom: 75px;
     >.inputSpan{
 
         min-width: 480px;

@@ -3,9 +3,18 @@
         <article class="about_article">
             <span>
 
-                <h1>About</h1>
+                <div class="aboutHeaderDiv"><h1>About me</h1></div>
+                <div class="aboutContentDiv">
 
-                <p>This is my personal Photography website where I host pictures that I take.</p>
+                    <p>
+                        Hi,
+                        my name's Cameron. I am a Web Developer, and this is my personal photography portfolio website. Here you will find 
+                        a database full of categorized photos. You can view all my photo galleries by going 
+                        to the browse section! If you wish to contact me for any purpose, you can leave a message on the contact page, or directly email me.
+                        Thanks for visiting!
+                    </p>
+
+                </div>a
 
             </span>
         </article>

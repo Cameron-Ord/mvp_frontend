@@ -73,7 +73,7 @@ transition: 0.3s ease-in-out;
         align-items: center;
         justify-items: center;
         width: 100%;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 1fr;
         
         >.credits_div{
             justify-items: center;
@@ -81,29 +81,26 @@ transition: 0.3s ease-in-out;
             display: grid;
             color: #F6FFF8;
             background-color: rgba($color: #6B9080, $alpha: 0.70);
-
-
+            grid-template-rows: 1fr 1fr 1fr;
             padding: 10px;
             border-radius: 10px;
-            width: 80%;
-
-
+            width: 70%;
+            text-align: center;
             animation: fadeIn 2s;
             -webkit-animation: fadeIn 2s;
             -moz-animation: fadeIn 2s;
             -o-animation: fadeIn 2s;
             -ms-animation: fadeIn 2s;
+            height: 80px;
         
                 >p{
-                    font-size: 0.9em;
-                    margin-top: 2.5px;
-                    margin-bottom: 2.5px;
+                    font-size: 0.8em;
+             
                 }
 
                 >h2{
-                    margin-top: 2.5px;
-                    margin-bottom: 2.5px;
-                    font-size: 0.9em;
+                              
+                    font-size: 0.8em;
                 }
             }
 
@@ -119,7 +116,8 @@ transition: 0.3s ease-in-out;
             padding: 10px;
             border-radius: 10px;
 
-
+            width: 70%;
+            height: 80px;
             animation: fadeIn 2s;
             -webkit-animation: fadeIn 2s;
             -moz-animation: fadeIn 2s;
@@ -135,9 +133,11 @@ transition: 0.3s ease-in-out;
                 margin-left: 5px;
             
                 margin-right: 5px;
+         
+    
             
                 width: 25px;
-            
+                max-width: 25px;
             }
             
         }

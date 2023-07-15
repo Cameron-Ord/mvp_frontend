@@ -75,12 +75,12 @@
 <style lang="scss" scoped>
 
 .nav_welcome{
-
     display: grid;
     justify-items: center;
     align-items: center;
-    margin-bottom: 50px;
+
  
+    grid-template-rows: 200px 350px;
 
 
     >.wrapper_span.hide_bar{
@@ -102,8 +102,10 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            color: #F6FFF8;
-            
+
+            padding: 10px;
+            border-radius: 10px;
+            background-color: rgba($color: #6B9080, $alpha: 0.70);
             animation: fadeIn 3.5s;
             -webkit-animation: fadeIn 3.5s;
             -moz-animation: fadeIn 3.5s;
@@ -112,10 +114,8 @@
             >.h1_text{
 
                 font-size: 1.5em;
-
-                border-radius: 10px;
-
                 color: rgba($color: #F6FFF8, $alpha: 1);
+                border-bottom: #F6FFF8 solid 1px;
             }
         }
 
@@ -124,7 +124,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 35px 45px;
             >.browse_link{
 
                 display: grid;
@@ -299,15 +299,36 @@
 
 @media only screen and (min-width: 770px){
 .nav_welcome{
+    grid-template-rows: 200px 350px;
 
-  margin-bottom: 75px;
+
+>.wrapper_span{
+
+
+  
+
+    >.heading_text{
+
+        
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba($color: #6B9080, $alpha: 0.50);
+
+        >.h1_text{
+
+            font-size: 1.75em;
+
+        }
+    }
+
+}
 }
 }
 
 
 @media only screen and (min-width: 1024px){
 .nav_welcome{
-
+    grid-template-rows: 200px 325px;
    margin-bottom: 100px;
 }
 
@@ -324,16 +345,19 @@ grid-template-columns: 1fr 1fr;
 
 >.wrapper_span{
 
-
+    grid-template-rows: 100px 75px;
   
 
     >.heading_text{
 
         
+        padding: 10px;
+        border-radius: 10px;
+        background-color: rgba($color: #6B9080, $alpha: 0.50);
 
         >.h1_text{
 
-            font-size: 3em;
+            font-size: 2em;
 
         }
     }
@@ -345,14 +369,5 @@ grid-template-columns: 1fr 1fr;
     0% {opacity: 0;}
     100% {opacity: 1}
 }
-@media only screen and (min-width: 770px){
 
-
-}
-
-
-@media only screen and (min-width: 1024px){
-
-
-}
 </style>
