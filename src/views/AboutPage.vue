@@ -41,7 +41,6 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 .about_page_div{
 
     background-image: url('~@/assets/DSCF4035.JPG');
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

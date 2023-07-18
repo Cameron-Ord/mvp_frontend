@@ -35,10 +35,7 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
     display: grid;
     align-items: center;
     justify-items: center;
-
-
-    background-image: url('~@/assets/DSC_3749.JPG');
-    background-attachment: fixed;
+    background-image: url('~@/assets/DSCF4035.JPG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

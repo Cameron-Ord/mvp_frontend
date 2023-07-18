@@ -31,7 +31,7 @@
                     <textarea class="inputTagBox" cols="30" rows="10" maxlength="300" ref="messageContent"></textarea>
                     <p class="submitTag" @click="submitText">Submit</p>
 
-                    <p v-if="status !== undefined">{{ status }}</p>
+                    <p class="status_tag" v-if="status !== undefined">{{ status }}</p>
                     </div>
 
                     <div class="orDiv">
@@ -40,7 +40,10 @@
                 
                     <div class="emailDiv">
                     <h3>Direct Email me</h3>
+
+                    <a href="mailto:cameron.ian.ronald.ord@outlook.com" class="a_tag">
                     <img src="~@/assets/jean-victor-balin-icon-letter-mail.svg">
+                    </a>
                     </div>
 
                 </div>  
@@ -217,7 +220,7 @@ import axios from 'axios';
             display: grid;
             align-items: center;
             justify-items: center;
-            grid-template-rows: 100px 100px 225px 80px 160px;
+            grid-template-rows: 100px 100px 1fr 80px 160px;
             text-align: center;
             background-color: rgba($color: #F6FFF8, $alpha: 0.70);
             width: 70%;
@@ -239,6 +242,7 @@ import axios from 'axios';
                 color: #F6FFF8;
             }
         }
+        
 
             >.emailDiv{
             background-color: rgba($color: #6B9080, $alpha: 0.80);
@@ -256,22 +260,38 @@ import axios from 'axios';
                 font-weight: bold;
                 color: #F6FFF8;
             }
+            >.a_tag{
+
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
 
             >img{
                 width: 50px;
                 cursor: pointer;
             }
         }
+        }
             >.innerDivBox{
                 
+                margin-top: 30px;
+                margin-bottom: 30px;
                 display: grid;
                 align-items: center;
                 justify-items: center;
-                grid-template-rows: 25px 125px 25px;
+                grid-auto-flow: row;
                 background-color: rgba($color: #6B9080, $alpha: 0.80);
                 padding: 10px;
                 border-radius: 10px;
                 width: 80%;
+
+
+                >.status_tag{
+
+                margin-top: 10px;
+                margin-bottom: 10px;
+                }
 
                 >.submitTag{
 
@@ -279,12 +299,16 @@ import axios from 'axios';
                     background-color: #F6FFF8;
                     color: #6B9080;
                     border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                     padding: 5px;
                     cursor: pointer;
 
                 }
                 >p{
-
+                    border-radius: 5px;
+                    margin-top: 10px;
+                    margin-bottom: 10px;
                     color: #F6FFF8;
                     font-weight: bold;
 
@@ -305,6 +329,7 @@ import axios from 'axios';
                 justify-items: center;
                 grid-template-rows: 25px 25px;
                 width: 70%;
+
                 >p{
                     color: #F6FFF8;
                     font-weight: bold;
@@ -375,13 +400,18 @@ margin-bottom: 75px;
                 font-size: 1.4em;
             }
 
+            >.a_tag{
+
             >img{
 
+        
             }
+        
+        }
         }
             >.innerDivBox{
                 width: 80%;
-                grid-template-rows: 35px 125px 35px;
+        
 
 
                 >.submitTag{
@@ -481,13 +511,20 @@ margin-bottom: 75px;
                 font-size: 1.4em;
             }
 
+
+            >.a_tag{
+
+            
+
             >img{
 
             }
+
+        }
         }
             >.innerDivBox{
                 width: 80%;
-                grid-template-rows: 50px 150px 50px;
+              
 
 
 
