@@ -32,13 +32,11 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 
 .image_bg{
 
-    display: grid;
-    align-items: center;
-    justify-items: center;
     background-image: url('~@/assets/DSCF4035.JPG');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
 }
 .contact_page{
 
