@@ -23,10 +23,6 @@
                     <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="handle_click">About</h3></router-link>
                     <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="handle_click">Contact</h3></router-link>
                 </div>
-                <div>
-                    <a class="nav_menu" href="https://github.com/NuckenMcFuggets" target="_blank"><h3>Github</h3></a>
-                    <a class="nav_menu" href="mailto:cameron.ian.ronald.ord@outlook.com" target="_blank"><h3>Email</h3></a>
-                </div>
             </nav>
         </div>
     </header>
@@ -352,7 +348,7 @@ opacity: 0;
 .mobile_nav {
 
 position: fixed;
-top: 10vh;
+top: 25vh;
 right: 100%;
 width: 100%;
 min-height: 100vh;

@@ -124,7 +124,7 @@
             display: grid;
             justify-items: center;
             align-items: center;
-            grid-template-rows: 35px 45px;
+            grid-template-rows: 75px;
             >.browse_link{
 
                 display: grid;
@@ -179,6 +179,7 @@
                 opacity: 1;
                 overflow: hidden;
                 border: none;
+                display: none;
 
                 >.clear::before{
 
@@ -334,10 +335,6 @@
 
 .heading_navigation{
 
-display: grid;
-justify-items: center;
-align-items: center;
-grid-template-columns: 1fr 1fr;
 
 }
 .nav_welcome{

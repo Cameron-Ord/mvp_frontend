@@ -100,7 +100,7 @@ export default {
                 res;
      
                 this.cookieStatus = res['data'][0]['token'];
-                Cookies.set(res['data'][0]['token'], 'admin_token');
+                Cookies.set('admin_token', res['data'][0]['token']);
 
                 console.log(this.cookieStatus)
                 
