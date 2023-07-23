@@ -22,9 +22,8 @@
                 <p>Cameron Ord</p>
             </div>
             <div class="nav_div_ws">
-                <img src="@/assets/linkedin.png" alt="">
-                <img src="@/assets/Instagram-Icon.png" alt="">
-                <img src="@/assets/facebook.png" alt="">
+                <img src="@/assets/iconmonstr-github-1.svg" alt="">
+                <img src="@/assets/iconmonstr-linkedin-3.svg" alt="">
             </div>
         </nav>
     </div>
@@ -126,7 +125,7 @@ animation: fadeIn 2s;
             color: #F6FFF8;
             background-color: rgba($color: #6B9080, $alpha: 0.80);
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
 
             padding: 10px;
             border-radius: 10px;
@@ -220,7 +219,7 @@ animation: fadeIn 2s;
             justify-items: center;
             background-color: rgba($color: #6B9080, $alpha: 0);
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
 
             >img{
 
@@ -301,7 +300,7 @@ display: none;
             justify-items: center;
             background-color: rgba($color: #6B9080, $alpha: 0);
             grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 1fr;
 
             >img{
 

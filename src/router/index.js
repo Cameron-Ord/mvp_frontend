@@ -17,11 +17,16 @@ const routes = [
     name: 'Home',
     meta: [
       {
-        title: 'Home',
+        title: 'Welcome',
       },
       {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
+      },
+
+      {
         name: 'description',
-        content: 'Welcome'
+        content: 'A photography site hosted by Cameron Ord'
       },
       {
         name: 'author',
@@ -34,9 +39,16 @@ const routes = [
     component: PhotoStream,
     name: 'Photostream',
     meta: [
+
+            
       {
-        title: 'Photostream',
+        title: 'Photo Gallery',
       },
+      {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
+      },
+
       {
         name: 'description',
         content: 'Welcome'
@@ -53,7 +65,11 @@ const routes = [
     name: 'Photo Viewer',
     meta: [
       {
-        title: 'Photostream',
+        title: 'Gallery Viewer',
+      },
+      {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
       },
       {
         name: 'description',
@@ -71,7 +87,11 @@ const routes = [
     name: 'About page',
     meta: [
       {
-        title: 'about',
+        title: 'About Me',
+      },
+      {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
       },
       {
         name: 'description',
@@ -89,8 +109,13 @@ const routes = [
     name: 'Contact page',
     meta: [
       {
-        title: 'Contact',
+        title: 'Contact Me',
       },
+      {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
+      },
+
       {
         name: 'description',
         content: 'Welcome'
@@ -109,6 +134,11 @@ const routes = [
       {
         title: 'secret',
       },
+      {
+        name:'keywords',
+        content:'Photography, portfolio, images, birds, nature, summer photography, winter photography, fall photography, spring photography, image hosting'
+      },
+
       {
         name: 'description',
         content: 'Welcome'
