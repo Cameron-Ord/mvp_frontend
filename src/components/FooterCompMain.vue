@@ -22,7 +22,7 @@
                 <p>Cameron Ord</p>
             </div>
             <div class="nav_div_ws">
-                <a href="https://github.com/NuckenMcFuggets" target="_blank"><img src="@/assets/iconmonstr-github-1.svg" alt=""></a>
+                <a href="https://github.com/Cameron-Ord" target="_blank"><img src="@/assets/iconmonstr-github-1.svg" alt=""></a>
                 
                 <a href="https://www.linkedin.com/in/camord34/" target="_blank"><img src="@/assets/iconmonstr-linkedin-3.svg" alt=""></a>
             </div>
