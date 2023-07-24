@@ -8,9 +8,9 @@
                 <p>Cameron Ord</p>
             </div>
             <div class="nav_div">
-                <img src="@/assets/linkedin.png" alt="">
-                <img src="@/assets/Instagram-Icon.png" alt="">
-                <img src="@/assets/facebook.png" alt="">
+                <a href="https://github.com/NuckenMcFuggets" target="_blank"><img src="@/assets/iconmonstr-github-1.svg" alt=""></a>
+                
+                <a href="https://www.linkedin.com/in/camord34/" target="_blank"><img src="@/assets/iconmonstr-linkedin-3.svg" alt=""></a>
             </div>
         </nav>
     </div>
@@ -22,8 +22,9 @@
                 <p>Cameron Ord</p>
             </div>
             <div class="nav_div_ws">
-                <img src="@/assets/iconmonstr-github-1.svg" alt="">
-                <img src="@/assets/iconmonstr-linkedin-3.svg" alt="">
+                <a href="https://github.com/NuckenMcFuggets" target="_blank"><img src="@/assets/iconmonstr-github-1.svg" alt=""></a>
+                
+                <a href="https://www.linkedin.com/in/camord34/" target="_blank"><img src="@/assets/iconmonstr-linkedin-3.svg" alt=""></a>
             </div>
         </nav>
     </div>
@@ -133,20 +134,26 @@ animation: fadeIn 2s;
             width: 70%;
             height: 80px;
                 
-            >img{
+
+            >a{
+
+                text-decoration: none;
+
+                >img{
+                    
+                    margin-top: 5px;
+                
+                    margin-bottom: 5px;
+                
+                    margin-left: 5px;
+                
+                    margin-right: 5px;
             
-                margin-top: 5px;
-            
-                margin-bottom: 5px;
-            
-                margin-left: 5px;
-            
-                margin-right: 5px;
-         
-    
-            
-                width: 25px;
-                max-width: 25px;
+
+                
+                    width: 25px;
+                    max-width: 25px;
+                }
             }
             
         }
@@ -221,12 +228,16 @@ animation: fadeIn 2s;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
 
+
+            >a{
+
             >img{
 
                 width: 25px;
                 margin-top: 10px;
             }
        
+            }
         }
     }
 }
@@ -302,10 +313,14 @@ display: none;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr;
 
+
+            >a{
+
             >img{
 
                 width: 25px;
                 margin-top: 10px;
+            }
             }
        
         }
