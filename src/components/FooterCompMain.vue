@@ -3,6 +3,9 @@
     <div class="page_footer">
         <nav class="container_">        
             <div class="credits_div">
+
+                <!--displaying footer and navigation info-->
+
                 <h2>Photography portfolio</h2>
                 <p>by</p>
                 <p>Cameron Ord</p>

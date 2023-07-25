@@ -35,6 +35,8 @@ import PageWelcome from '@/components/PageWelcome.vue';
 
         methods:{
             delete_classes(){
+
+                //Deletes classes on call
                 
                 let menu_btn = document.querySelector(`.hamburger`);
 

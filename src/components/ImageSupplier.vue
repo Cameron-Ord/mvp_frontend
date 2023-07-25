@@ -1,9 +1,13 @@
 <template>
     
     <div class="divtacular">
+
+        <!--protecting HTML from undefined variables-->
+
             <div class="article_container" v-if="(stored_images !== undefined && p !== undefined)">
                 <article class="image_container">
                     <span>
+                        <!--image navigation, goes to next or previous image in array based on which button is clicked-->
                         <div @click="prev" class="previous_image">
                         
                             <div class="prev_bar_1"></div>
@@ -11,6 +15,9 @@
                         
                         </div>
                         <div class="image_holder">
+
+                            <!--displays an image object from the stored_images array based off the position of p-->
+
                         <img :src="stored_images[p]">
                         </div>
                         <div @click="next" class="next_image">
@@ -42,6 +49,9 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+
+            //calls function on mount
+
             this.get_images();
          
       
@@ -50,6 +60,8 @@ import Cookies from 'vue-cookies';
 
         methods:{
 
+
+            //changing p to be the next or previous number in the array on function call
 
             next() {
 
@@ -76,14 +88,11 @@ import Cookies from 'vue-cookies';
             },
 
 
-            handle_images(){
-               
-                this.get_images();
-
-            },
 
 
             get_images(){
+
+                //gets images based off the type stored in the cookie
 
                 let type_get = Cookies.get('photo_type');
 
@@ -97,6 +106,8 @@ import Cookies from 'vue-cookies';
                     }
 
                 }).then((response =>{
+
+                    //pushes all file paths into the stored_images array
 
                     this.stored_images = []
 

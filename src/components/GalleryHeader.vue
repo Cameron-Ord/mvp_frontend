@@ -3,6 +3,8 @@
 
         <article class="gallery_article">
 
+            <!--header display-->
+
             <span>
                 <h1>PHOTO GALLERIES</h1>
             </span>

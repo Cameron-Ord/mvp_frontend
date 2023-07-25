@@ -1,6 +1,7 @@
 <template>
   <div class="apex_parent">
 
+    <!--setting router-->
     <router-view/>
   </div>
 </template>

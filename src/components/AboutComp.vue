@@ -10,6 +10,8 @@
                         <p> Hi, my name's Cameron. I am a Web Developer, and this is my personal photography portfolio website.</p>
                     </div>
 
+                    <!--Navigation-->
+                    
                     <div>
                         <p>You can find all my work in the galleries <router-link to="/PhotoStream" class="routerStream">here</router-link> </p>
                     </div>

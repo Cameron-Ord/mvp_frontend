@@ -2,6 +2,7 @@
 
     <div class="divParent">
 
+        <!--displaying HTML-->
 
         <article class="contact_header">
                 <span>
@@ -15,6 +16,7 @@
             <span class="inputSpan">
                 <div class="inputDiv">
 
+            
 
                     <div class="innerDiv">
                     <p>Your Name</p>
@@ -30,6 +32,8 @@
                     <p>Your message</p>
                     <textarea class="inputTagBox" cols="30" rows="10" maxlength="300" ref="messageContent"></textarea>
                     <p class="submitTag" @click="submitText">Submit</p>
+
+                    <!--displays a status message once it becomes defined && protecting the HTML-->
 
                     <p class="status_tag" v-if="status !== undefined">{{ status }}</p>
                     </div>
@@ -77,11 +81,14 @@ import axios from 'axios';
 
             submitText(){
 
+                //grabbing values from text boxes
+
                 this.name_value = this.$refs['userName'].value
                 this.email_value = this.$refs['userEmail'].value
                 this.content_value = this.$refs['messageContent'].value
 
 
+                //if the value from the text box is an empty string, sets it to null
 
                 if(this.name_value === ''){
                     this.name_value = null;
@@ -98,6 +105,8 @@ import axios from 'axios';
 
                 axios({
 
+                    //sending data through axios
+
                     url: `${process.env.VUE_APP_BASE_DOMAIN}/api/contact`,
 
                     method: 'POST',
@@ -112,9 +121,13 @@ import axios from 'axios';
 
                     res;
 
+                    //on success, displays a success message
+
                     this.status = 'message sent!';
 
                 }).catch((err)=>{
+
+                    //dynamically assigning error responses
 
                     if(err['response']['data'] === 'the name must be sent!'){
 

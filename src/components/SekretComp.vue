@@ -3,6 +3,7 @@
         <article>
 
             <span>
+                <!--login and image upload-->
 
             <div class="login_div" v-if="cookieStatus === null">
 
@@ -14,6 +15,7 @@
             </div>
 
             <div class="upload_div">
+
 
                 <input type="file" multiple ref="upload_file" class="files_input">
                 <input type="text" placeholder="description" ref="file_description">
@@ -50,6 +52,8 @@ export default {
 
 
         uploadImage(){
+
+            //setting form data and sending it
          
             let form = new FormData();
 
@@ -58,6 +62,9 @@ export default {
             }
             form.append("description", this.$refs["file_description"].value);
             form.append("type", this.$refs['file_type'].value);
+
+            //appending token from cookie 
+
             form.append("token", this.cookieStatus);
 
             axios({
@@ -86,6 +93,8 @@ export default {
 
             axios({
 
+                //sending data from input tags
+
                 url:`${process.env.VUE_APP_BASE_DOMAIN}/api/admin-login`,
 
                 method: 'POST',
@@ -99,6 +108,8 @@ export default {
 
                 res;
      
+                //setting an admin token on sucessful login. This is used to upload images.
+
                 this.cookieStatus = res['data'][0]['token'];
                 Cookies.set('admin_token', res['data'][0]['token']);
 

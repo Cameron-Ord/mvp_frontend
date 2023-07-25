@@ -1,9 +1,14 @@
 <template>
+
+    <!--protecting the html from undefined variables-->
+
     <article v-if="p !== undefined" class="bw_article">
         <span class="bw_span" v-if="stored_images !== undefined">
 
+            <!--displays a random image from the stored_images array-->
             <img :src="stored_images[p]" alt="">
 
+            <!--navigation-->                                                      <!--calls the handle_click function on click-->
             <router-link to="/ImageLoader" class="bw_router" ><p class="p_tag_bw" @click="handle_click">View</p></router-link>
 
         </span>
@@ -26,6 +31,7 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+            //calls the API function
             this.get_images()
 
         },
@@ -34,6 +40,7 @@ import Cookies from 'vue-cookies';
 
             handle_click(){
 
+                //calls 2 functions on click
                 this.grab_type();
                 this.delete_classes();
 
@@ -42,11 +49,16 @@ import Cookies from 'vue-cookies';
 
             grab_type(){
 
+                //sets the photo_type cookie based of the image_type variable when the user clicks the view button
+
                 Cookies.set('photo_type', this.image_type_storage);
 
             },
 
             delete_classes(){
+
+                //deleting classes
+
             let menu_btn = document.querySelector(`.hamburger`);
 
             let mobile_menu = document.querySelector(`.mobile_nav`);
@@ -70,6 +82,8 @@ import Cookies from 'vue-cookies';
 
             get_images(){
 
+                //gets images where the type is black/white
+
                 axios({
                     url:`${process.env.VUE_APP_BASE_DOMAIN}/api/images`,
 
@@ -81,12 +95,18 @@ import Cookies from 'vue-cookies';
                     }
                 }).then((response => {
  
+                    //pushing all the file paths into the stored_images array
+
                     for(let i=0; i<response['data'].length; i++){
                     this.stored_images.push(response['data'][i]['file_path'])
                     
                     }
 
+                    //defining the image_type_storage variable with it's type
+
                     this.image_type_storage = response['data'][0]['type'];
+
+                    //defining p by giving it a random number from 0 to the length of the response
 
                     this.p = Math.floor(Math.random() * response['data'].length);
 

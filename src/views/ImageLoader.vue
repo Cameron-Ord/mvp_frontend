@@ -34,6 +34,8 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+            //calling functions and setting variables
+
             this.assign_style();
             this.cookie_holder = Cookies.get('photo_type');
 
@@ -45,6 +47,8 @@ import Cookies from 'vue-cookies';
         methods:{
 
             assign_style(){
+
+                //modifying style for this page
 
             let btn_bgc = document.querySelector('.btn_div');
             let icon_bgc = document.querySelector('.nav_icon_button');

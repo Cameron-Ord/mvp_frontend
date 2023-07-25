@@ -6,8 +6,12 @@
                 </div>
                 <nav class="heading_navigation">
                     <div class="browse_link">
+                        <!--navigation-->
                         <router-link to="/PhotoStream" class="router"><h3 class="h3_text" @click="delete_classes">Browse</h3></router-link>
                     </div>
+
+                    <!--search bar, currently not in use-->
+
                     <div class="search">
                         <div class="icon" @click="icon_click"></div>
                         <div class="input">
@@ -28,6 +32,8 @@
 
             delete_classes(){
 
+                //deletes classes
+
                 let search = document.querySelector('.search');
 
                 let input = document.querySelector('.input');
@@ -46,11 +52,15 @@
             
             clear_bar(){
 
+                //clears content inside the search bar on call
+
                 document.querySelector('.search_input').value = this.$refs['search_input_value'] = '';
 
             },
 
             icon_click(){
+
+                //toggling classes on click 
 
                 let search = document.querySelector('.search');
 

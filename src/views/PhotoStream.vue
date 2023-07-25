@@ -37,6 +37,8 @@ import Cookies from 'vue-cookies';
 
         mounted(){
 
+            //function calls on mount
+
             this.assign_style();
 
             this.delete_classes();
@@ -49,6 +51,8 @@ import Cookies from 'vue-cookies';
 
 
             assign_style(){
+
+                //assigns a specific style for this page
 
                 let btn_bgc = document.querySelector('.btn_div');
                 let icon_bgc = document.querySelector('.nav_icon_button');
@@ -73,11 +77,17 @@ import Cookies from 'vue-cookies';
             },
 
             delete_cookies(){
+
+                //deletes cookies
+
                 Cookies.remove('stored_int');
                 Cookies.remove('photo_type');
             },
 
             delete_classes(){
+
+                //deletes respective classes
+
                 let menu_btn = document.querySelector(`.hamburger`);
 
                 let mobile_menu = document.querySelector(`.mobile_nav`);

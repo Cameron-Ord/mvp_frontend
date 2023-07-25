@@ -5,6 +5,9 @@
         <div class="wrapper">
             <nav class="header_span">
                 <div class="btn_div">
+
+                    <!--hamburger menu bars-->
+
                 <button @click="make_active" class="hamburger"><div>
 
                     <div class="bar_1"></div>
@@ -15,10 +18,16 @@
                 </div>
             </nav>
             <nav class="icon_nav">
+
+                <!--navigation-->
+
                 <router-link to="/" class="nav_router"><h1 class="nav_icon_button">[C]</h1></router-link>
             </nav>
             <nav class="mobile_nav">
                 <div>
+
+                    <!--nav buttons, calls handle click function on click-->
+                    
                     <router-link to="/PhotoStream" class="router"><h3 class="nav_menu" @click="handle_click">Browse</h3></router-link>
                     <router-link to="/AboutPage" class="router"><h3 class="nav_menu" @click="handle_click">About</h3></router-link>
                     <router-link to="/ContactPage" class="router"><h3 class="nav_menu" @click="handle_click">Contact</h3></router-link>
@@ -30,9 +39,14 @@
             <div class="desktop_wrapper">
             <nav>
                 <div class="icon_div">
+
+                    <!--navigation-->
+
                 <h1 class="icon" @click="gotoMain">[C]</h1>
                 </div>
                 <div class="htag_div">
+
+                    <!--nav buttons, calls handle click (pc) function on click-->
 
                     <router-link to="/PhotoStream" class="router"><h2 class="nav_tag" @click="handle_click_pc">Browse</h2></router-link>
                     <router-link to="/AboutPage" class="router"><h2 class="nav_tag" @click="handle_click_pc">About</h2></router-link>
@@ -60,15 +74,23 @@ export default {
 
         gotoMain(){
 
+            //if the user is not at '/', pushes to '/'. Otherwise, refreshes
+
             if(this.$route.path !== '/'){
 
                 this.$router.push('/');
 
+            }else{
+
+                this.$router.go();
             }
             
         },
 
+        //functions that call other functions
+
         handle_click_pc(){
+
 
             this.delete_cookies();
         },
@@ -87,6 +109,9 @@ export default {
 
 
         delete_classes(){
+
+            //deletes classes
+
         let menu_btn = document.querySelector(`.hamburger`);
 
         let mobile_menu = document.querySelector(`.mobile_nav`);
@@ -140,6 +165,8 @@ export default {
         },
 
         make_active() {
+
+            //function for toggling classes on click
 
         let menu_btn = document.querySelector(`.hamburger`);
 
