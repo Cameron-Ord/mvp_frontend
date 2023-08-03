@@ -87,8 +87,8 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
         align-items: center;
         justify-items: center;
         width: 100%;
-        margin-top: 25px;
-        margin-bottom: 25px;
+        margin-bottom: 50px;
+
         
     }
 }

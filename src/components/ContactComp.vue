@@ -166,6 +166,14 @@ import axios from 'axios';
 100% {opacity: 1}
 }
 
+.contact_header.hide_contact_header{
+    opacity: 0;
+}
+
+.contact_article.hide_contact_info{
+    opacity: 0;
+}
+
 .divParent{
 
     display: grid;
@@ -174,6 +182,11 @@ import axios from 'axios';
     width: 100%;
     margin-top: 25px;
     margin-bottom: 25px;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
 
     >.divWrapper{
         display: grid;
@@ -191,6 +204,7 @@ import axios from 'axios';
             background-color: #6B9080;
             width: 100%;
             height: 100px;
+            transition: 0.3s ease-in-out;
 
             >span{
 
@@ -213,6 +227,7 @@ import axios from 'axios';
             align-items: center;
             justify-items: center;
             width: 100%;
+            transition: 0.3s ease-in-out;
 
 
             >.inputSpan{
@@ -366,6 +381,8 @@ import axios from 'axios';
 100% {opacity: 1}
 }
 
+
+
 .divParent{
 
     display: grid;
@@ -381,15 +398,18 @@ import axios from 'axios';
         text-align: center;
         width: 100%;
         grid-template-rows: 0.75fr 2fr;
+        transition: 0.3s ease-in-out;
+
 
         >.contact_header{
-
+           
             display: grid;
             align-items: center;
             justify-items: center;
             background-color: #6B9080;
             width: 100%;
             height: 150px;
+            opacity: 1;
 
             >span{
 
