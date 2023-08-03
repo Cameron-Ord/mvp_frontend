@@ -52,6 +52,7 @@ setup () {
     width: 100%;
     display: grid;
     align-items: center;
+    
     justify-items: center;
 }
 .page_footer.hide_footer{
@@ -95,6 +96,7 @@ animation: fadeIn 2s;
         display: grid;
         align-items: center;
         justify-items: center;
+        height: 100%;
         width: 100%;
         grid-template-columns: 1fr 1fr;
         

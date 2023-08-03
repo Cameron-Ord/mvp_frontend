@@ -1,10 +1,19 @@
 <template>
     <!--protecting the html from undefined variables-->
 
-    <article v-if="p !== undefined" class="summer_article">
-        <span class="summer_span" v-if="stored_images !== undefined">
-            <!--displays a random image from the stored_images array-->
+    <article class="summer_article">
 
+        <span class="loaderSpan" v-if="stored_images === undefined && p === undefined">
+
+            <div class="loader">
+
+            </div>
+
+        </span>
+
+        <span class="summer_span" v-if="stored_images !== undefined && p !== undefined">
+            <!--displays a random image from the stored_images array-->
+        
             <img :src="stored_images[p]" alt="">
             <!--navigation-->                                                      <!--calls the handle_click function on click-->
 
@@ -21,7 +30,7 @@ import Cookies from 'vue-cookies';
 
         data() {
             return {
-                stored_images: [],
+                stored_images: undefined,
                 stored_interval: null,
                 p: undefined,
                 image_type_storage: undefined
@@ -81,6 +90,7 @@ import Cookies from 'vue-cookies';
                 //gets images where the type is summer
 
 
+
                 axios({
                     url:`${process.env.VUE_APP_BASE_DOMAIN}/api/images`,
 
@@ -92,6 +102,7 @@ import Cookies from 'vue-cookies';
  
                     //pushing all the file paths into the stored_images array
 
+                    this.stored_images = []
 
                     for(let i=0; i<response['data'].length; i++){
                     this.stored_images.push(response['data'][i]['file_path'])
@@ -122,6 +133,17 @@ import Cookies from 'vue-cookies';
 
 
 <style lang="scss" scoped>
+
+@keyframes loading{
+
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+
+}
 @keyframes fadeIn {
 0% {opacity: 0;}
 100% {opacity: 1}
@@ -136,6 +158,33 @@ transition: 0.3s ease-in-out;
 margin-top: 5px;
 margin-bottom: 5px;
 transform: translateY(0px);
+
+>.loaderSpan{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    >.loader::after{
+
+        content: "";
+        border: #EAF4F4 10px solid;
+        border-top-color:#6B9080 ;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+
+    }
+
+
+    >.loader{
+      
+
+        transform: translateY(-10px);        
+        height: 75px;
+        width: 75px;
+        display: grid;
+        
+    }
+}
 
 >.summer_span{
     display: grid;
@@ -192,6 +241,34 @@ transform: translateY(0px);
 .summer_article{
 
     transform: translateY(0px);
+
+
+    >.loaderSpan{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    >.loader::after{
+
+        content: "";
+        border: #EAF4F4 10px solid;
+        border-top-color:#6B9080 ;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+
+    }
+
+
+    >.loader{
+        transform: translateY(-15px);        
+
+        height: 100px;
+        width: 100px;
+        display: grid;
+        
+    }
+}
+
 >.summer_span{
 
     >h2{
@@ -228,6 +305,35 @@ transform: translateY(0px);
 @media only screen and (min-width: 1024px){
 .summer_article{
     transform: translateX(40px);
+
+
+
+    >.loaderSpan{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+
+    >.loader::after{
+
+        content: "";
+        border: #EAF4F4 10px solid;
+        border-top-color:#6B9080 ;
+        border-radius: 50%;
+        animation: loading 0.75s ease infinite;
+
+    }
+
+
+    >.loader{
+        transform: translateY(-20px);        
+
+        height: 150px;
+        width: 150px;
+        display: grid;
+        
+    }
+}
+
 >.summer_span{
 
     >h2{

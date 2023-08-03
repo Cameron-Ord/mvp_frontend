@@ -26,11 +26,38 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
             AboutComp
         },
 
-        mounted(){
+         mounted(){
 
+            this.assign_style()
         },
 
         methods:{
+            assign_style(){
+
+                //assigns a specific style for this page
+
+                let btn_bgc = document.querySelector('.btn_div');
+                let icon_bgc = document.querySelector('.nav_icon_button');
+                let nav_menu_bgc = document.querySelectorAll('.nav_menu');
+                let ws_bgc = document.querySelector('.page_header_ws');
+                let footercreds = document.querySelector('.credits_div');
+                let footernav = document.querySelector('.nav_div');
+                let fscontainer = document.querySelector('.page_footer_ws');
+
+                for(let i=0; i<nav_menu_bgc.length; i++){
+
+                nav_menu_bgc[i]['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+
+                }
+
+                fscontainer['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                footernav['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                footercreds['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                btn_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                icon_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+                ws_bgc['style']['background-color'] = 'rgba(107, 144, 128, 0.95)';
+            },
+
 
         }
 
@@ -40,19 +67,15 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 <style lang="scss" scoped>
 .about_page_div{
 
-    background-image: url('~@/assets/DSCF4035.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-attachment: fixed;
+    background-color: rgba($color: #EAF4F4, $alpha: 1);
 
     >.about_main{
 
         display: grid;
         align-items: center;
         justify-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250, 1fr));
         min-height: 80vh;
-        grid-template-rows: repeat(auto-fit, minmax(250, 1fr));
     }
 }
 
@@ -60,14 +83,14 @@ import HeaderCompMain from '@/components/HeaderCompMain.vue';
 
     .about_main{
 
-        grid-template-rows: repeat(auto-fit, minmax(480, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(480, 1fr));
     }
 }
 @media only screen and (min-width: 1024px){
 
     .about_main{
 
-        grid-template-rows: repeat(auto-fit, minmax(770, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(770, 1fr));
     }
 }
 </style>

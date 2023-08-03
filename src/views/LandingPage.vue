@@ -28,6 +28,7 @@ import PageWelcome from '@/components/PageWelcome.vue';
 
         mounted(){
 
+            //on mount, deletes classes
             this.delete_classes();
 
         },

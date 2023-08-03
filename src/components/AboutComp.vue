@@ -1,7 +1,7 @@
 <template>
     <div class="aboutParent">
         <article class="about_article">
-            <span>
+            <span class="contContainer">
 
                 <div class="aboutHeaderDiv"><h1>About me</h1></div>
 
@@ -42,6 +42,8 @@
     display: grid;
     align-items: center;
     justify-items: center;
+    width: 100%;
+    height: 100%;
     animation: fadeIn 2s;
     -webkit-animation: fadeIn 2s;
     -moz-animation: fadeIn 2s;
@@ -59,18 +61,22 @@
     align-items: center;
     justify-items: center;
     transition: 0.3s ease-in-out;
-    grid-template-rows: 1fr 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
 
-    >span{
+    >.contContainer{
         
         display: grid;
         align-items: center;
         justify-items: center;
         text-align: center;
-        grid-template-rows: 1fr 1fr;
         padding: 5px;
-        border-radius: 10px;
+        border-radius: 5px;
+        grid-auto-flow: row;
+        row-gap: 20px;
+
+        width: 80%;
 
         >.aboutHeaderDiv{
 
@@ -79,7 +85,7 @@
             justify-items: center;
             text-align: center;
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 5px;
             background-color: rgba($color: #6B9080, $alpha: 0.80);
             >h1{
 
@@ -93,21 +99,19 @@
         }
 
         >.aboutContentDiv{
-            background-color: rgba($color: #F6FFF8, $alpha: 0.80);
             display: grid;
             align-items: center;
             justify-items: center;
             text-align: center;
             padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-
+            border-radius: 5px;
+          
             grid-template-rows: 1fr 1fr 1fr;
 
             >div{
                 background-color: rgba($color: #6B9080, $alpha: 0.80);
                 padding: 10px;
-                border-radius: 10px;
+                border-radius: 5px;
                 >p{
 
                 letter-spacing: 1px;
@@ -129,24 +133,98 @@
 }
 @media only screen and (min-width: 770px){
 
+.aboutParent{
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+    animation: fadeIn 2s;
+    -webkit-animation: fadeIn 2s;
+    -moz-animation: fadeIn 2s;
+    -o-animation: fadeIn 2s;
+    -ms-animation: fadeIn 2s;
+}
+.about_article.hide_about{
+
+    opacity: 0;
+}
+
 .about_article{
 
->span{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    transition: 0.3s ease-in-out;
+    margin-top: 25px;
+    margin-bottom: 25px;
 
 
-    width: 50%;
-
-
-    >h1{
-   
-    }
-
-    >p{
-
-
+    >.contContainer{
         
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+        grid-auto-flow: row;
+        row-gap: 20px;
+        width: 50%;
+
+        >.aboutHeaderDiv{
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: rgba($color: #6B9080, $alpha: 0.80);
+            >h1{
+
+                color: #F6FFF8;
+
+                font-size: 2.5em;
+
+                border-bottom: #F6FFF8 solid 1px;
+            }
+
+        }
+
+        >.aboutContentDiv{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+
+            grid-template-rows: 1fr 1fr 1fr;
+
+            >div{
+                background-color: rgba($color: #6B9080, $alpha: 0.80);
+                padding: 10px;
+                border-radius: 5px;
+                >p{
+
+                letter-spacing: 1px;
+                
+                color: #F6FFF8;
+
+                >.routerStream{
+
+                    font-weight: bolder;
+                    text-decoration: none;
+                    color: #EAF4F4;
+                    cursor: pointer;
+                    border-bottom: #EAF4F4 solid 1px;
+                }
+                }
+            }
+        }
     }
-}
 }
 }
 
@@ -154,10 +232,10 @@
 
 .about_article{
 
->span{
+>.contContainer{
 
 
-    width: 58%;
+    width: 35%;
 
 
     >h1{

@@ -4,6 +4,8 @@
 
         <!--displaying HTML-->
 
+    <div class="divWrapper">
+
         <article class="contact_header">
                 <span>
                 <h1>CONTACT ME</h1>
@@ -17,6 +19,7 @@
                 <div class="inputDiv">
 
             
+                    <div class="tagsSep">
 
                     <div class="innerDiv">
                     <p>Your Name</p>
@@ -27,6 +30,9 @@
                     <p>Your Email</p>
                     <input class="inputTag" type="text" ref="userEmail">
                     </div>
+
+                    </div>
+                    <div class="boxSep">
 
                     <div class="innerDivBox">
                     <p>Your message</p>
@@ -49,11 +55,12 @@
                     <img src="~@/assets/jean-victor-balin-icon-letter-mail.svg">
                     </a>
                     </div>
+                    </div>
 
                 </div>  
             </span>
         </article>
-
+    </div>
     </div>
 
 </template>
@@ -164,201 +171,195 @@ import axios from 'axios';
     display: grid;
     align-items: center;
     justify-items: center;
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
     width: 100%;
-
-}
-.contact_article.hide_contact_info{
-
-    opacity: 0;
-}
-.contact_header.hide_contact_header{
-    opacity: 0;
-}
-.contact_header{
     margin-top: 25px;
-            
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-template-rows: 1fr 1fr;
-    transition: 0.3s ease-in-out;
-    
-    >span{
-    
-        display: grid;
-        align-items: center;
-        justify-items: center;
-        background-color: rgba($color: #6B9080, $alpha: 0.80);
-        padding: 10px;
-        border-radius: 10px;
-            >h1{
-                font-weight: bold;
-                font-size: 2em;
-                margin-bottom: 15px;
-                margin-top: 15px;
-                color: #F6FFF8;
-                border-bottom: #F6FFF8 solid 1px;
-
-            }
-        }
-}
-
-.contact_article{
     margin-bottom: 25px;
-    transition: 0.3s ease-in-out;
-    display: grid;
-    align-items: center;
-    justify-items: center;
 
-    width: 100%;
-
-
-    >.inputSpan{
-        min-width: 250px;
+    >.divWrapper{
         display: grid;
         align-items: center;
         justify-items: center;
-     
+        text-align: center;
         width: 100%;
-   
+        grid-template-rows: 0.5fr 2fr;
 
-
-        >.inputDiv{
-
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            grid-template-rows: 100px 100px 1fr 80px 160px;
-            text-align: center;
-            background-color: rgba($color: #F6FFF8, $alpha: 0.70);
-            width: 70%;
-            
-            padding: 10px;
-            border-radius: 10px;
-            >.orDiv{
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            width: 70px;
-            height: 70px;
-
-            border-radius: 50%;
-            background-color: rgba($color: #6B9080, $alpha: 0.80);
-            >h3{
-                border-bottom: #F6FFF8 solid 1px;
-                font-weight: bold;
-                color: #F6FFF8;
-            }
-        }
-        
-
-            >.emailDiv{
-            background-color: rgba($color: #6B9080, $alpha: 0.80);
-            grid-template-rows: 40px 50px;
-            padding: 10px;
-            border-radius: 10px;
-
-            width: 80%;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-
-
-            >h3{
-                font-weight: bold;
-                color: #F6FFF8;
-            }
-            >.a_tag{
-
+        >.contact_header{
 
             display: grid;
             align-items: center;
             justify-items: center;
+            background-color: #6B9080;
+            width: 100%;
+            height: 100px;
 
-            >img{
-                width: 50px;
-                cursor: pointer;
-            }
-        }
-        }
-            >.innerDivBox{
+            >span{
+
+                display: grid;
                 
-                margin-top: 30px;
-                margin-bottom: 30px;
-                display: grid;
-                align-items: center;
-                justify-items: center;
-                grid-auto-flow: row;
-                background-color: rgba($color: #6B9080, $alpha: 0.80);
-                padding: 10px;
-                border-radius: 10px;
-                width: 80%;
 
+                >h1{
 
-                >.status_tag{
+                    border-bottom: #EAF4F4 solid 1px;
+                    font-size: 1.6em;
+                    color: #EAF4F4;
 
-                margin-top: 10px;
-                margin-bottom: 10px;
-                }
-
-                >.submitTag{
-
-
-                    background-color: #F6FFF8;
-                    color: #6B9080;
-                    border-radius: 5px;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    padding: 5px;
-                    cursor: pointer;
-
-                }
-                >p{
-                    border-radius: 5px;
-                    margin-top: 10px;
-                    margin-bottom: 10px;
-                    color: #F6FFF8;
-                    font-weight: bold;
-
-                }
-                >.inputTagBox{
-                height: 80%;
-                width: 90%;
-                max-height: 60px;
-                max-width:180px;
                 }
             }
-            >.innerDiv{
-                background-color: rgba($color: #6B9080, $alpha: 0.80);
-                padding: 10px;
-                border-radius: 10px;
+        }
+
+        >.contact_article{
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
+
+
+            >.inputSpan{
                 display: grid;
-                align-items: center;
-                justify-items: center;
-                grid-template-rows: 25px 25px;
-                width: 70%;
 
-                >p{
-                    color: #F6FFF8;
-                    font-weight: bold;
+                width: 100%;
 
+                >.inputDiv{
+                    display: grid;
+                    align-items: center;
+                    justify-items: center;
+                    grid-auto-flow: row;
+                    row-gap: 25px;
+
+
+                    >.boxSep{
+
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 25px;
+                        width: 100%;
+
+                        >.emailDiv{
+
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            background-color: #6B9080;
+                            padding: 10px;
+                            color: #EAF4F4;
+                            border-radius: 5px;
+                            grid-auto-flow: row;
+                            row-gap: 10px;
+                            width: 60%;
+                            max-width: 225px;
+                            
+                            >h3{
+
+                                color: #EAF4F4;
+
+
+                            }
+
+                            >a{
+
+                                >img{
+                                    width: 50px;
+                                }
+                            }
+
+                        }
+                        >.orDiv{
+
+                            background-color: #6B9080;
+                            align-items: center;
+                            justify-items: center;
+                            display: grid;
+                            color: #EAF4F4;
+                            width: 75px;
+                            height: 75px;
+                            border-radius: 50%;
+
+                        }
+                        >.innerDivBox{
+
+                            padding: 10px;
+                            border-radius: 5px;
+                            background-color: #6B9080;
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 25px;
+                            width: 75%;
+                            max-width: 275px;
+                      
+                            
+
+                            >p{
+
+                                color: #EAF4F4;
+                                font-weight: 900;
+
+                            }
+
+                            >.inputTagBox{
+                                width: 90%;
+                                max-width: 200px;
+                                max-height: 75px;
+                            }
+
+                            >.submitTag{
+
+                                color: #6B9080;
+
+                                padding: 10px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                background-color: #EAF4F4;
+
+
+                            }
+
+                        }
+
+
+                    }
+                    >.tagsSep{
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 20px;
+                        width: 100%;
+                  
+
+                        >.innerDiv{
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 10px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 60%;
+                            max-width: 225px;
+                            background-color: #6B9080;
+                            >p{
+                                color: #EAF4F4;
+                            }
+                            >.inputTag{
+
+                                width: 80%;
+                                max-width: 200px;
+                            }
+
+                        }
+
+                    }
                 }
-                >.inputTag{
-                    width: 90%;
-
-                };
             }
-
         }
     }
-
-
 }
+
 @media only screen and (min-width: 770px){
     @keyframes fadeIn {
 0% {opacity: 0;}
@@ -367,107 +368,199 @@ import axios from 'axios';
 
 .divParent{
 
-}
-.contact_article.hide_contact_info{
-
-}
-.contact_header.hide_contact_header{
-
-}
-.contact_header{
-    margin-top: 75px;
-    >span{
-    
-            >h1{
-
-                font-size: 2.5em;
-            }
-        }
-}
-
-.contact_article{
-
-margin-bottom: 75px;
-    >.inputSpan{
-
-        min-width: 480px;
-     
-        width: 75%;
-
-        >.inputDiv{
-            grid-template-rows: 125px 125px 285px 100px 180px;
-            >.orDiv{
-
-                width: 75px;
-                height: 75px;
-            >h3{
-
-            }
-        }
-
-            >.emailDiv{
-
-                grid-template-rows: 40px 50px;
-                width: 60%;
-            >h3{
-                font-size: 1.4em;
-            }
-
-            >.a_tag{
-
-            >img{
-
-        
-            }
-        
-        }
-        }
-            >.innerDivBox{
-                width: 80%;
-        
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
 
 
-                >.submitTag{
+    >.divWrapper{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        grid-template-rows: 0.75fr 2fr;
 
+        >.contact_header{
 
-                background-color: #F6FFF8;
-                color: #6B9080;
-                border-radius: 5px;
-                padding: 5px;
-                cursor: pointer;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: #6B9080;
+            width: 100%;
+            height: 150px;
+
+            >span{
+
+                display: grid;
+                
+
+                >h1{
+
+                    border-bottom: #EAF4F4 solid 1px;
+                    font-size: 2em;
+                    color: #EAF4F4;
 
                 }
+            }
+        }
+
+        >.contact_article{
+
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
 
 
-                >p{
-                    font-size: 1.2em;
+            >.inputSpan{
+                display: grid;
 
-                }
-                >.inputTagBox{
+                width: 100%;
 
-                    height: 80%;
-                    width: 90%;
-                    max-height: 80px;
-                    max-width:250px;
+                >.inputDiv{
+                    display: grid;
+                    align-items: center;
+                    justify-items: center;
+                    grid-auto-flow: row;
+                    row-gap: 25px;
+
+
+                    >.boxSep{
+
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 25px;
+                        width: 100%;
+
+                        >.emailDiv{
+
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            background-color: #6B9080;
+                            padding: 10px;
+                            color: #EAF4F4;
+                            border-radius: 5px;
+                            grid-auto-flow: row;
+                            row-gap: 20px;
+                            width: 60%;
+                            max-width: 275px;
+                            
+                            >h3{
+
+                                color: #EAF4F4;
+                                font-size: 1.25em;
+
+
+                            }
+
+                            >a{
+
+                                >img{
+                                    width: 50px;
+                                }
+                            }
+
+                        }
+                        >.orDiv{
+
+                            background-color: #6B9080;
+                            align-items: center;
+                            justify-items: center;
+                            display: grid;
+                            color: #EAF4F4;
+                            width: 75px;
+                            height: 75px;
+                            border-radius: 50%;
+
+                        }
+                        >.innerDivBox{
+
+                            padding: 10px;
+                            border-radius: 5px;
+                            background-color: #6B9080;
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 25px;
+                            width: 75%;
+                            max-width: 300px;
+                      
+                            
+
+                            >p{
+
+                                color: #EAF4F4;
+                                font-weight: 900;
+
+                            }
+
+                            >.inputTagBox{
+                                width: 90%;
+                                max-width: 250px;
+                                max-height: 100px;
+                            }
+
+                            >.submitTag{
+
+                                color: #6B9080;
+
+                                padding: 10px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                background-color: #EAF4F4;
+
+
+                            }
+
+                        }
+
+
+                    }
+                    >.tagsSep{
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 25px;
+                        width: 100%;
+                  
+
+                        >.innerDiv{
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 20px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 60%;
+                            max-width: 225px;
+                            background-color: #6B9080;
+                            >p{
+                                color: #EAF4F4;
+                                font-weight: 900;
+                            }
+                            >.inputTag{
+
+                                width: 80%;
+                                max-width: 200px;
+                            }
+
+                        }
+
+                    }
                 }
             }
-            >.innerDiv{
-                width: 60%;
-                grid-template-rows: 25px 25px;
-                >p{
-        
-                    font-size: 1.2em;
-
-                }
-                >.inputTag{
-
-
-                };
-            }
-
         }
     }
 }
+
 }
 @media only screen and (min-width: 1024px){
 
@@ -476,109 +569,201 @@ margin-bottom: 75px;
 100% {opacity: 1}
 }
 
+
 .divParent{
 
-}
-.contact_article.hide_contact_info{
-
-}
-.contact_header.hide_contact_header{
-
-}
-.contact_header{
-    
-    >span{
-    
-            >h1{
-
-                font-size: 2.5em;
-            }
-        }
-}
-
-.contact_article{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
 
 
-    >.inputSpan{
+    >.divWrapper{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        text-align: center;
+        width: 100%;
+        grid-template-rows: 0.75fr 2fr;
 
-        min-width: 770px;
-     
-        width: 40%;
+        >.contact_header{
 
-        >.inputDiv{
-            grid-template-rows: 125px 125px 325px 100px 180px;
-            >.orDiv{
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            background-color: #6B9080;
+            width: 25%;
+            height: 150px;
 
-                width: 75px;
-                height: 75px;
-            >h3{
+            border-radius: 5px;
+            >span{
 
-            }
-        }
+                display: grid;
+                
 
-            >.emailDiv{
+                >h1{
 
-                grid-template-rows: 50px 60px;
-                width: 70%;
-            >h3{
-                font-size: 1.4em;
-            }
-
-
-            >.a_tag{
-
-            
-
-            >img{
-
-            }
-
-        }
-        }
-            >.innerDivBox{
-                width: 80%;
-              
-
-
-
-                >.submitTag{
-
-
-                background-color: #F6FFF8;
-                color: #6B9080;
-                border-radius: 5px;
-                padding: 5px;
-                cursor: pointer;
+                    border-bottom: #EAF4F4 solid 1px;
+                    font-size: 2em;
+                    color: #EAF4F4;
 
                 }
-                >p{
-                    font-size: 1.2em;
+            }
+        }
 
-                }
-                >.inputTagBox{
+        >.contact_article{
 
-                    height: 80%;
-                    width: 90%;
-                    max-height: 100px;
-                    max-width:300px;
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            width: 100%;
+
+
+            >.inputSpan{
+                display: grid;
+
+                width: 100%;
+
+                >.inputDiv{
+                    display: grid;
+                    align-items: center;
+                    justify-items: center;
+             
+                    
+
+                    >.boxSep{
+
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 25px;
+                        width: 100%;
+
+                        >.emailDiv{
+
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            background-color: #6B9080;
+                            padding: 10px;
+                            color: #EAF4F4;
+                            border-radius: 5px;
+                            grid-auto-flow: row;
+                            row-gap: 20px;
+                            width: 60%;
+                            max-width: 275px;
+                            
+                            >h3{
+
+                                color: #EAF4F4;
+                                font-size: 1.25em;
+
+
+                            }
+
+                            >a{
+
+                                >img{
+                                    width: 50px;
+                                }
+                            }
+
+                        }
+                        >.orDiv{
+
+                            background-color: #6B9080;
+                            align-items: center;
+                            justify-items: center;
+                            display: grid;
+                            color: #EAF4F4;
+                            width: 75px;
+                            height: 75px;
+                            border-radius: 50%;
+
+                        }
+                        >.innerDivBox{
+
+                            padding: 10px;
+                            border-radius: 5px;
+                            background-color: #6B9080;
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 25px;
+                            width: 75%;
+                            max-width: 300px;
+                      
+                            
+
+                            >p{
+
+                                color: #EAF4F4;
+                                font-weight: 900;
+
+                            }
+
+                            >.inputTagBox{
+                                width: 90%;
+                                max-width: 250px;
+                                max-height: 100px;
+                            }
+
+                            >.submitTag{
+
+                                color: #6B9080;
+
+                                padding: 10px;
+                                border-radius: 5px;
+                                cursor: pointer;
+                                background-color: #EAF4F4;
+
+
+                            }
+
+                        }
+
+
+                    }
+                    >.tagsSep{
+                        display: grid;
+                        align-items: center;
+                        justify-items: center;
+                        grid-auto-flow: row;
+                        row-gap: 25px;
+                        width: 100%;
+                  
+
+                        >.innerDiv{
+                            display: grid;
+                            align-items: center;
+                            justify-items: center;
+                            grid-auto-flow: row;
+                            row-gap: 20px;
+                            padding: 10px;
+                            border-radius: 5px;
+                            width: 60%;
+                            max-width: 225px;
+                            background-color: #6B9080;
+                            >p{
+                                color: #EAF4F4;
+                                font-weight: 900;
+                            }
+                            >.inputTag{
+
+                                width: 80%;
+                                max-width: 200px;
+                            }
+
+                        }
+
+                    }
                 }
             }
-            >.innerDiv{
-                width: 50%;
-                grid-template-rows: 30px 30px;
-                >p{
-        
-                    font-size: 1.2em;
-
-                }
-                >.inputTag{
-                    width: 70%;
-
-                };
-            }
-
         }
     }
 }
+
 }
 </style>
