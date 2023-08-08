@@ -52,7 +52,7 @@
                     <h3>Direct Email me</h3>
 
                     <a href="mailto:cameron.ian.ronald.ord@outlook.com" class="a_tag">
-                    <img src="~@/assets/jean-victor-balin-icon-letter-mail.svg">
+                    <img src="~@/assets/mail.svg">
                     </a>
                     </div>
                     </div>
